@@ -12,15 +12,15 @@ resource "random_string" "main" {
   length  = 60
   special = false
   upper   = false
+  numeric = var.unique-include-numbers
 }
 
 resource "random_string" "first_letter" {
   length  = 1
   special = false
   upper   = false
+  numeric = false
 }
-
-
 
 locals {
   // adding a first letter to guarantee that you always start with a letter
