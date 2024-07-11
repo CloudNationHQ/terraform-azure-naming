@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.7.1...v0.8.0) (2024-07-11)
+
+
+### Features
+
+* add private dns resolver support ([#21](https://github.com/CloudNationHQ/terraform-azure-naming/issues/21)) ([c2bb0c7](https://github.com/CloudNationHQ/terraform-azure-naming/commit/c2bb0c71f2f0d586a9878ffd633f872a2aec9968))
+
 ## [0.7.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.7.0...v0.7.1) (2024-07-10)
 
 
