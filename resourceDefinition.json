@@ -1639,6 +1639,72 @@
     "dashes": true
   },
   {
+    "name": "private_dns_resolver",
+    "lenght": {
+      "min": 3,
+      "max": 80
+    },
+    "regex": "^[a-zA-Z][a-zA-Z0-9-_]{1,78}[a-zA-Z0-9]$",
+    "scope": "resourceGroup",
+    "slug": "dnspr",
+    "dashes": true
+  },
+  {
+    "name": "private_dns_resolver_dns_forwarding_ruleset",
+    "length": {
+      "min": 2,
+      "max": 80
+    },
+    "regex": "^[a-zA-Z][a-zA-Z0-9-_]{0,78}[a-zA-Z0-9]$",
+    "scope": "resourceGroup",
+    "slug": "dnsfwrs",
+    "dashes": true
+  },
+  {
+    "name": "private_dns_resolver_forwarding_rule",
+    "length": {
+      "min": 1,
+      "max": 80
+    },
+    "regex": "^[a-zA-Z0-9]([a-zA-Z0-9-_]{0,78}[a-zA-Z0-9])?$",
+    "scope": "parent",
+    "slug": "dnsfwr",
+    "dashes": true
+  },
+  {
+    "name": "private_dns_resolver_inbound_endpoint",
+    "lenght": {
+      "min": 3,
+      "max": 80
+    },
+    "regex": "^[a-zA-Z][a-zA-Z0-9-_]{1,78}[a-zA-Z0-9]$",
+    "scope": "parent",
+    "slug": "dnsprie",
+    "dashes": true
+  },
+  {
+    "name": "private_dns_resolver_outbound_endpoint",
+    "lenght": {
+      "min": 3,
+      "max": 80
+    },
+    "regex": "^[a-zA-Z][a-zA-Z0-9-_]{1,78}[a-zA-Z0-9]$",
+    "scope": "parent",
+    "slug": "dnsproe",
+    "dashes": true
+  },
+  {
+    "name": "private_dns_resolver_virtual_network_link",
+    "length": {
+      "min": 1,
+      "max": 80
+    },
+    "regex": "^[a-zA-Z0-9]([a-zA-Z0-9-_]{0,78}[a-zA-Z0-9])?$",
+    "scope": "parent",
+    "slug": "dnsfwrsvnetl",
+    "dashes": true
+  },
+  {
     "name": "private_endpoint",
     "length": {
       "min": 2,

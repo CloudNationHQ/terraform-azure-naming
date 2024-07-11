@@ -866,6 +866,36 @@ output "private_dns_ptr_record" {
   description = "Private Dns Ptr Record"
 }
 
+output "private_dns_resolver" {
+  value       = local.az.private_dns_resolver
+  description = "Private Dns Resolver"
+}
+
+output "private_dns_resolver_dns_forwarding_ruleset" {
+  value       = local.az.private_dns_resolver_dns_forwarding_ruleset
+  description = "Private Dns Resolver Dns Forwarding Ruleset"
+}
+
+output "private_dns_resolver_forwarding_rule" {
+  value       = local.az.private_dns_resolver_forwarding_rule
+  description = "Private Dns Resolver Forwarding Rule"
+}
+
+output "private_dns_resolver_inbound_endpoint" {
+  value       = local.az.private_dns_resolver_inbound_endpoint
+  description = "Private Dns Resolver Inbound Endpoint"
+}
+
+output "private_dns_resolver_outbound_endpoint" {
+  value       = local.az.private_dns_resolver_outbound_endpoint
+  description = "Private Dns Resolver Outbound Endpoint"
+}
+
+output "private_dns_resolver_virtual_network_link" {
+  value       = local.az.private_dns_resolver_virtual_network_link
+  description = "Private Dns Resolver Virtual Network Link"
+}
+
 output "private_dns_srv_record" {
   value       = local.az.private_dns_srv_record
   description = "Private Dns Srv Record"
