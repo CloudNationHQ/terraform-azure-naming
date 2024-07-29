@@ -1615,6 +1615,16 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
+    network_watcher_flow_log = {
+      name        = substr(join("-", compact([local.prefix, "fl", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "fl", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "fl"
+      min_length  = 1
+      max_length  = 80
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
+    }
     notification_hub = {
       name        = substr(join("-", compact([local.prefix, "nh", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "nh", local.suffix_unique])), 0, 260)
@@ -3148,6 +3158,10 @@ locals {
     network_watcher = {
       valid_name        = length(regexall(local.az.network_watcher.regex, local.az.network_watcher.name)) > 0 && length(local.az.network_watcher.name) > local.az.network_watcher.min_length
       valid_name_unique = length(regexall(local.az.network_watcher.regex, local.az.network_watcher.name_unique)) > 0
+    }
+    network_watcher_flow_log = {
+      valid_name        = length(regexall(local.az.network_watcher_flow_log.regex, local.az.network_watcher_flow_log.name)) > 0 && length(local.az.network_watcher_flow_log.name) > local.az.network_watcher_flow_log.min_length
+      valid_name_unique = length(regexall(local.az.network_watcher_flow_log.regex, local.az.network_watcher_flow_log.name_unique)) > 0
     }
     notification_hub = {
       valid_name        = length(regexall(local.az.notification_hub.regex, local.az.notification_hub.name)) > 0 && length(local.az.notification_hub.name) > local.az.notification_hub.min_length

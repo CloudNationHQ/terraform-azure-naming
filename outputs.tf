@@ -796,6 +796,11 @@ output "network_watcher" {
   description = "Network Watcher"
 }
 
+output "network_watcher_flow_log" {
+  value       = local.az.network_watcher_flow_log
+  description = "Network Watcher Flow Log"
+}
+
 output "notification_hub" {
   value       = local.az.notification_hub
   description = "Notification Hub"
