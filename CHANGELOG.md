@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.8.0...v0.9.0) (2024-08-02)
+
+
+### Features
+
+* add network watcher flow logs resource ([#23](https://github.com/CloudNationHQ/terraform-azure-naming/issues/23)) ([e62ba57](https://github.com/CloudNationHQ/terraform-azure-naming/commit/e62ba57230b80bd7d9e7d6324d88c73569398635))
+
 ## [0.8.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.7.1...v0.8.0) (2024-07-11)
 
 
