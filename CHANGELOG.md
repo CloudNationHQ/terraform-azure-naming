@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.9.0...v0.10.0) (2024-08-06)
+
+
+### Features
+
+* add mysql flexible resources support ([#26](https://github.com/CloudNationHQ/terraform-azure-naming/issues/26)) ([3841c66](https://github.com/CloudNationHQ/terraform-azure-naming/commit/3841c660c098b21f7edce1500a16e047e404b6e1))
+* add synapse resources support ([#28](https://github.com/CloudNationHQ/terraform-azure-naming/issues/28)) ([5d4bec1](https://github.com/CloudNationHQ/terraform-azure-naming/commit/5d4bec1ef551fc8586e2f2cdcb7fecfd6476f086))
+
 ## [0.9.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.8.0...v0.9.0) (2024-08-02)
 
 
