@@ -2498,10 +2498,10 @@ locals {
       regex       = "^[0-9a-zA-Z]{1,15}$"
     }
     synapse_sql_pool = {
-      name        = substr(join("", compact([local.prefix_safe, "sysp", local.suffix_safe])), 0, 15)
-      name_unique = substr(join("", compact([local.prefix_safe, "sysp", local.suffix_unique_safe])), 0, 15)
+      name        = substr(join("", compact([local.prefix_safe, "sysql", local.suffix_safe])), 0, 15)
+      name_unique = substr(join("", compact([local.prefix_safe, "sysql", local.suffix_unique_safe])), 0, 15)
       dashes      = false
-      slug        = "sysp"
+      slug        = "sysql"
       min_length  = 1
       max_length  = 15
       scope       = "parent"
