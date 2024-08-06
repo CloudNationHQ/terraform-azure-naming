@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.10.0...v0.11.0) (2024-08-06)
+
+
+### Features
+
+* add postgresql flexible resources support ([#29](https://github.com/CloudNationHQ/terraform-azure-naming/issues/29)) ([2a8a10a](https://github.com/CloudNationHQ/terraform-azure-naming/commit/2a8a10a0a4a297f12c4fb4b51a0ead631775fd28))
+
 ## [0.10.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.9.0...v0.10.0) (2024-08-06)
 
 
