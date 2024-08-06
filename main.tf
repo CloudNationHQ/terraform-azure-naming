@@ -22,6 +22,8 @@ resource "random_string" "first_letter" {
   numeric = false
 }
 
+
+
 locals {
   // adding a first letter to guarantee that you always start with a letter
   random_safe_generation = join("", [random_string.first_letter.result, random_string.main.result])
@@ -1530,6 +1532,36 @@ locals {
       name_unique = substr(join("-", compact([local.prefix, "mysqlfw", local.suffix_unique])), 0, 128)
       dashes      = true
       slug        = "mysqlfw"
+      min_length  = 1
+      max_length  = 128
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9-_]+$"
+    }
+    mysql_flexible_server = {
+      name        = substr(join("-", compact([local.prefix, "mysqlf", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "mysqlf", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "mysqlf"
+      min_length  = 3
+      max_length  = 63
+      scope       = "global"
+      regex       = "^[a-z0-9][a-zA-Z0-9-]+[a-z0-9]$"
+    }
+    mysql_flexible_server_database = {
+      name        = substr(join("-", compact([local.prefix, "mysqlfdb", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "mysqlfdb", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "mysqlfdb"
+      min_length  = 1
+      max_length  = 63
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9-_]+$"
+    }
+    mysql_flexible_server_firewall_rule = {
+      name        = substr(join("-", compact([local.prefix, "mysqlffw", local.suffix])), 0, 128)
+      name_unique = substr(join("-", compact([local.prefix, "mysqlffw", local.suffix_unique])), 0, 128)
+      dashes      = true
+      slug        = "mysqlffw"
       min_length  = 1
       max_length  = 128
       scope       = "parent"
@@ -3126,6 +3158,18 @@ locals {
     mysql_firewall_rule = {
       valid_name        = length(regexall(local.az.mysql_firewall_rule.regex, local.az.mysql_firewall_rule.name)) > 0 && length(local.az.mysql_firewall_rule.name) > local.az.mysql_firewall_rule.min_length
       valid_name_unique = length(regexall(local.az.mysql_firewall_rule.regex, local.az.mysql_firewall_rule.name_unique)) > 0
+    }
+    mysql_flexible_server = {
+      valid_name        = length(regexall(local.az.mysql_flexible_server.regex, local.az.mysql_flexible_server.name)) > 0 && length(local.az.mysql_flexible_server.name) > local.az.mysql_flexible_server.min_length
+      valid_name_unique = length(regexall(local.az.mysql_flexible_server.regex, local.az.mysql_flexible_server.name_unique)) > 0
+    }
+    mysql_flexible_server_database = {
+      valid_name        = length(regexall(local.az.mysql_flexible_server_database.regex, local.az.mysql_flexible_server_database.name)) > 0 && length(local.az.mysql_flexible_server_database.name) > local.az.mysql_flexible_server_database.min_length
+      valid_name_unique = length(regexall(local.az.mysql_flexible_server_database.regex, local.az.mysql_flexible_server_database.name_unique)) > 0
+    }
+    mysql_flexible_server_firewall_rule = {
+      valid_name        = length(regexall(local.az.mysql_flexible_server_firewall_rule.regex, local.az.mysql_flexible_server_firewall_rule.name)) > 0 && length(local.az.mysql_flexible_server_firewall_rule.name) > local.az.mysql_flexible_server_firewall_rule.min_length
+      valid_name_unique = length(regexall(local.az.mysql_flexible_server_firewall_rule.regex, local.az.mysql_flexible_server_firewall_rule.name_unique)) > 0
     }
     mysql_server = {
       valid_name        = length(regexall(local.az.mysql_server.regex, local.az.mysql_server.name)) > 0 && length(local.az.mysql_server.name) > local.az.mysql_server.min_length

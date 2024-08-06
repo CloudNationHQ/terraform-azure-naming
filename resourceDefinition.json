@@ -1474,6 +1474,39 @@
     "dashes": true
   },
   {
+    "name": "mysql_flexible_server",
+    "length": {
+      "min": 3,
+      "max": 63
+    },
+    "regex": "^(?=.{3,63}$)[a-z0-9][a-zA-Z0-9-]+[a-z0-9]$",
+    "scope": "global",
+    "slug": "mysqlf",
+    "dashes": true
+  },
+  {
+  "name": "mysql_flexible_server_database",
+  "length": {
+    "min": 1,
+    "max": 63
+  },
+    "regex": "^(?=.{1,63}$)[a-zA-Z0-9-_]+$",
+    "scope": "parent",
+    "slug": "mysqlfdb",
+    "dashes": true
+  },
+  {
+    "name": "mysql_flexible_server_firewall_rule",
+    "length": {
+      "min": 1,
+      "max": 128
+    },
+    "regex": "^(?=.{1,128}$)[a-zA-Z0-9-_]+$",
+    "scope": "parent",
+    "slug": "mysqlffw",
+    "dashes": true
+  },
+  {
     "name": "network_interface",
     "length": {
       "min": 1,
