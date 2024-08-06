@@ -2328,7 +2328,7 @@
     },
     "regex": "^[0-9a-zA-Z]{1,15}$",
     "scope": "parent",
-    "slug": "sysp",
+    "slug": "sysql",
     "dashes": false
   },
   {
