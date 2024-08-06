@@ -1717,6 +1717,36 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9-_]+$"
     }
+    postgresql_flexible_server = {
+      name        = substr(join("-", compact([local.prefix, "psqlf", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "psqlf", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "psqlf"
+      min_length  = 3
+      max_length  = 63
+      scope       = "global"
+      regex       = "^[a-z0-9][a-z0-9-]{1,61}[a-z0-9]$"
+    }
+    postgresql_flexible_server_database = {
+      name        = substr(join("-", compact([local.prefix, "psqlfdb", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "psqlfdb", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "psqlfdb"
+      min_length  = 1
+      max_length  = 63
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9-_]{1,63}$"
+    }
+    postgresql_flexible_server_firewall_rule = {
+      name        = substr(join("-", compact([local.prefix, "psqlffw", local.suffix])), 0, 128)
+      name_unique = substr(join("-", compact([local.prefix, "psqlffw", local.suffix_unique])), 0, 128)
+      dashes      = true
+      slug        = "psqlffw"
+      min_length  = 1
+      max_length  = 128
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9-_]{1,128}$"
+    }
     postgresql_server = {
       name        = substr(join("-", compact([local.prefix, "psql", local.suffix])), 0, 63)
       name_unique = substr(join("-", compact([local.prefix, "psql", local.suffix_unique])), 0, 63)
@@ -3320,6 +3350,18 @@ locals {
     postgresql_firewall_rule = {
       valid_name        = length(regexall(local.az.postgresql_firewall_rule.regex, local.az.postgresql_firewall_rule.name)) > 0 && length(local.az.postgresql_firewall_rule.name) > local.az.postgresql_firewall_rule.min_length
       valid_name_unique = length(regexall(local.az.postgresql_firewall_rule.regex, local.az.postgresql_firewall_rule.name_unique)) > 0
+    }
+    postgresql_flexible_server = {
+      valid_name        = length(regexall(local.az.postgresql_flexible_server.regex, local.az.postgresql_flexible_server.name)) > 0 && length(local.az.postgresql_flexible_server.name) > local.az.postgresql_flexible_server.min_length
+      valid_name_unique = length(regexall(local.az.postgresql_flexible_server.regex, local.az.postgresql_flexible_server.name_unique)) > 0
+    }
+    postgresql_flexible_server_database = {
+      valid_name        = length(regexall(local.az.postgresql_flexible_server_database.regex, local.az.postgresql_flexible_server_database.name)) > 0 && length(local.az.postgresql_flexible_server_database.name) > local.az.postgresql_flexible_server_database.min_length
+      valid_name_unique = length(regexall(local.az.postgresql_flexible_server_database.regex, local.az.postgresql_flexible_server_database.name_unique)) > 0
+    }
+    postgresql_flexible_server_firewall_rule = {
+      valid_name        = length(regexall(local.az.postgresql_flexible_server_firewall_rule.regex, local.az.postgresql_flexible_server_firewall_rule.name)) > 0 && length(local.az.postgresql_flexible_server_firewall_rule.name) > local.az.postgresql_flexible_server_firewall_rule.min_length
+      valid_name_unique = length(regexall(local.az.postgresql_flexible_server_firewall_rule.regex, local.az.postgresql_flexible_server_firewall_rule.name_unique)) > 0
     }
     postgresql_server = {
       valid_name        = length(regexall(local.az.postgresql_server.regex, local.az.postgresql_server.name)) > 0 && length(local.az.postgresql_server.name) > local.az.postgresql_server.min_length
