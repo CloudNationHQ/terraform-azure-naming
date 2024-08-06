@@ -846,6 +846,21 @@ output "postgresql_firewall_rule" {
   description = "Postgresql Firewall Rule"
 }
 
+output "postgresql_flexible_server" {
+  value       = local.az.postgresql_flexible_server
+  description = "Postgresql Flexible Server"
+}
+
+output "postgresql_flexible_server_database" {
+  value       = local.az.postgresql_flexible_server_database
+  description = "Postgresql Flexible Server Database"
+}
+
+output "postgresql_flexible_server_firewall_rule" {
+  value       = local.az.postgresql_flexible_server_firewall_rule
+  description = "Postgresql Flexible Server Firewall Rule"
+}
+
 output "postgresql_server" {
   value       = local.az.postgresql_server
   description = "Postgresql Server"
