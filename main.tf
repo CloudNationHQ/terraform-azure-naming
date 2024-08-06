@@ -2397,6 +2397,96 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
+    synapse_firewall_rule = {
+      name        = substr(join("-", compact([local.prefix, "syfw", local.suffix])), 0, 128)
+      name_unique = substr(join("-", compact([local.prefix, "syfw", local.suffix_unique])), 0, 128)
+      dashes      = true
+      slug        = "syfw"
+      min_length  = 1
+      max_length  = 128
+      scope       = "parent"
+      regex       = "^[^<>*%:?\\+\\/]{1,127}[^<>*%:.?\\+\\/]$"
+    }
+    synapse_integration_runtime_azure = {
+      name        = substr(join("-", compact([local.prefix, "synira", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "synira", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "synira"
+      min_length  = 3
+      max_length  = 63
+      scope       = "subscription"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9_-]$"
+    }
+    synapse_integration_runtime_self_hosted = {
+      name        = substr(join("-", compact([local.prefix, "synirsh", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "synirsh", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "synirsh"
+      min_length  = 3
+      max_length  = 63
+      scope       = "subscription"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9_-]$"
+    }
+    synapse_linked_service = {
+      name        = substr(join("", compact([local.prefix_safe, "synls", local.suffix_safe])), 0, 140)
+      name_unique = substr(join("", compact([local.prefix_safe, "synls", local.suffix_unique_safe])), 0, 140)
+      dashes      = false
+      slug        = "synls"
+      min_length  = 1
+      max_length  = 140
+      scope       = "subscription"
+      regex       = "^[a-zA-Z0-9_]{1,140}$"
+    }
+    synapse_managed_private_endpoint = {
+      name        = substr(join("-", compact([local.prefix, "synmpe", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "synmpe", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "synmpe"
+      min_length  = 3
+      max_length  = 63
+      scope       = "subscription"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9_.-]{1,61}[a-zA-Z0-9_]$"
+    }
+    synapse_private_link_hub = {
+      name        = substr(join("", compact([local.prefix_safe, "synplh", local.suffix_safe])), 0, 45)
+      name_unique = substr(join("", compact([local.prefix_safe, "synplh", local.suffix_unique_safe])), 0, 45)
+      dashes      = false
+      slug        = "synplh"
+      min_length  = 1
+      max_length  = 45
+      scope       = "subscription"
+      regex       = "^[a-z0-9]{1,45}$"
+    }
+    synapse_spark_pool = {
+      name        = substr(join("", compact([local.prefix_safe, "sysp", local.suffix_safe])), 0, 15)
+      name_unique = substr(join("", compact([local.prefix_safe, "sysp", local.suffix_unique_safe])), 0, 15)
+      dashes      = false
+      slug        = "sysp"
+      min_length  = 1
+      max_length  = 15
+      scope       = "parent"
+      regex       = "^[0-9a-zA-Z]{1,15}$"
+    }
+    synapse_sql_pool = {
+      name        = substr(join("", compact([local.prefix_safe, "sysp", local.suffix_safe])), 0, 15)
+      name_unique = substr(join("", compact([local.prefix_safe, "sysp", local.suffix_unique_safe])), 0, 15)
+      dashes      = false
+      slug        = "sysp"
+      min_length  = 1
+      max_length  = 15
+      scope       = "parent"
+      regex       = "^[0-9a-zA-Z]{1,15}$"
+    }
+    synapse_workspace = {
+      name        = substr(join("", compact([local.prefix_safe, "syws", local.suffix_safe])), 0, 45)
+      name_unique = substr(join("", compact([local.prefix_safe, "syws", local.suffix_unique_safe])), 0, 45)
+      dashes      = false
+      slug        = "syws"
+      min_length  = 1
+      max_length  = 45
+      scope       = "resourceGroup"
+      regex       = "^[0-9a-z]{1,45}$"
+    }
     template_deployment = {
       name        = substr(join("-", compact([local.prefix, "deploy", local.suffix])), 0, 64)
       name_unique = substr(join("-", compact([local.prefix, "deploy", local.suffix_unique])), 0, 64)
@@ -3502,6 +3592,42 @@ locals {
     subnet = {
       valid_name        = length(regexall(local.az.subnet.regex, local.az.subnet.name)) > 0 && length(local.az.subnet.name) > local.az.subnet.min_length
       valid_name_unique = length(regexall(local.az.subnet.regex, local.az.subnet.name_unique)) > 0
+    }
+    synapse_firewall_rule = {
+      valid_name        = length(regexall(local.az.synapse_firewall_rule.regex, local.az.synapse_firewall_rule.name)) > 0 && length(local.az.synapse_firewall_rule.name) > local.az.synapse_firewall_rule.min_length
+      valid_name_unique = length(regexall(local.az.synapse_firewall_rule.regex, local.az.synapse_firewall_rule.name_unique)) > 0
+    }
+    synapse_integration_runtime_azure = {
+      valid_name        = length(regexall(local.az.synapse_integration_runtime_azure.regex, local.az.synapse_integration_runtime_azure.name)) > 0 && length(local.az.synapse_integration_runtime_azure.name) > local.az.synapse_integration_runtime_azure.min_length
+      valid_name_unique = length(regexall(local.az.synapse_integration_runtime_azure.regex, local.az.synapse_integration_runtime_azure.name_unique)) > 0
+    }
+    synapse_integration_runtime_self_hosted = {
+      valid_name        = length(regexall(local.az.synapse_integration_runtime_self_hosted.regex, local.az.synapse_integration_runtime_self_hosted.name)) > 0 && length(local.az.synapse_integration_runtime_self_hosted.name) > local.az.synapse_integration_runtime_self_hosted.min_length
+      valid_name_unique = length(regexall(local.az.synapse_integration_runtime_self_hosted.regex, local.az.synapse_integration_runtime_self_hosted.name_unique)) > 0
+    }
+    synapse_linked_service = {
+      valid_name        = length(regexall(local.az.synapse_linked_service.regex, local.az.synapse_linked_service.name)) > 0 && length(local.az.synapse_linked_service.name) > local.az.synapse_linked_service.min_length
+      valid_name_unique = length(regexall(local.az.synapse_linked_service.regex, local.az.synapse_linked_service.name_unique)) > 0
+    }
+    synapse_managed_private_endpoint = {
+      valid_name        = length(regexall(local.az.synapse_managed_private_endpoint.regex, local.az.synapse_managed_private_endpoint.name)) > 0 && length(local.az.synapse_managed_private_endpoint.name) > local.az.synapse_managed_private_endpoint.min_length
+      valid_name_unique = length(regexall(local.az.synapse_managed_private_endpoint.regex, local.az.synapse_managed_private_endpoint.name_unique)) > 0
+    }
+    synapse_private_link_hub = {
+      valid_name        = length(regexall(local.az.synapse_private_link_hub.regex, local.az.synapse_private_link_hub.name)) > 0 && length(local.az.synapse_private_link_hub.name) > local.az.synapse_private_link_hub.min_length
+      valid_name_unique = length(regexall(local.az.synapse_private_link_hub.regex, local.az.synapse_private_link_hub.name_unique)) > 0
+    }
+    synapse_spark_pool = {
+      valid_name        = length(regexall(local.az.synapse_spark_pool.regex, local.az.synapse_spark_pool.name)) > 0 && length(local.az.synapse_spark_pool.name) > local.az.synapse_spark_pool.min_length
+      valid_name_unique = length(regexall(local.az.synapse_spark_pool.regex, local.az.synapse_spark_pool.name_unique)) > 0
+    }
+    synapse_sql_pool = {
+      valid_name        = length(regexall(local.az.synapse_sql_pool.regex, local.az.synapse_sql_pool.name)) > 0 && length(local.az.synapse_sql_pool.name) > local.az.synapse_sql_pool.min_length
+      valid_name_unique = length(regexall(local.az.synapse_sql_pool.regex, local.az.synapse_sql_pool.name_unique)) > 0
+    }
+    synapse_workspace = {
+      valid_name        = length(regexall(local.az.synapse_workspace.regex, local.az.synapse_workspace.name)) > 0 && length(local.az.synapse_workspace.name) > local.az.synapse_workspace.min_length
+      valid_name_unique = length(regexall(local.az.synapse_workspace.regex, local.az.synapse_workspace.name_unique)) > 0
     }
     template_deployment = {
       valid_name        = length(regexall(local.az.template_deployment.regex, local.az.template_deployment.name)) > 0 && length(local.az.template_deployment.name) > local.az.template_deployment.min_length

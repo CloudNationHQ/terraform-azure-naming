@@ -2266,6 +2266,105 @@
     "dashes": true
   },
   {
+    "name": "synapse_workspace",
+    "length": {
+      "min": 1,
+      "max": 45
+    },
+    "regex": "^[0-9a-z]{1,45}$",
+    "scope": "resourceGroup",
+    "slug": "syws",
+    "dashes": false
+  },
+  {
+    "name": "synapse_spark_pool",
+    "length": {
+      "min": 1,
+      "max": 15
+    },
+    "regex": "^[0-9a-zA-Z]{1,15}$",
+    "scope": "parent",
+    "slug": "sysp",
+    "dashes": false
+  },
+  {
+    "name": "synapse_sql_pool",
+    "length": {
+      "min": 1,
+      "max": 15
+    },
+    "regex": "^[0-9a-zA-Z]{1,15}$",
+    "scope": "parent",
+    "slug": "sysp",
+    "dashes": false
+  },
+  {
+    "name": "synapse_firewall_rule",
+    "length": {
+      "min": 1,
+      "max": 128
+    },
+    "regex": "^[^<>*%:?\\\\+\\\\/]{1,127}[^<>*%:.?\\\\+\\\\/]$",
+    "scope": "parent",
+    "slug": "syfw",
+    "dashes": true
+  },
+  {
+    "name": "synapse_integration_runtime_azure",
+    "length": {
+      "min": 3,
+      "max": 63
+    },
+    "regex": "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9_-]$",
+    "scope": "subscription",
+    "slug": "synira",
+    "dashes": true
+  },
+  {
+    "name": "synapse_integration_runtime_self_hosted",
+    "length": {
+      "min": 3,
+      "max": 63
+    },
+    "regex": "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9_-]$",
+    "scope": "subscription",
+    "slug": "synirsh",
+    "dashes": true
+  },
+  {
+    "name": "synapse_linked_service",
+    "length": {
+      "min": 1,
+      "max": 140
+    },
+    "regex": "^[a-zA-Z0-9_]{1,140}$",
+    "scope": "subscription",
+    "slug": "synls",
+    "dashes": false
+  },
+  {
+    "name": "synapse_managed_private_endpoint",
+    "length": {
+      "min": 3,
+      "max": 63
+    },
+    "regex": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{1,61}[a-zA-Z0-9_]$",
+    "scope": "subscription",
+    "slug": "synmpe",
+    "dashes": true
+  },
+  {
+    "name": "synapse_private_link_hub",
+    "length": {
+      "min": 1,
+      "max": 45
+    },
+    "regex": "^[a-z0-9]{1,45}$",
+    "scope": "subscription",
+    "slug": "synplh",
+    "dashes": false
+  },
+  {
     "name": "template_deployment",
     "length": {
       "min": 1,

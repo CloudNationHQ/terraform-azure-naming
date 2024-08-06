@@ -1186,6 +1186,51 @@ output "subnet" {
   description = "Subnet"
 }
 
+output "synapse_firewall_rule" {
+  value       = local.az.synapse_firewall_rule
+  description = "Synapse Firewall Rule"
+}
+
+output "synapse_integration_runtime_azure" {
+  value       = local.az.synapse_integration_runtime_azure
+  description = "Synapse Integration Runtime Azure"
+}
+
+output "synapse_integration_runtime_self_hosted" {
+  value       = local.az.synapse_integration_runtime_self_hosted
+  description = "Synapse Integration Runtime Self Hosted"
+}
+
+output "synapse_linked_service" {
+  value       = local.az.synapse_linked_service
+  description = "Synapse Linked Service"
+}
+
+output "synapse_managed_private_endpoint" {
+  value       = local.az.synapse_managed_private_endpoint
+  description = "Synapse Managed Private Endpoint"
+}
+
+output "synapse_private_link_hub" {
+  value       = local.az.synapse_private_link_hub
+  description = "Synapse Private Link Hub"
+}
+
+output "synapse_spark_pool" {
+  value       = local.az.synapse_spark_pool
+  description = "Synapse Spark Pool"
+}
+
+output "synapse_sql_pool" {
+  value       = local.az.synapse_sql_pool
+  description = "Synapse Sql Pool"
+}
+
+output "synapse_workspace" {
+  value       = local.az.synapse_workspace
+  description = "Synapse Workspace"
+}
+
 output "template_deployment" {
   value       = local.az.template_deployment
   description = "Template Deployment"
