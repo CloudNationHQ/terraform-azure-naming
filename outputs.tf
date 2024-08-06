@@ -756,6 +756,21 @@ output "mysql_firewall_rule" {
   description = "Mysql Firewall Rule"
 }
 
+output "mysql_flexible_server" {
+  value       = local.az.mysql_flexible_server
+  description = "Mysql Flexible Server"
+}
+
+output "mysql_flexible_server_database" {
+  value       = local.az.mysql_flexible_server_database
+  description = "Mysql Flexible Server Database"
+}
+
+output "mysql_flexible_server_firewall_rule" {
+  value       = local.az.mysql_flexible_server_firewall_rule
+  description = "Mysql Flexible Server Firewall Rule"
+}
+
 output "mysql_server" {
   value       = local.az.mysql_server
   description = "Mysql Server"
