@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.11.0...v0.11.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* fix synapse sql pool slug ([#31](https://github.com/CloudNationHQ/terraform-azure-naming/issues/31)) ([ad26502](https://github.com/CloudNationHQ/terraform-azure-naming/commit/ad2650260b0af67b76ca2fc916570b99ca158e28))
+
 ## [0.11.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.10.0...v0.11.0) (2024-08-06)
 
 
