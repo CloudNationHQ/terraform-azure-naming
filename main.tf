@@ -507,6 +507,26 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9-]+$"
     }
+    data_collection_endpoint = {
+      name        = substr(join("-", compact([local.prefix, "dce", local.suffix])), 0, 44)
+      name_unique = substr(join("-", compact([local.prefix, "dce", local.suffix_unique])), 0, 44)
+      dashes      = true
+      slug        = "dce"
+      min_length  = 3
+      max_length  = 44
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9]([a-zA-Z0-9-]{1,42}[a-zA-Z0-9])?$"
+    }
+    data_collection_rule = {
+      name        = substr(join("-", compact([local.prefix, "dcr", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "dcr", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "dcr"
+      min_length  = 1
+      max_length  = 64
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9_-]{1,64}$"
+    }
     data_factory = {
       name        = substr(join("-", compact([local.prefix, "adf", local.suffix])), 0, 63)
       name_unique = substr(join("-", compact([local.prefix, "adf", local.suffix_unique])), 0, 63)
@@ -2916,6 +2936,14 @@ locals {
     dashboard = {
       valid_name        = length(regexall(local.az.dashboard.regex, local.az.dashboard.name)) > 0 && length(local.az.dashboard.name) > local.az.dashboard.min_length
       valid_name_unique = length(regexall(local.az.dashboard.regex, local.az.dashboard.name_unique)) > 0
+    }
+    data_collection_endpoint = {
+      valid_name        = length(regexall(local.az.data_collection_endpoint.regex, local.az.data_collection_endpoint.name)) > 0 && length(local.az.data_collection_endpoint.name) > local.az.data_collection_endpoint.min_length
+      valid_name_unique = length(regexall(local.az.data_collection_endpoint.regex, local.az.data_collection_endpoint.name_unique)) > 0
+    }
+    data_collection_rule = {
+      valid_name        = length(regexall(local.az.data_collection_rule.regex, local.az.data_collection_rule.name)) > 0 && length(local.az.data_collection_rule.name) > local.az.data_collection_rule.min_length
+      valid_name_unique = length(regexall(local.az.data_collection_rule.regex, local.az.data_collection_rule.name_unique)) > 0
     }
     data_factory = {
       valid_name        = length(regexall(local.az.data_factory.regex, local.az.data_factory.name)) > 0 && length(local.az.data_factory.name) > local.az.data_factory.min_length

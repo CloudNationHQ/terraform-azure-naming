@@ -241,6 +241,16 @@ output "dashboard" {
   description = "Dashboard"
 }
 
+output "data_collection_endpoint" {
+  value       = local.az.data_collection_endpoint
+  description = "Data Collection Endpoint"
+}
+
+output "data_collection_rule" {
+  value       = local.az.data_collection_rule
+  description = "Data Collection Rule"
+}
+
 output "data_factory" {
   value       = local.az.data_factory
   description = "Data Factory"
