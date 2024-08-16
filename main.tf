@@ -1837,6 +1837,56 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]*[a-zA-Z0-9_]$"
     }
+    private_dns_resolver_dns_forwarding_ruleset = {
+      name        = substr(join("-", compact([local.prefix, "dnsfwrs", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "dnsfwrs", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "dnsfwrs"
+      min_length  = 2
+      max_length  = 80
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-_]{0,78}[a-zA-Z0-9]$"
+    }
+    private_dns_resolver_forwarding_rule = {
+      name        = substr(join("-", compact([local.prefix, "dnsfwr", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "dnsfwr", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "dnsfwr"
+      min_length  = 1
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9]([a-zA-Z0-9-_]{0,78}[a-zA-Z0-9])?$"
+    }
+    private_dns_resolver_inbound_endpoint = {
+      name        = substr(join("-", compact([local.prefix, "dnsprie", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "dnsprie", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "dnsprie"
+      min_length  = 3
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-_]{1,78}[a-zA-Z0-9]$"
+    }
+    private_dns_resolver_outbound_endpoint = {
+      name        = substr(join("-", compact([local.prefix, "dnsproe", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "dnsproe", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "dnsproe"
+      min_length  = 3
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-_]{1,78}[a-zA-Z0-9]$"
+    }
+    private_dns_resolver_virtual_network_link = {
+      name        = substr(join("-", compact([local.prefix, "dnsfwrsvnetl", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "dnsfwrsvnetl", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "dnsfwrsvnetl"
+      min_length  = 1
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9]([a-zA-Z0-9-_]{0,78}[a-zA-Z0-9])?$"
+    }
     private_dns_srv_record = {
       name        = substr(join("-", compact([local.prefix, "pdnsrec", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "pdnsrec", local.suffix_unique])), 0, 80)
@@ -3398,6 +3448,26 @@ locals {
     private_dns_resolver = {
       valid_name        = length(regexall(local.az.private_dns_resolver.regex, local.az.private_dns_resolver.name)) > 0 && length(local.az.private_dns_resolver.name) > local.az.private_dns_resolver.min_length
       valid_name_unique = length(regexall(local.az.private_dns_resolver.regex, local.az.private_dns_resolver.name_unique)) > 0
+    }
+    private_dns_resolver_dns_forwarding_ruleset = {
+      valid_name        = length(regexall(local.az.private_dns_resolver_dns_forwarding_ruleset.regex, local.az.private_dns_resolver_dns_forwarding_ruleset.name)) > 0 && length(local.az.private_dns_resolver_dns_forwarding_ruleset.name) > local.az.private_dns_resolver_dns_forwarding_ruleset.min_length
+      valid_name_unique = length(regexall(local.az.private_dns_resolver_dns_forwarding_ruleset.regex, local.az.private_dns_resolver_dns_forwarding_ruleset.name_unique)) > 0
+    }
+    private_dns_resolver_forwarding_rule = {
+      valid_name        = length(regexall(local.az.private_dns_resolver_forwarding_rule.regex, local.az.private_dns_resolver_forwarding_rule.name)) > 0 && length(local.az.private_dns_resolver_forwarding_rule.name) > local.az.private_dns_resolver_forwarding_rule.min_length
+      valid_name_unique = length(regexall(local.az.private_dns_resolver_forwarding_rule.regex, local.az.private_dns_resolver_forwarding_rule.name_unique)) > 0
+    }
+    private_dns_resolver_inbound_endpoint = {
+      valid_name        = length(regexall(local.az.private_dns_resolver_inbound_endpoint.regex, local.az.private_dns_resolver_inbound_endpoint.name)) > 0 && length(local.az.private_dns_resolver_inbound_endpoint.name) > local.az.private_dns_resolver_inbound_endpoint.min_length
+      valid_name_unique = length(regexall(local.az.private_dns_resolver_inbound_endpoint.regex, local.az.private_dns_resolver_inbound_endpoint.name_unique)) > 0
+    }
+    private_dns_resolver_outbound_endpoint = {
+      valid_name        = length(regexall(local.az.private_dns_resolver_outbound_endpoint.regex, local.az.private_dns_resolver_outbound_endpoint.name)) > 0 && length(local.az.private_dns_resolver_outbound_endpoint.name) > local.az.private_dns_resolver_outbound_endpoint.min_length
+      valid_name_unique = length(regexall(local.az.private_dns_resolver_outbound_endpoint.regex, local.az.private_dns_resolver_outbound_endpoint.name_unique)) > 0
+    }
+    private_dns_resolver_virtual_network_link = {
+      valid_name        = length(regexall(local.az.private_dns_resolver_virtual_network_link.regex, local.az.private_dns_resolver_virtual_network_link.name)) > 0 && length(local.az.private_dns_resolver_virtual_network_link.name) > local.az.private_dns_resolver_virtual_network_link.min_length
+      valid_name_unique = length(regexall(local.az.private_dns_resolver_virtual_network_link.regex, local.az.private_dns_resolver_virtual_network_link.name_unique)) > 0
     }
     private_dns_srv_record = {
       valid_name        = length(regexall(local.az.private_dns_srv_record.regex, local.az.private_dns_srv_record.name)) > 0 && length(local.az.private_dns_srv_record.name) > local.az.private_dns_srv_record.min_length
