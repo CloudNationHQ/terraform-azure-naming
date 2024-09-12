@@ -129,11 +129,11 @@ No modules.
 
 | Name | Description | Type | Required |
 | :-- | :-- | :-- | :-- |
-| <a name="prefix"></a> [`prefix`](prefix)                                                 | It is not recommended that you use prefix by azure you should be using a suffix for your resources.             | list(string)  |    no    |
-| <a name="suffix"></a> [`suffix`](suffix)                                                 | It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible | list(string) |    no    |
-| <a name="unique-include-numbers"></a> [unique-include-numbers](unique-include-numbers) | If you want to include numbers in the unique generation                                                         | bool        |    no    |
-| <a name="unique-length"></a> [`unique-length`](unique-length)                            | Max length of the uniqueness suffix to be added                                                                 | number         |    no    |
-| <a name="unique-seed"></a> [`unique-seed`](unique-seed)                                  | Custom value for the random characters to be used                                                               | string        |    no    |
+| `prefix`                                             | It is not recommended that you use prefix by azure you should be using a suffix for your resources.             | list(string)  |    no    |
+| `suffix`                                                | It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible | list(string) |    no    |
+| `unique-include-numbers` | If you want to include numbers in the unique generation                                                         | bool        |    no    |
+| `unique-length`                    | Max length of the uniqueness suffix to be added                                                                 | number         |    no    |
+| `unique-seed`                                | Custom value for the random characters to be used                                                               | string        |    no    |
 
 ## Outputs
 
