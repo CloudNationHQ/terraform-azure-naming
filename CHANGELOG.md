@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.14.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.13.0...v0.14.0) (2024-09-12)
+
+
+### Features
+
+* add databricks cluster policy and instance pool naming resources ([#39](https://github.com/CloudNationHQ/terraform-azure-naming/issues/39)) ([5ae24a9](https://github.com/CloudNationHQ/terraform-azure-naming/commit/5ae24a9705f98a0b5deb54932cf846f7f328a529))
+* add databricks cluster policy and instance pool naming resources ([#42](https://github.com/CloudNationHQ/terraform-azure-naming/issues/42)) ([57f0145](https://github.com/CloudNationHQ/terraform-azure-naming/commit/57f0145aaa2ea947a0bda8fb054a850835025273))
+* add databricks cluster policy and instance pool naming resources ([#45](https://github.com/CloudNationHQ/terraform-azure-naming/issues/45)) ([36b361e](https://github.com/CloudNationHQ/terraform-azure-naming/commit/36b361e697dafa8f4109095f56149af769e38722))
+* add databricks cluster policy and instance pool naming resources ([#48](https://github.com/CloudNationHQ/terraform-azure-naming/issues/48)) ([2d03d47](https://github.com/CloudNationHQ/terraform-azure-naming/commit/2d03d47994e030a62ff4c5e4969a4b18dea5c7d1))
+* add release please yml ([#40](https://github.com/CloudNationHQ/terraform-azure-naming/issues/40)) ([3adb8cb](https://github.com/CloudNationHQ/terraform-azure-naming/commit/3adb8cb8f912bd84cec35af3432dc98d4fb284fc))
+* update docs ([#46](https://github.com/CloudNationHQ/terraform-azure-naming/issues/46)) ([0a4771f](https://github.com/CloudNationHQ/terraform-azure-naming/commit/0a4771f41d22117540ec8b9742930af5039c156c))
+* update release-please.yml ([5493fa6](https://github.com/CloudNationHQ/terraform-azure-naming/commit/5493fa6d2718bf1434d01e28b5114071f8f2c71f))
+
 ## [0.13.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.12.0...v0.13.0) (2024-08-16)
 
 
