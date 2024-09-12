@@ -708,34 +708,34 @@ locals {
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-_.]+$"
     }
     databricks_cluster = {
-      name        = substr(join("-", compact([local.prefix, "cl", local.suffix])), 0, 200)
-      name_unique = substr(join("-", compact([local.prefix, "cl", local.suffix_unique])), 0, 200)
+      name        = substr(join("-", compact([local.prefix, "dbc", local.suffix])), 0, 30)
+      name_unique = substr(join("-", compact([local.prefix, "dbc", local.suffix_unique])), 0, 30)
       dashes      = true
-      slug        = "cl"
-      min_length  = 1
-      max_length  = 200
+      slug        = "dbc"
+      min_length  = 3
+      max_length  = 30
       scope       = "parent"
-      regex       = "^[a-zA-Z0-9-_ ]+$"
+      regex       = "^[a-zA-Z0-9-_]+$"
     }
-    databricks_cluster_policy = {
-      name        = substr(join("-", compact([local.prefix, "clp", local.suffix])), 1, 100)
-      name_unique = substr(join("-", compact([local.prefix, "clp", local.suffix_unique])), 1, 100)
+    databricks_high_concurrency_cluster = {
+      name        = substr(join("-", compact([local.prefix, "dbhcc", local.suffix])), 0, 30)
+      name_unique = substr(join("-", compact([local.prefix, "dbhcc", local.suffix_unique])), 0, 30)
       dashes      = true
-      slug        = "clp"
-      min_length  = 1
-      max_length  = 100
+      slug        = "dbhcc"
+      min_length  = 3
+      max_length  = 30
       scope       = "parent"
-      regex       = "^[a-zA-Z0-9-_ ]+$"
+      regex       = "^[a-zA-Z0-9-_]+$"
     }
-    databricks_instance_pool = {
-      name        = substr(join("-", compact([local.prefix, "ip", local.suffix])), 1, 100)
-      name_unique = substr(join("-", compact([local.prefix, "ip", local.suffix_unique])), 1, 100)
+    databricks_standard_cluster = {
+      name        = substr(join("-", compact([local.prefix, "dbsc", local.suffix])), 0, 30)
+      name_unique = substr(join("-", compact([local.prefix, "dbsc", local.suffix_unique])), 0, 30)
       dashes      = true
-      slug        = "ip"
-      min_length  = 1
-      max_length  = 100
+      slug        = "dbsc"
+      min_length  = 3
+      max_length  = 30
       scope       = "parent"
-      regex       = "^[a-zA-Z0-9-_ ]+$"
+      regex       = "^[a-zA-Z0-9-_]+$"
     }
     databricks_workspace = {
       name        = substr(join("-", compact([local.prefix, "dbw", local.suffix])), 0, 30)
@@ -3021,13 +3021,13 @@ locals {
       valid_name        = length(regexall(local.az.databricks_cluster.regex, local.az.databricks_cluster.name)) > 0 && length(local.az.databricks_cluster.name) > local.az.databricks_cluster.min_length
       valid_name_unique = length(regexall(local.az.databricks_cluster.regex, local.az.databricks_cluster.name_unique)) > 0
     }
-    databricks_cluster_policy = {
-      valid_name        = length(regexall(local.az.databricks_cluster_policy.regex, local.az.databricks_cluster_policy.name)) > 0 && length(local.az.databricks_cluster_policy.name) > local.az.databricks_cluster_policy.min_length
-      valid_name_unique = length(regexall(local.az.databricks_cluster_policy.regex, local.az.databricks_cluster_policy.name_unique)) > 0
+    databricks_high_concurrency_cluster = {
+      valid_name        = length(regexall(local.az.databricks_high_concurrency_cluster.regex, local.az.databricks_high_concurrency_cluster.name)) > 0 && length(local.az.databricks_high_concurrency_cluster.name) > local.az.databricks_high_concurrency_cluster.min_length
+      valid_name_unique = length(regexall(local.az.databricks_high_concurrency_cluster.regex, local.az.databricks_high_concurrency_cluster.name_unique)) > 0
     }
-    databricks_instance_pool = {
-      valid_name        = length(regexall(local.az.databricks_instance_pool.regex, local.az.databricks_instance_pool.name)) > 0 && length(local.az.databricks_instance_pool.name) > local.az.databricks_instance_pool.min_length
-      valid_name_unique = length(regexall(local.az.databricks_instance_pool.regex, local.az.databricks_instance_pool.name_unique)) > 0
+    databricks_standard_cluster = {
+      valid_name        = length(regexall(local.az.databricks_standard_cluster.regex, local.az.databricks_standard_cluster.name)) > 0 && length(local.az.databricks_standard_cluster.name) > local.az.databricks_standard_cluster.min_length
+      valid_name_unique = length(regexall(local.az.databricks_standard_cluster.regex, local.az.databricks_standard_cluster.name_unique)) > 0
     }
     databricks_workspace = {
       valid_name        = length(regexall(local.az.databricks_workspace.regex, local.az.databricks_workspace.name)) > 0 && length(local.az.databricks_workspace.name) > local.az.databricks_workspace.min_length
