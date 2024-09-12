@@ -139,6 +139,9 @@ No modules.
 
 | Name                                                                                                                                                                                                     | Description                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `aadb2c_directory`                                                                                                 | AADB2C Directory                                   |
+| `aks_node_pool_linux`                                                                                               | AKS Node Pool Linux                                |
+| `aks_node_pool_windows`                                                                                             | AKS Node Pool Windows                              |
 | `analysis_services_server`                                                                                         | Analysis Services Server                           |
 | `api_management`                                                                                                                         | Api Management                                     |
 | `app_configuration`                                                                                                                | App Configuration                                  |
@@ -151,11 +154,12 @@ No modules.
 | `automation_account`                                                                                                             | Automation Account                                 |
 | `automation_certificate`                                                                                                 | Automation Certificate                             |
 | `automation_credential`                                                                                                    | Automation Credential                              |
+| `automation_job_schedule`                                                                                           | Automation Job Schedule                            |
 | `automation_runbook`                                                                                                             | Automation Runbook                                 |
 | `automation_schedule`                                                                                                          | Automation Schedule                                |
 | `automation_variable`                                                                                                          | Automation Variable                                |
 | `availability_set`                                                                                                                   | Availability Set                                   |
-| `baston_host`                                                                                                                              | Bastion Host                                       |
+| `bastion_host`                                                                                                                              | Bastion Host                                       |
 | `batch_account`                                                                                                                            | Batch Account                                      |
 | `batch_application`                                                                                                                | Batch Application                                  |
 | `batch_certificate`                                                                                                                | Batch Certificate                                  |
@@ -170,6 +174,9 @@ No modules.
 | `cdn_endpoint`                                                                                                                               | Cdn Endpoint                                       |
 | `cdn_profile`                                                                                                                                  | Cdn Profile                                        |
 | `cognitive_account`                                                                                                                | Cognitive Account                                  |
+| `container_app`                                                                                                     | Container App                                      |
+| `container_app_environment`                                                                                        | Container App Environment                         |
+| `container_app_job`                                                                                                 | Container App Job                                  |
 | `container_group`                                                                                                                      | Container Group                                    |
 | `container_registry`                                                                                                             | Container Registry                                 |
 | `container_registry_webhook`                                                                                   | Container Registry Webhook                         |
@@ -179,6 +186,8 @@ No modules.
 | `cosmosdb_postgres`                                                                                                                | Cosmosdb Postgres                                  |
 | `custom_provider`                                                                                                                      | Custom Provider                                    |
 | `dashboard`                                                                                                                                          | Dashboard                                          |
+| `data_collection_endpoint`                                                                                          | Data Collection Endpoint                          |
+| `data_collection_rule`                                                                                              | Data Collection Rule                              |
 | `data_factory`                                                                                                                               | Data Factory                                       |
 | `data_factory_dataset_mysql`                                                                                 | Data Factory Dataset Mysql                         |
 | `data_factory_dataset_postgresql`                                                                  | Data Factory Dataset Postgresql                    |
@@ -198,6 +207,8 @@ No modules.
 | `database_migration_project`                                                                                   | Database Migration Project                         |
 | `database_migration_service`                                                                                   | Database Migration Service                         |
 | `databricks_cluster`                                                                                                             | Databricks Cluster                                 |
+| `databricks_cluster_policy`                                                                                         | Databricks Cluster Policy                          |
+| `databricks_instance_pool`                                                                                          | Databricks Instance Pool                           |
 | `databricks_workspace`                                                                                                       | Databricks Workspace                               |
 | `dev_test_lab`                                                                                                                             | Dev Test Lab                                       |
 | `dev_test_linux_virtual_machine`                                                                   | Dev Test Linux Virtual Machine                     |
@@ -248,6 +259,7 @@ No modules.
 | `iothub_consumer_group`                                                                                                  | Iothub Consumer Group                              |
 | `iothub_dps`                                                                                                                                     | Iothub Dps                                         |
 | `iothub_dps_certificate`                                                                                               | Iothub Dps Certificate                             |
+| `ip_group`                                                                                                          | IP Group                                           |
 | `key_vault`                                                                                                                                        | Key Vault                                          |
 | `key_vault_certificate`                                                                                                  | Key Vault Certificate                              |
 | `key_vault_key`                                                                                                                          | Key Vault Key                                      |
@@ -276,6 +288,9 @@ No modules.
 | `mariadb_virtual_network_rule`                                                                           | Mariadb Virtual Network Rule                       |
 | `mssql_database`                                                                                                                         | Mssql Database                                     |
 | `mssql_elasticpool`                                                                                                                | Mssql Elasticpool                                  |
+| `mysql_flexible_server`                                                                                             | MySQL Flexible Server                              |
+| `mysql_flexible_server_database`                                                                                    | MySQL Flexible Server Database                    |
+| `mysql_flexible_server_firewall_rule`                                                                               | MySQL Flexible Server Firewall Rule               |
 | `mssql_server`                                                                                                                               | Mssql Server                                       |
 | `mysql_database`                                                                                                                         | Mysql Database                                     |
 | `mysql_firewall_rule`                                                                                                        | Mysql Firewall Rule                                |
@@ -287,12 +302,16 @@ No modules.
 | `network_security_group_rule`                                                                              | Network Security Group Rule                        |
 | `network_security_rule`                                                                                                  | Network Security Rule                              |
 | `network_watcher`                                                                                                                      | Network Watcher                                    |
+| `network_watcher_flow_log`                                                                                          | Network Watcher Flow Log                           |
 | `notification_hub`                                                                                                                   | Notification Hub                                   |
 | `notification_hub_authorization_rule`                                                      | Notification Hub Authorization Rule                |
 | `notification_hub_namespace`                                                                                   | Notification Hub Namespace                         |
 | `point_to_site_vpn_gateway`                                                                                  | Point To Site Vpn Gateway                          |
 | `postgresql_database`                                                                                                          | Postgresql Database                                |
 | `postgresql_firewall_rule`                                                                                         | Postgresql Firewall Rule                           |
+| `postgresql_flexible_server`                                                                                        | PostgreSQL Flexible Server                        |
+| `postgresql_flexible_server_database`                                                                               | PostgreSQL Flexible Server Database               |
+| `postgresql_flexible_server_firewall_rule`                                                                          | PostgreSQL Flexible Server Firewall Rule          |
 | `postgresql_server`                                                                                                                | Postgresql Server                                  |
 | `postgresql_virtual_network_rule`                                                                  | Postgresql Virtual Network Rule                    |
 | `powerbi_embedded`                                                                                                                   | Powerbi Embedded                                   |
@@ -301,6 +320,12 @@ No modules.
 | `private_dns_cname_record`                                                                                       | Private Dns Cname Record                           |
 | `private_dns_mx_record`                                                                                                | Private Dns Mx Record                              |
 | `private_dns_ptr_record`                                                                                             | Private Dns Ptr Record                             |
+| `private_dns_resolver`                                                                                              | Private DNS Resolver                               |
+| `private_dns_resolver_dns_forwarding_ruleset`                                                                       | Private DNS Resolver DNS Forwarding Ruleset       |
+| `private_dns_resolver_forwarding_rule`                                                                              | Private DNS Resolver Forwarding Rule              |
+| `private_dns_resolver_inbound_endpoint`                                                                             | Private DNS Resolver Inbound Endpoint             |
+| `private_dns_resolver_outbound_endpoint`                                                                            | Private DNS Resolver Outbound Endpoint            |
+| `private_dns_resolver_virtual_network_link`                                                                         | Private DNS Resolver Virtual Network Link         |
 | `private_dns_srv_record`                                                                                             | Private Dns Srv Record                             |
 | `private_dns_txt_record`                                                                                             | Private Dns Txt Record                             |
 | `private_dns_zone`                                                                                                                 | Private Dns Zone                                   |
@@ -312,6 +337,7 @@ No modules.
 | `public_ip`                                                                                                                                        | Public Ip                                          |
 | `public_ip_prefix`                                                                                                                 | Public Ip Prefix                                   |
 | `recovery_services_vault`                                                                                            | Recovery Services Vault                            |
+| `recovery_services_vault_backup_policy`                                                                             | Recovery Services Vault Backup Policy             |
 | `redis_cache`                                                                                                                                  | Redis Cache                                        |
 | `redis_firewall_rule`                                                                                                        | Redis Firewall Rule                                |
 | `relay_hybrid_connection`                                                                                            | Relay Hybrid Connection                            |
@@ -359,11 +385,22 @@ No modules.
 | `stream_analytics_stream_input_eventhub`                                           | Stream Analytics Stream Input Eventhub             |
 | `stream_analytics_stream_input_iothub`                                                 | Stream Analytics Stream Input Iothub               |
 | `subnet`                                                                                                                                                   | Subnet                                             |
+| `synapse_firewall_rule`                                                                                             | Synapse Firewall Rule                             |
+| `synapse_integration_runtime_azure`                                                                                 | Synapse Integration Runtime (Azure)               |
+| `synapse_integration_runtime_self_hosted`                                                                           | Synapse Integration Runtime (Self-Hosted)         |
+| `synapse_linked_service`                                                                                            | Synapse Linked Service                            |
+| `synapse_managed_private_endpoint`                                                                                  | Synapse Managed Private Endpoint                  |
+| `synapse_private_link_hub`                                                                                          | Synapse Private Link Hub                          |
+| `synapse_spark_pool`                                                                                                | Synapse Spark Pool                                |
+| `synapse_sql_pool`                                                                                                  | Synapse SQL Pool                                  |
+| `synapse_workspace`                                                                                                 | Synapse Workspace                                 |
 | `template_deployment`                                                                                                          | Template Deployment                                |
 | `traffic_manager_profile`                                                                                            | Traffic Manager Profile                            |
 | `unique-seed`                                                                                                                                    | n/a                                                |
 | `user_assigned_identity`                                                                                               | User Assigned Identity                             |
 | `validation`                                                                                                                                       | n/a                                                |
+| `virtual_hub`                                                                                                       | Virtual Hub                                       |
+| `virtual_hub_connection`                                                                                           | Virtual Hub Connection                            |
 | `virtual_machine`                                                                                                                      | Virtual Machine                                    |
 | `virtual_machine_extension`                                                                                      | Virtual Machine Extension                          |
 | `virtual_machine_scale_set`                                                                                    | Virtual Machine Scale Set                          |
@@ -375,43 +412,6 @@ No modules.
 | `virtual_wan`                                                                                                                                  | Virtual Wan                                        |
 | `windows_virtual_machine`                                                                                            | Windows Virtual Machine                            |
 | `windows_virtual_machine_scale_set`                                                          | Windows Virtual Machine Scale Set                  |
-| `aadb2c_directory`                                                                                                 | AADB2C Directory                                   |
-| `aks_node_pool_linux`                                                                                               | AKS Node Pool Linux                                |
-| `aks_node_pool_windows`                                                                                             | AKS Node Pool Windows                              |
-| `automation_job_schedule`                                                                                           | Automation Job Schedule                            |
-| `container_app`                                                                                                     | Container App                                      |
-| `container_app_environment`                                                                                        | Container App Environment                         |
-| `container_app_job`                                                                                                 | Container App Job                                  |
-| `data_collection_endpoint`                                                                                          | Data Collection Endpoint                          |
-| `data_collection_rule`                                                                                              | Data Collection Rule                              |
-| `databricks_cluster_policy`                                                                                         | Databricks Cluster Policy                          |
-| `databricks_instance_pool`                                                                                          | Databricks Instance Pool                           |
-| `ip_group`                                                                                                          | IP Group                                           |
-| `mysql_flexible_server`                                                                                             | MySQL Flexible Server                              |
-| `mysql_flexible_server_database`                                                                                    | MySQL Flexible Server Database                    |
-| `mysql_flexible_server_firewall_rule`                                                                               | MySQL Flexible Server Firewall Rule               |
-| `network_watcher_flow_log`                                                                                          | Network Watcher Flow Log                           |
-| `postgresql_flexible_server`                                                                                        | PostgreSQL Flexible Server                        |
-| `postgresql_flexible_server_database`                                                                               | PostgreSQL Flexible Server Database               |
-| `postgresql_flexible_server_firewall_rule`                                                                          | PostgreSQL Flexible Server Firewall Rule          |
-| `private_dns_resolver`                                                                                              | Private DNS Resolver                               |
-| `private_dns_resolver_dns_forwarding_ruleset`                                                                       | Private DNS Resolver DNS Forwarding Ruleset       |
-| `private_dns_resolver_forwarding_rule`                                                                              | Private DNS Resolver Forwarding Rule              |
-| `private_dns_resolver_inbound_endpoint`                                                                             | Private DNS Resolver Inbound Endpoint             |
-| `private_dns_resolver_outbound_endpoint`                                                                            | Private DNS Resolver Outbound Endpoint            |
-| `private_dns_resolver_virtual_network_link`                                                                         | Private DNS Resolver Virtual Network Link         |
-| `recovery_services_vault_backup_policy`                                                                             | Recovery Services Vault Backup Policy             |
-| `synapse_firewall_rule`                                                                                             | Synapse Firewall Rule                             |
-| `synapse_integration_runtime_azure`                                                                                 | Synapse Integration Runtime (Azure)               |
-| `synapse_integration_runtime_self_hosted`                                                                           | Synapse Integration Runtime (Self-Hosted)         |
-| `synapse_linked_service`                                                                                            | Synapse Linked Service                            |
-| `synapse_managed_private_endpoint`                                                                                  | Synapse Managed Private Endpoint                  |
-| `synapse_private_link_hub`                                                                                          | Synapse Private Link Hub                          |
-| `synapse_spark_pool`                                                                                                | Synapse Spark Pool                                |
-| `synapse_sql_pool`                                                                                                  | Synapse SQL Pool                                  |
-| `synapse_workspace`                                                                                                 | Synapse Workspace                                 |
-| `virtual_hub`                                                                                                       | Virtual Hub                                       |
-| `virtual_hub_connection`                                                                                           | Virtual Hub Connection                            |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
