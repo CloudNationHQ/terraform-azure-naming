@@ -127,8 +127,8 @@ No modules.
 
 ## Inputs
 
-| Name                                                                                                 | Description                                                                                                     | Type           | Required |
-| ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------- | ------- | :------: |
+| Name | Description | Type | Required |
+| :-- | :-- | :-- | :-- |
 | <a name="prefix"></a> [prefix](prefix)                                                 | It is not recommended that you use prefix by azure you should be using a suffix for your resources.             | `list(string)`  |    no    |
 | <a name="suffix"></a> [suffix](suffix)                                                 | It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible | `list(string)` |    no    |
 | <a name="unique-include-numbers"></a> [unique-include-numbers](unique-include-numbers) | If you want to include numbers in the unique generation                                                         | `bool`          |    no    |
