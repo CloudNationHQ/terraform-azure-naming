@@ -346,14 +346,14 @@ output "databricks_cluster" {
   description = "Databricks Cluster"
 }
 
-output "databricks_high_concurrency_cluster" {
-  value       = local.az.databricks_high_concurrency_cluster
-  description = "Databricks High Concurrency Cluster"
+output "databricks_cluster_policy" {
+  value       = local.az.databricks_cluster_policy
+  description = "Databricks Cluster Policy"
 }
 
-output "databricks_standard_cluster" {
-  value       = local.az.databricks_standard_cluster
-  description = "Databricks Standard Cluster"
+output "databricks_instance_pool" {
+  value       = local.az.databricks_instance_pool
+  description = "Databricks Instance Pool"
 }
 
 output "databricks_workspace" {
