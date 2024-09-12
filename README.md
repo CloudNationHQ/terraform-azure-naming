@@ -2,6 +2,23 @@
 
 This module helps you to keep consistency on your resources names for Terraform The goal of this module it is that for each resource that requires a name in Terraform you would be easily able to compose this name using this module and this will keep the consistency in your repositories.
 
+## Goals
+
+The main objective is to create a more logic data structure, achieved by combining and grouping related resources together in a complex object.
+
+The structure of the module promotes reusability. It's intended to be a repeatable component, simplifying the process of building diverse workloads and platform accelerators consistently.
+
+A primary goal is to utilize keys and values in the object that correspond to the REST API's structure. This enables us to carry out iterations, increasing its practical value as time goes on.
+
+A last key goal is to separate logic from configuration in the module, thereby enhancing its scalability, ease of customization, and manageability.
+
+
+## Features
+
+- Adapt consistent naming across all resource modules
+- Retrieve a resource slug for naming purposes
+- Randomise names for unique global naming like storage accounts
+
 # Usage
 
 For every resource in `terraform_azurerm` just remove the `azurerm` part of the module and use the `name` property of this output.
@@ -106,18 +123,17 @@ No modules.
 
 | Name                                                                                                                | Type     |
 | ------------------------------------------------------------------------------------------------------------------- | -------- |
-| [random_string.first_letter](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
-| [random_string.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)         | resource |
+| [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 
 ## Inputs
 
-| Name                                                                                                 | Description                                                                                                     | Type           | Default | Required |
+| Name                                                                                                 | Description                                                                                                     | Type           | Required |
 | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------- | ------- | :------: |
-| <a name="input_prefix"></a> [prefix](#input\_prefix)                                                 | It is not recommended that you use prefix by azure you should be using a suffix for your resources.             | `list(string)` | `[]`    |    no    |
-| <a name="input_suffix"></a> [suffix](#input\_suffix)                                                 | It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible | `list(string)` | `[]`    |    no    |
-| <a name="input_unique-include-numbers"></a> [unique-include-numbers](#input\_unique-include-numbers) | If you want to include numbers in the unique generation                                                         | `bool`         | `true`  |    no    |
-| <a name="input_unique-length"></a> [unique-length](#input\_unique-length)                            | Max length of the uniqueness suffix to be added                                                                 | `number`       | `4`     |    no    |
-| <a name="input_unique-seed"></a> [unique-seed](#input\_unique-seed)                                  | Custom value for the random characters to be used                                                               | `string`       | `""`    |    no    |
+| <a name="prefix"></a> [prefix](prefix)                                                 | It is not recommended that you use prefix by azure you should be using a suffix for your resources.             | `list(string)`  |    no    |
+| <a name="suffix"></a> [suffix](suffix)                                                 | It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible | `list(string)` |    no    |
+| <a name="unique-include-numbers"></a> [unique-include-numbers](unique-include-numbers) | If you want to include numbers in the unique generation                                                         | `bool`          |    no    |
+| <a name="unique-length"></a> [unique-length](unique-length)                            | Max length of the uniqueness suffix to be added                                                                 | `number`         |    no    |
+| <a name="unique-seed"></a> [unique-seed](unique-seed)                                  | Custom value for the random characters to be used                                                               | `string`        |    no    |
 
 ## Outputs
 
@@ -248,14 +264,10 @@ No modules.
 | <a name="output_linux_virtual_machine_scale_set"></a> [linux\_virtual\_machine\_scale\_set](#output\_linux\_virtual\_machine\_scale\_set)                                                                | Linux Virtual Machine Scale Set                    |
 | <a name="output_local_network_gateway"></a> [local\_network\_gateway](#output\_local\_network\_gateway)                                                                                                  | Local Network Gateway                              |
 | <a name="output_log_analytics_workspace"></a> [log\_analytics\_workspace](#output\_log\_analytics\_workspace)                                                                                            | Log Analytics Workspace                            |
-| <a name="output_monitor_action_group"></a> [monitor\_action\_group]                                                                                                                                      |
-| (#output\_monitor\_action\_group)                                                                                                                                                                        | Alerts Action group                                |
-| <a name="output_monitor_scheduled_query_rules_alert"></a> [monitor\_scheduled\_query\_rules\_alert]                                                                                                      |
-| (#output\_monitor\_scheduled\_query\_rules\_alert)                                                                                                                                                       | Alerts scheduled query rules                       |
-| <a name="output_monitor_autoscale_setting"></a> [monitor\_autoscale\_setting]                                                                                                                            |
-| (#output\_monitor\_autoscale\_setting)                                                                                                                                                                   | Autoscale Setting                                  |
-| <a name="output_monitor_diagnostic_setting"></a> [monitor\_diagnostic\_setting]                                                                                                                          |
-| (#output\_monitor\_diagnostic\_setting)                                                                                                                                                                  | Siagnostic setting                                 |
+| <a name="output_monitor_action_group"></a> [monitor\_action\_group](#output\_monitor\_action\_group)                                                                             | Monitor Action Group     |
+| <a name="output_monitor_scheduled_query_rules_alert"></a> [monitor\_scheduled\_query\_rules\_alert](#output\_monitor\_scheduled\_query\_rules\_alert)                                                                             | Monitor Scheduled Query Rules Alert     |
+| <a name="output_monitor_autoscale_setting"></a> [monitor\_autoscale\_setting](#output\_monitor\_autoscale\_setting)                                                                             | Monitor Autoscale Settting     |
+| <a name="output_monitor_diagnostic_setting"></a> [monitor\_diagnostic\_setting](#output\_monitor\_diagnostic\_setting)                                                                             | Monitor Diagnostic Setting     |            
 | <a name="output_logic_app_workflow"></a> [logic\_app\_workflow](#output\_logic\_app\_workflow)                                                                                                           | Logic App Workflow                                 |
 | <a name="output_machine_learning_workspace"></a> [machine\_learning\_workspace](#output\_machine\_learning\_workspace)                                                                                   | Machine Learning Workspace                         |
 | <a name="output_managed_disk"></a> [managed\_disk](#output\_managed\_disk)                                                                                                                               | Managed Disk                                       |
@@ -367,16 +379,30 @@ No modules.
 | <a name="output_windows_virtual_machine_scale_set"></a> [windows\_virtual\_machine\_scale\_set](#output\_windows\_virtual\_machine\_scale\_set)                                                          | Windows Virtual Machine Scale Set                  |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-# Contributing
+## Testing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+As a prerequirement, please ensure that both go and terraform are properly installed on your system.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+The [Makefile](Makefile) includes two distinct variations of tests. The first one is designed to deploy different usage scenarios of the module. These tests are executed by specifying the TF_PATH environment variable, which determines the different usages located in the example directory.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+To execute this test, input the command ```make test TF_PATH=default```, substituting default with the specific usage you wish to test.
+
+The second variation is known as a extended test. This one performs additional checks and can be executed without specifying any parameters, using the command ```make test_extended```.
+
+Both are designed to be executed locally and are also integrated into the github workflow.
+
+Each of these tests contributes to the robustness and resilience of the module. They ensure the module performs consistently and accurately under different scenarios and configurations.
+
+## Authors
+
+Module is maintained by [these awesome contributors](https://github.com/cloudnationhq/terraform-databricks-clp/graphs/contributors).
+
+## Contributing
+
+We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
+
+For more information, please see our contribution [guidelines](./CONTRIBUTING.md).
+
+## License
+
+MIT Licensed. See [LICENSE](./LICENSE) for full details.

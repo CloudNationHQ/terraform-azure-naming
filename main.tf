@@ -1,13 +1,3 @@
-terraform {
-  required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.6"
-    }
-  }
-  required_version = "~> 1.0"
-}
-
 resource "random_string" "main" {
   length  = 60
   special = false
@@ -21,8 +11,6 @@ resource "random_string" "first_letter" {
   upper   = false
   numeric = false
 }
-
-
 
 locals {
   // adding a first letter to guarantee that you always start with a letter
