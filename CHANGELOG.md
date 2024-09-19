@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.14.0...v0.15.0) (2024-09-19)
+
+
+### Features
+
+* add support for vpn site and gateway connection resources ([#50](https://github.com/CloudNationHQ/terraform-azure-naming/issues/50)) ([8f3b84c](https://github.com/CloudNationHQ/terraform-azure-naming/commit/8f3b84c5344060503c925cb9ff53cfa9c14807cd))
+
 ## [0.14.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.13.0...v0.14.0) (2024-09-12)
 
 
