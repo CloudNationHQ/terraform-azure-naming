@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+  }
+  required_version = "~> 1.0"
+}
+
 resource "random_string" "main" {
   length  = 60
   special = false
@@ -11,6 +21,8 @@ resource "random_string" "first_letter" {
   upper   = false
   numeric = false
 }
+
+
 
 locals {
   // adding a first letter to guarantee that you always start with a letter
@@ -496,10 +508,10 @@ locals {
       regex       = "^[a-zA-Z0-9-]+$"
     }
     data_collection_endpoint = {
-      name        = substr(join("-", compact([local.prefix, "dce", local.suffix])), 0, 44)
-      name_unique = substr(join("-", compact([local.prefix, "dce", local.suffix_unique])), 0, 44)
+      name        = substr(join("-", compact([local.prefix, "dcr", local.suffix])), 0, 44)
+      name_unique = substr(join("-", compact([local.prefix, "dcr", local.suffix_unique])), 0, 44)
       dashes      = true
-      slug        = "dce"
+      slug        = "dcr"
       min_length  = 3
       max_length  = 44
       scope       = "resourceGroup"
@@ -696,34 +708,34 @@ locals {
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-_.]+$"
     }
     databricks_cluster = {
-      name        = substr(join("-", compact([local.prefix, "cl", local.suffix])), 0, 200)
-      name_unique = substr(join("-", compact([local.prefix, "cl", local.suffix_unique])), 0, 200)
+      name        = substr(join("-", compact([local.prefix, "dbc", local.suffix])), 0, 30)
+      name_unique = substr(join("-", compact([local.prefix, "dbc", local.suffix_unique])), 0, 30)
       dashes      = true
-      slug        = "cl"
-      min_length  = 1
-      max_length  = 200
+      slug        = "dbc"
+      min_length  = 3
+      max_length  = 30
       scope       = "parent"
-      regex       = "^[a-zA-Z0-9-_ ]+$"
+      regex       = "^[a-zA-Z0-9-_]+$"
     }
-    databricks_cluster_policy = {
-      name        = substr(join("-", compact([local.prefix, "clp", local.suffix])), 1, 100)
-      name_unique = substr(join("-", compact([local.prefix, "clp", local.suffix_unique])), 1, 100)
+    databricks_high_concurrency_cluster = {
+      name        = substr(join("-", compact([local.prefix, "dbhcc", local.suffix])), 0, 30)
+      name_unique = substr(join("-", compact([local.prefix, "dbhcc", local.suffix_unique])), 0, 30)
       dashes      = true
-      slug        = "clp"
-      min_length  = 1
-      max_length  = 100
+      slug        = "dbhcc"
+      min_length  = 3
+      max_length  = 30
       scope       = "parent"
-      regex       = "^[a-zA-Z0-9-_ ]+$"
+      regex       = "^[a-zA-Z0-9-_]+$"
     }
-    databricks_instance_pool = {
-      name        = substr(join("-", compact([local.prefix, "ip", local.suffix])), 1, 100)
-      name_unique = substr(join("-", compact([local.prefix, "ip", local.suffix_unique])), 1, 100)
+    databricks_standard_cluster = {
+      name        = substr(join("-", compact([local.prefix, "dbsc", local.suffix])), 0, 30)
+      name_unique = substr(join("-", compact([local.prefix, "dbsc", local.suffix_unique])), 0, 30)
       dashes      = true
-      slug        = "ip"
-      min_length  = 1
-      max_length  = 100
+      slug        = "dbsc"
+      min_length  = 3
+      max_length  = 30
       scope       = "parent"
-      regex       = "^[a-zA-Z0-9-_ ]+$"
+      regex       = "^[a-zA-Z0-9-_]+$"
     }
     databricks_workspace = {
       name        = substr(join("-", compact([local.prefix, "dbw", local.suffix])), 0, 30)
@@ -2715,6 +2727,26 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
     }
+    vpn_gateway_connection = {
+      name        = substr(join("-", compact([local.prefix, "vcn", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "vcn", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "vcn"
+      min_length  = 1
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
+    }
+    vpn_site = {
+      name        = substr(join("-", compact([local.prefix, "vst", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "vst", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "vst"
+      min_length  = 1
+      max_length  = 80
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
+    }
     windows_virtual_machine = {
       name        = substr(join("-", compact([local.prefix, "vm", local.suffix])), 0, 15)
       name_unique = substr(join("-", compact([local.prefix, "vm", local.suffix_unique])), 0, 15)
@@ -3009,13 +3041,13 @@ locals {
       valid_name        = length(regexall(local.az.databricks_cluster.regex, local.az.databricks_cluster.name)) > 0 && length(local.az.databricks_cluster.name) > local.az.databricks_cluster.min_length
       valid_name_unique = length(regexall(local.az.databricks_cluster.regex, local.az.databricks_cluster.name_unique)) > 0
     }
-    databricks_cluster_policy = {
-      valid_name        = length(regexall(local.az.databricks_cluster_policy.regex, local.az.databricks_cluster_policy.name)) > 0 && length(local.az.databricks_cluster_policy.name) > local.az.databricks_cluster_policy.min_length
-      valid_name_unique = length(regexall(local.az.databricks_cluster_policy.regex, local.az.databricks_cluster_policy.name_unique)) > 0
+    databricks_high_concurrency_cluster = {
+      valid_name        = length(regexall(local.az.databricks_high_concurrency_cluster.regex, local.az.databricks_high_concurrency_cluster.name)) > 0 && length(local.az.databricks_high_concurrency_cluster.name) > local.az.databricks_high_concurrency_cluster.min_length
+      valid_name_unique = length(regexall(local.az.databricks_high_concurrency_cluster.regex, local.az.databricks_high_concurrency_cluster.name_unique)) > 0
     }
-    databricks_instance_pool = {
-      valid_name        = length(regexall(local.az.databricks_instance_pool.regex, local.az.databricks_instance_pool.name)) > 0 && length(local.az.databricks_instance_pool.name) > local.az.databricks_instance_pool.min_length
-      valid_name_unique = length(regexall(local.az.databricks_instance_pool.regex, local.az.databricks_instance_pool.name_unique)) > 0
+    databricks_standard_cluster = {
+      valid_name        = length(regexall(local.az.databricks_standard_cluster.regex, local.az.databricks_standard_cluster.name)) > 0 && length(local.az.databricks_standard_cluster.name) > local.az.databricks_standard_cluster.min_length
+      valid_name_unique = length(regexall(local.az.databricks_standard_cluster.regex, local.az.databricks_standard_cluster.name_unique)) > 0
     }
     databricks_workspace = {
       valid_name        = length(regexall(local.az.databricks_workspace.regex, local.az.databricks_workspace.name)) > 0 && length(local.az.databricks_workspace.name) > local.az.databricks_workspace.min_length
@@ -3812,6 +3844,14 @@ locals {
     virtual_wan = {
       valid_name        = length(regexall(local.az.virtual_wan.regex, local.az.virtual_wan.name)) > 0 && length(local.az.virtual_wan.name) > local.az.virtual_wan.min_length
       valid_name_unique = length(regexall(local.az.virtual_wan.regex, local.az.virtual_wan.name_unique)) > 0
+    }
+    vpn_gateway_connection = {
+      valid_name        = length(regexall(local.az.vpn_gateway_connection.regex, local.az.vpn_gateway_connection.name)) > 0 && length(local.az.vpn_gateway_connection.name) > local.az.vpn_gateway_connection.min_length
+      valid_name_unique = length(regexall(local.az.vpn_gateway_connection.regex, local.az.vpn_gateway_connection.name_unique)) > 0
+    }
+    vpn_site = {
+      valid_name        = length(regexall(local.az.vpn_site.regex, local.az.vpn_site.name)) > 0 && length(local.az.vpn_site.name) > local.az.vpn_site.min_length
+      valid_name_unique = length(regexall(local.az.vpn_site.regex, local.az.vpn_site.name_unique)) > 0
     }
     windows_virtual_machine = {
       valid_name        = length(regexall(local.az.windows_virtual_machine.regex, local.az.windows_virtual_machine.name)) > 0 && length(local.az.windows_virtual_machine.name) > local.az.windows_virtual_machine.min_length
