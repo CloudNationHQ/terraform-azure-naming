@@ -2707,7 +2707,7 @@
   slug: synspwg
   dashes: true
 
-- name: function_app_slot" h"
+- name: function_app_slot
   length:
     min: 2
     max: 59

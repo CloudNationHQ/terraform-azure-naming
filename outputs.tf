@@ -621,6 +621,11 @@ output "function_app" {
   description = "Function App"
 }
 
+output "function_app_slot" {
+  value       = local.az.function_app_slot
+  description = "Function App Slot"
+}
+
 output "hdinsight_hadoop_cluster" {
   value       = local.az.hdinsight_hadoop_cluster
   description = "Hdinsight Hadoop Cluster"

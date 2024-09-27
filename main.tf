@@ -1265,6 +1265,16 @@ locals {
       scope       = "global"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,58}[a-zA-Z0-9]$"
     }
+    function_app_slot = {
+      name        = substr(join("-", compact([local.prefix, "fas", local.suffix])), 0, 59)
+      name_unique = substr(join("-", compact([local.prefix, "fas", local.suffix_unique])), 0, 59)
+      dashes      = true
+      slug        = "fas"
+      min_length  = 2
+      max_length  = 59
+      scope       = "global"
+      regex       = "^[0-9A-Za-z][0-9A-Za-z-]{0,57}[0-9a-zA-Z]$"
+    }
     hdinsight_hadoop_cluster = {
       name        = substr(join("-", compact([local.prefix, "hadoop", local.suffix])), 0, 59)
       name_unique = substr(join("-", compact([local.prefix, "hadoop", local.suffix_unique])), 0, 59)
@@ -3918,6 +3928,10 @@ locals {
     function_app = {
       valid_name        = length(regexall(local.az.function_app.regex, local.az.function_app.name)) > 0 && length(local.az.function_app.name) > local.az.function_app.min_length
       valid_name_unique = length(regexall(local.az.function_app.regex, local.az.function_app.name_unique)) > 0
+    }
+    function_app_slot = {
+      valid_name        = length(regexall(local.az.function_app_slot.regex, local.az.function_app_slot.name)) > 0 && length(local.az.function_app_slot.name) > local.az.function_app_slot.min_length
+      valid_name_unique = length(regexall(local.az.function_app_slot.regex, local.az.function_app_slot.name_unique)) > 0
     }
     hdinsight_hadoop_cluster = {
       valid_name        = length(regexall(local.az.hdinsight_hadoop_cluster.regex, local.az.hdinsight_hadoop_cluster.name)) > 0 && length(local.az.hdinsight_hadoop_cluster.name) > local.az.hdinsight_hadoop_cluster.min_length
