@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.15.0...v0.16.0) (2024-09-27)
+
+
+### Features
+
+* complete refactor naming module ([#52](https://github.com/CloudNationHQ/terraform-azure-naming/issues/52)) ([53bf474](https://github.com/CloudNationHQ/terraform-azure-naming/commit/53bf47432016173ac46bbb75a10e03b65c47bb0d))
+
 ## [0.15.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.14.0...v0.15.0) (2024-09-19)
 
 
