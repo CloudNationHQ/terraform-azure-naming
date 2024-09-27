@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.16.0...v0.17.0) (2024-09-27)
+
+
+### Features
+
+* automate README outputs update with terraform-docs in makefile ([#54](https://github.com/CloudNationHQ/terraform-azure-naming/issues/54)) ([3ffd4b6](https://github.com/CloudNationHQ/terraform-azure-naming/commit/3ffd4b689d9d37cb60dce5bb897fcee38fbf8948))
+
 ## [0.16.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.15.0...v0.16.0) (2024-09-27)
 
 
