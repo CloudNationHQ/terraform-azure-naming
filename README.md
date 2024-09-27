@@ -29,6 +29,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 - optionally randomizes names for globally unique identifiers.
 - validates names using regular expressions for compliance.
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -40,13 +41,18 @@ End-to-end testing is not conducted on these modules, as they are individual com
 
 | Name | Version |
 |------|---------|
-| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.6 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.6.3 |
+
+## Modules
+
+No modules.
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
+| [random_string.first_letter](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
+| [random_string.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 
 ## Inputs
 
@@ -404,6 +410,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 | <a name="output_web_pubsub_hub"></a> [web\_pubsub\_hub](#output\_web\_pubsub\_hub) | Web Pubsub Hub |
 | <a name="output_windows_virtual_machine"></a> [windows\_virtual\_machine](#output\_windows\_virtual\_machine) | Windows Virtual Machine |
 | <a name="output_windows_virtual_machine_scale_set"></a> [windows\_virtual\_machine\_scale\_set](#output\_windows\_virtual\_machine\_scale\_set) | Windows Virtual Machine Scale Set |
+<!-- END_TF_DOCS -->
 
 ## Notes
 

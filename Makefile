@@ -1,6 +1,6 @@
-.PHONY: all install build generate init format validate
+.PHONY: all install build generate init format validate docs
 
-all: build init format validate
+all: build init format validate docs
 	@echo "Cleaning up initialization files..."
 	@rm -rf .terraform
 	@rm -f terraform.tfstate
@@ -25,3 +25,7 @@ format:
 validate:
 	@terraform fmt --check
 	@terraform validate -no-color
+
+docs:
+	@terraform-docs markdown table --output-file README.md --output-mode inject .
+
