@@ -424,7 +424,7 @@ For more information, please see our contribution [guidelines](./CONTRIBUTING.md
 
 ## Authors
 
-Module is maintained by [these awesome contributors](https://github.com/cloudnation/terraform-azure-naming/graphs/contributors).
+Module is maintained by [these awesome contributors](https://github.com/cloudnationhq/terraform-azure-naming/graphs/contributors).
 
 ## License
 
