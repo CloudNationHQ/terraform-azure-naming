@@ -7,7 +7,7 @@
       min_length  = {{ .Length.Min }}
       max_length  = {{ .Length.Max }}
       scope       = "{{ .Scope }}"
-      regex       = "{{ cleanRegex .Regex }}"
+      regex       = "{{ .Regex | escapeTerraformString }}"
     }
 {{- end -}}
 
@@ -18,8 +18,6 @@
     }
 {{- end -}}
 
-
-
 {{- define "main" -}}
 terraform {
   required_providers {
@@ -28,7 +26,7 @@ terraform {
       version = "~> 3.6"
     }
   }
-  required_version = "~> 1.0" 
+  required_version = "~> 1.0"
 }
 
 resource "random_string" "main" {
@@ -45,8 +43,6 @@ resource "random_string" "first_letter" {
   numeric  = false
 }
 
-
-
 locals {
   // adding a first letter to guarantee that you always start with a letter
   random_safe_generation = join("", [random_string.first_letter.result, random_string.main.result])
@@ -57,7 +53,7 @@ locals {
   suffix_unique          = join("-", concat(var.suffix, [local.random]))
   suffix_safe            = lower(join("", var.suffix))
   suffix_unique_safe     = lower(join("", concat(var.suffix, [local.random])))
-  // Names based in the recomendations of
+  // Names based on the recommendations of
   // https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
   az = {
     {{- range . }}

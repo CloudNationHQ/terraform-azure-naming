@@ -1,93 +1,141 @@
 package main
 
 import (
-	"encoding/json"
-	"io/ioutil"
+	"fmt"
 	"log"
 	"os"
-	"regexp"
 	"sort"
 	"strings"
 	"text/template"
 
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
+	"gopkg.in/yaml.v2"
 )
 
-// Resource definition for the package
 type Resource struct {
-	Name   string  `json:"name"`
-	Length *Length `json:"length,omitempty"`
-	Regex  *string `json:"regex,omitempty"`
-	Scope  *string `json:"scope,omitempty"`
-	Slug   *string `json:"slug,omitempty"`
-	Dashes bool    `json:"dashes"`
+	Name   string  `yaml:"name"`
+	Length *Length `yaml:"length,omitempty"`
+	Regex  *string `yaml:"regex,omitempty"`
+	Scope  *string `yaml:"scope,omitempty"`
+	Slug   *string `yaml:"slug,omitempty"`
+	Dashes bool    `yaml:"dashes"`
 }
 
-// Length allowed for that resorce
 type Length struct {
-	Min int `json:"min"`
-	Max int `json:"max"`
+	Min int `yaml:"min"`
+	Max int `yaml:"max"`
 }
 
 func main() {
-	files, err := ioutil.ReadDir("templates")
-	if err != nil {
-		log.Fatal(err)
+	if err := processResources(); err != nil {
+		log.Fatalf("Error processing resources: %v", err)
 	}
-	var fileNames = make([]string, len(files))
-	for i, file := range files {
-		fileNames[i] = "templates/" + file.Name()
-	}
-	caser := cases.Title(language.AmericanEnglish)
-	parsedTemplate, err := template.New("templates").Funcs(template.FuncMap{
-		// Terraform not yet support lookahead in their regex function
-		"cleanRegex": func(dirtyString string) string {
-			var re = regexp.MustCompile(`(?m)\(\?=.{\d+,\d+}\$\)|\(\?!\.\*--\)`)
-			return re.ReplaceAllString(dirtyString, "")
-		},
-		"replace": strings.ReplaceAll,
-		"title":   caser.String,
-	}).ParseFiles(fileNames...)
+}
+
+func processResources() error {
+	files, err := getTemplateFiles("templates")
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
-	sourceDefinitions, err := ioutil.ReadFile("resourceDefinition.json")
+	parsedTemplate, err := createTemplate(files)
 	if err != nil {
-		log.Fatal(err)
-	}
-	var data []Resource
-	err = json.Unmarshal(sourceDefinitions, &data)
-	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
-	// Undocumented resource definitions
-	sourceDefinitionsUndocumented, err := ioutil.ReadFile("resourceDefinition_out_of_docs.json")
+	data, err := loadResourceData("resourceDefinition.yaml", "resourceDefinition_out_of_docs.yaml")
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
-	var dataUndocumented []Resource
-	err = json.Unmarshal(sourceDefinitionsUndocumented, &dataUndocumented)
-	if err != nil {
-		log.Fatal(err)
-	}
-	data = append(data, dataUndocumented...)
 
-	// Sort the documented and undocumented resources alphabetically
 	sort.Slice(data, func(i, j int) bool {
 		return data[i].Name < data[j].Name
 	})
 
-	mainFile, err := os.OpenFile("main.tf", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		log.Fatal(err)
+	if err := generateFile("main.tf", parsedTemplate, "main", data); err != nil {
+		return err
 	}
-	parsedTemplate.ExecuteTemplate(mainFile, "main", data)
-	outputsFile, err := os.OpenFile("outputs.tf", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		log.Fatal(err)
+
+	if err := generateFile("outputs.tf", parsedTemplate, "outputs", data); err != nil {
+		return err
 	}
-	parsedTemplate.ExecuteTemplate(outputsFile, "outputs", data)
+
+	uniqueCount := countUniqueResources("resourceDefinition.yaml")
+	fmt.Printf("Number of unique resources in resourceDefinition.yaml: %d\n", uniqueCount)
+
+	return nil
+}
+
+func getTemplateFiles(dir string) ([]string, error) {
+	files, err := os.ReadDir(dir)
+	if err != nil {
+		return nil, err
+	}
+
+	var fileNames []string
+	for _, file := range files {
+		fileNames = append(fileNames, dir+"/"+file.Name())
+	}
+	return fileNames, nil
+}
+
+func createTemplate(files []string) (*template.Template, error) {
+	caser := cases.Title(language.AmericanEnglish)
+	return template.New("templates").Funcs(template.FuncMap{
+		"escapeTerraformString": func(s string) string {
+			s = strings.ReplaceAll(s, `\`, `\\`)
+			return strings.ReplaceAll(s, `"`, `\"`)
+		},
+		"replace": strings.ReplaceAll,
+		"title":   caser.String,
+	}).ParseFiles(files...)
+}
+
+func loadResourceData(mainFile, undocumentedFile string) ([]Resource, error) {
+	var data []Resource
+
+	if err := loadYAMLFile(mainFile, &data); err != nil {
+		return nil, err
+	}
+
+	var undocumentedData []Resource
+	if err := loadYAMLFile(undocumentedFile, &undocumentedData); err != nil {
+		return nil, err
+	}
+
+	return append(data, undocumentedData...), nil
+}
+
+func loadYAMLFile(filename string, data interface{}) error {
+	content, err := os.ReadFile(filename)
+	if err != nil {
+		return err
+	}
+	return yaml.Unmarshal(content, data)
+}
+
+func generateFile(filename string, tmpl *template.Template, templateName string, data interface{}) error {
+	file, err := os.OpenFile(filename, os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	return tmpl.ExecuteTemplate(file, templateName, data)
+}
+
+func countUniqueResources(filename string) int {
+	var resources []Resource
+	if err := loadYAMLFile(filename, &resources); err != nil {
+		log.Printf("Error loading resource file: %v", err)
+		return 0
+	}
+
+	uniqueNames := make(map[string]bool)
+	for _, resource := range resources {
+		uniqueNames[resource.Name] = true
+	}
+
+	return len(uniqueNames)
 }

@@ -31,6 +31,41 @@ output "api_management" {
   description = "Api Management"
 }
 
+output "api_management_api" {
+  value       = local.az.api_management_api
+  description = "Api Management Api"
+}
+
+output "api_management_api_operation_tag" {
+  value       = local.az.api_management_api_operation_tag
+  description = "Api Management Api Operation Tag"
+}
+
+output "api_management_backend" {
+  value       = local.az.api_management_backend
+  description = "Api Management Backend"
+}
+
+output "api_management_certificate" {
+  value       = local.az.api_management_certificate
+  description = "Api Management Certificate"
+}
+
+output "api_management_gateway" {
+  value       = local.az.api_management_gateway
+  description = "Api Management Gateway"
+}
+
+output "api_management_group" {
+  value       = local.az.api_management_group
+  description = "Api Management Group"
+}
+
+output "api_management_logger" {
+  value       = local.az.api_management_logger
+  description = "Api Management Logger"
+}
+
 output "app_configuration" {
   value       = local.az.app_configuration
   description = "App Configuration"
@@ -59,6 +94,11 @@ output "application_gateway" {
 output "application_insights" {
   value       = local.az.application_insights
   description = "Application Insights"
+}
+
+output "application_insights_web_test" {
+  value       = local.az.application_insights_web_test
+  description = "Application Insights Web Test"
 }
 
 output "application_security_group" {
@@ -179,6 +219,31 @@ output "cdn_profile" {
 output "cognitive_account" {
   value       = local.az.cognitive_account
   description = "Cognitive Account"
+}
+
+output "cognitive_deployment" {
+  value       = local.az.cognitive_deployment
+  description = "Cognitive Deployment"
+}
+
+output "communication_service" {
+  value       = local.az.communication_service
+  description = "Communication Service"
+}
+
+output "consumption_budget_resource_group" {
+  value       = local.az.consumption_budget_resource_group
+  description = "Consumption Budget Resource Group"
+}
+
+output "consumption_budget_subscription" {
+  value       = local.az.consumption_budget_subscription
+  description = "Consumption Budget Subscription"
+}
+
+output "containerGroups" {
+  value       = local.az.containerGroups
+  description = "Containergroups"
 }
 
 output "container_app" {
@@ -374,6 +439,26 @@ output "dev_test_linux_virtual_machine" {
 output "dev_test_windows_virtual_machine" {
   value       = local.az.dev_test_windows_virtual_machine
   description = "Dev Test Windows Virtual Machine"
+}
+
+output "digital_twins_endpoint_eventgrid" {
+  value       = local.az.digital_twins_endpoint_eventgrid
+  description = "Digital Twins Endpoint Eventgrid"
+}
+
+output "digital_twins_endpoint_eventhub" {
+  value       = local.az.digital_twins_endpoint_eventhub
+  description = "Digital Twins Endpoint Eventhub"
+}
+
+output "digital_twins_endpoint_servicebus" {
+  value       = local.az.digital_twins_endpoint_servicebus
+  description = "Digital Twins Endpoint Servicebus"
+}
+
+output "digital_twins_instance" {
+  value       = local.az.digital_twins_instance
+  description = "Digital Twins Instance"
 }
 
 output "disk_encryption_set" {
@@ -576,9 +661,49 @@ output "hdinsight_storm_cluster" {
   description = "Hdinsight Storm Cluster"
 }
 
+output "healthcare_dicom_service" {
+  value       = local.az.healthcare_dicom_service
+  description = "Healthcare Dicom Service"
+}
+
+output "healthcare_fhir_service" {
+  value       = local.az.healthcare_fhir_service
+  description = "Healthcare Fhir Service"
+}
+
+output "healthcare_medtech_service" {
+  value       = local.az.healthcare_medtech_service
+  description = "Healthcare Medtech Service"
+}
+
+output "healthcare_service" {
+  value       = local.az.healthcare_service
+  description = "Healthcare Service"
+}
+
+output "healthcare_workspace" {
+  value       = local.az.healthcare_workspace
+  description = "Healthcare Workspace"
+}
+
 output "image" {
   value       = local.az.image
   description = "Image"
+}
+
+output "integration_service_environment" {
+  value       = local.az.integration_service_environment
+  description = "Integration Service Environment"
+}
+
+output "iot_security_device_group" {
+  value       = local.az.iot_security_device_group
+  description = "Iot Security Device Group"
+}
+
+output "iot_security_solution" {
+  value       = local.az.iot_security_solution
+  description = "Iot Security Solution"
 }
 
 output "iotcentral_application" {
@@ -636,6 +761,11 @@ output "kubernetes_cluster" {
   description = "Kubernetes Cluster"
 }
 
+output "kubernetes_fleet_manager" {
+  value       = local.az.kubernetes_fleet_manager
+  description = "Kubernetes Fleet Manager"
+}
+
 output "kusto_cluster" {
   value       = local.az.kusto_cluster
   description = "Kusto Cluster"
@@ -656,9 +786,39 @@ output "lb" {
   description = "Lb"
 }
 
+output "lb_backend_address_pool" {
+  value       = local.az.lb_backend_address_pool
+  description = "Lb Backend Address Pool"
+}
+
+output "lb_backend_pool" {
+  value       = local.az.lb_backend_pool
+  description = "Lb Backend Pool"
+}
+
+output "lb_nat_pool" {
+  value       = local.az.lb_nat_pool
+  description = "Lb Nat Pool"
+}
+
 output "lb_nat_rule" {
   value       = local.az.lb_nat_rule
   description = "Lb Nat Rule"
+}
+
+output "lb_outbound_rule" {
+  value       = local.az.lb_outbound_rule
+  description = "Lb Outbound Rule"
+}
+
+output "lb_probe" {
+  value       = local.az.lb_probe
+  description = "Lb Probe"
+}
+
+output "lb_rule" {
+  value       = local.az.lb_rule
+  description = "Lb Rule"
 }
 
 output "linux_virtual_machine" {
@@ -671,9 +831,24 @@ output "linux_virtual_machine_scale_set" {
   description = "Linux Virtual Machine Scale Set"
 }
 
+output "load_test" {
+  value       = local.az.load_test
+  description = "Load Test"
+}
+
 output "local_network_gateway" {
   value       = local.az.local_network_gateway
   description = "Local Network Gateway"
+}
+
+output "log_analytics_cluster" {
+  value       = local.az.log_analytics_cluster
+  description = "Log Analytics Cluster"
+}
+
+output "log_analytics_storage_insights" {
+  value       = local.az.log_analytics_storage_insights
+  description = "Log Analytics Storage Insights"
 }
 
 output "log_analytics_workspace" {
@@ -681,14 +856,54 @@ output "log_analytics_workspace" {
   description = "Log Analytics Workspace"
 }
 
+output "logic_app_action_custom" {
+  value       = local.az.logic_app_action_custom
+  description = "Logic App Action Custom"
+}
+
+output "logic_app_action_http" {
+  value       = local.az.logic_app_action_http
+  description = "Logic App Action Http"
+}
+
+output "logic_app_integration_account" {
+  value       = local.az.logic_app_integration_account
+  description = "Logic App Integration Account"
+}
+
+output "logic_app_trigger_custom" {
+  value       = local.az.logic_app_trigger_custom
+  description = "Logic App Trigger Custom"
+}
+
+output "logic_app_trigger_http_request" {
+  value       = local.az.logic_app_trigger_http_request
+  description = "Logic App Trigger Http Request"
+}
+
+output "logic_app_trigger_recurrence" {
+  value       = local.az.logic_app_trigger_recurrence
+  description = "Logic App Trigger Recurrence"
+}
+
 output "logic_app_workflow" {
   value       = local.az.logic_app_workflow
   description = "Logic App Workflow"
 }
 
+output "machine_learning_compute_instance" {
+  value       = local.az.machine_learning_compute_instance
+  description = "Machine Learning Compute Instance"
+}
+
 output "machine_learning_workspace" {
   value       = local.az.machine_learning_workspace
   description = "Machine Learning Workspace"
+}
+
+output "maintenance_configuration" {
+  value       = local.az.maintenance_configuration
+  description = "Maintenance Configuration"
 }
 
 output "managed_disk" {
@@ -731,9 +946,19 @@ output "monitor_autoscale_setting" {
   description = "Monitor Autoscale Setting"
 }
 
+output "monitor_data_collection_endpoint" {
+  value       = local.az.monitor_data_collection_endpoint
+  description = "Monitor Data Collection Endpoint"
+}
+
 output "monitor_diagnostic_setting" {
   value       = local.az.monitor_diagnostic_setting
   description = "Monitor Diagnostic Setting"
+}
+
+output "monitor_private_link_scope" {
+  value       = local.az.monitor_private_link_scope
+  description = "Monitor Private Link Scope"
 }
 
 output "monitor_scheduled_query_rules_alert" {
@@ -791,6 +1016,26 @@ output "mysql_virtual_network_rule" {
   description = "Mysql Virtual Network Rule"
 }
 
+output "netapp_account" {
+  value       = local.az.netapp_account
+  description = "Netapp Account"
+}
+
+output "netapp_pool" {
+  value       = local.az.netapp_pool
+  description = "Netapp Pool"
+}
+
+output "netapp_snapshot" {
+  value       = local.az.netapp_snapshot
+  description = "Netapp Snapshot"
+}
+
+output "netapp_volume" {
+  value       = local.az.netapp_volume
+  description = "Netapp Volume"
+}
+
 output "network_ddos_protection_plan" {
   value       = local.az.network_ddos_protection_plan
   description = "Network Ddos Protection Plan"
@@ -826,6 +1071,11 @@ output "network_watcher_flow_log" {
   description = "Network Watcher Flow Log"
 }
 
+output "nginx_deployment" {
+  value       = local.az.nginx_deployment
+  description = "Nginx Deployment"
+}
+
 output "notification_hub" {
   value       = local.az.notification_hub
   description = "Notification Hub"
@@ -844,6 +1094,11 @@ output "notification_hub_namespace" {
 output "point_to_site_vpn_gateway" {
   value       = local.az.point_to_site_vpn_gateway
   description = "Point To Site Vpn Gateway"
+}
+
+output "portal_dashboard" {
+  value       = local.az.portal_dashboard
+  description = "Portal Dashboard"
 }
 
 output "postgresql_database" {
@@ -991,6 +1246,11 @@ output "public_ip_prefix" {
   description = "Public Ip Prefix"
 }
 
+output "purview_account" {
+  value       = local.az.purview_account
+  description = "Purview Account"
+}
+
 output "recovery_services_vault" {
   value       = local.az.recovery_services_vault
   description = "Recovery Services Vault"
@@ -999,6 +1259,16 @@ output "recovery_services_vault" {
 output "recovery_services_vault_backup_policy" {
   value       = local.az.recovery_services_vault_backup_policy
   description = "Recovery Services Vault Backup Policy"
+}
+
+output "redhat_openshift_cluster" {
+  value       = local.az.redhat_openshift_cluster
+  description = "Redhat Openshift Cluster"
+}
+
+output "redhat_openshift_domain" {
+  value       = local.az.redhat_openshift_domain
+  description = "Redhat Openshift Domain"
 }
 
 output "redis_cache" {
@@ -1024,6 +1294,11 @@ output "relay_namespace" {
 output "resource_group" {
   value       = local.az.resource_group
   description = "Resource Group"
+}
+
+output "resource_group_policy_assignment" {
+  value       = local.az.resource_group_policy_assignment
+  description = "Resource Group Policy Assignment"
 }
 
 output "role_assignment" {
@@ -1171,6 +1446,16 @@ output "storage_share_directory" {
   description = "Storage Share Directory"
 }
 
+output "storage_sync" {
+  value       = local.az.storage_sync
+  description = "Storage Sync"
+}
+
+output "storage_sync_group" {
+  value       = local.az.storage_sync_group
+  description = "Storage Sync Group"
+}
+
 output "storage_table" {
   value       = local.az.storage_table
   description = "Storage Table"
@@ -1236,6 +1521,11 @@ output "subnet" {
   description = "Subnet"
 }
 
+output "subscription_policy_assignment" {
+  value       = local.az.subscription_policy_assignment
+  description = "Subscription Policy Assignment"
+}
+
 output "synapse_firewall_rule" {
   value       = local.az.synapse_firewall_rule
   description = "Synapse Firewall Rule"
@@ -1276,6 +1566,21 @@ output "synapse_sql_pool" {
   description = "Synapse Sql Pool"
 }
 
+output "synapse_sql_pool_vulnerability_assessment_baseline" {
+  value       = local.az.synapse_sql_pool_vulnerability_assessment_baseline
+  description = "Synapse Sql Pool Vulnerability Assessment Baseline"
+}
+
+output "synapse_sql_pool_workload_classifier" {
+  value       = local.az.synapse_sql_pool_workload_classifier
+  description = "Synapse Sql Pool Workload Classifier"
+}
+
+output "synapse_sql_pool_workload_group" {
+  value       = local.az.synapse_sql_pool_workload_group
+  description = "Synapse Sql Pool Workload Group"
+}
+
 output "synapse_workspace" {
   value       = local.az.synapse_workspace
   description = "Synapse Workspace"
@@ -1294,6 +1599,21 @@ output "traffic_manager_profile" {
 output "user_assigned_identity" {
   value       = local.az.user_assigned_identity
   description = "User Assigned Identity"
+}
+
+output "virtual_desktop_application_group" {
+  value       = local.az.virtual_desktop_application_group
+  description = "Virtual Desktop Application Group"
+}
+
+output "virtual_desktop_host_pool" {
+  value       = local.az.virtual_desktop_host_pool
+  description = "Virtual Desktop Host Pool"
+}
+
+output "virtual_desktop_workspace" {
+  value       = local.az.virtual_desktop_workspace
+  description = "Virtual Desktop Workspace"
 }
 
 output "virtual_hub" {
@@ -1359,6 +1679,16 @@ output "vpn_gateway_connection" {
 output "vpn_site" {
   value       = local.az.vpn_site
   description = "Vpn Site"
+}
+
+output "web_pubsub" {
+  value       = local.az.web_pubsub
+  description = "Web Pubsub"
+}
+
+output "web_pubsub_hub" {
+  value       = local.az.web_pubsub_hub
+  description = "Web Pubsub Hub"
 }
 
 output "windows_virtual_machine" {
