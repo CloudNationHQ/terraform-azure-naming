@@ -3203,7 +3203,7 @@ locals {
       min_length  = 1
       max_length  = 45
       scope       = "resourceGroup"
-      regex       = "^[0-9a-z]{1,45}$"
+      regex       = "[a-zA-Z0-9-]{1,50}$"
     }
     template_deployment = {
       name        = substr(join("-", compact([local.prefix, "deploy", local.suffix])), 0, 64)
