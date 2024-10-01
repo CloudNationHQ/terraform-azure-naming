@@ -1910,7 +1910,7 @@
   length:
     min: 1
     max: 45
-  regex: '^[0-9a-z]{1,45}$'
+  regex: '[a-zA-Z0-9-]{1,50}$'
   scope: resourceGroup
   slug: syws
   dashes: false
