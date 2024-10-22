@@ -435,16 +435,6 @@ locals {
       scope       = "global"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{1,62}[a-zA-Z0-9]$"
     }
-    cdn_endpoint = {
-      name        = substr(join("-", compact([local.prefix, "cdn", local.suffix])), 0, 50)
-      name_unique = substr(join("-", compact([local.prefix, "cdn", local.suffix_unique])), 0, 50)
-      dashes      = true
-      slug        = "cdn"
-      min_length  = 1
-      max_length  = 50
-      scope       = "global"
-      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,48}[a-zA-Z0-9]$"
-    }
     cdn_frontdoor_custom_domain = {
       name        = substr(join("-", compact([local.prefix, "cfdcd", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "cfdcd", local.suffix_unique])), 0, 260)
@@ -554,16 +544,6 @@ locals {
       max_length  = 260
       scope       = "parent"
       regex       = "^[0-9A-Za-z_-]{1,260}$"
-    }
-    cdn_profile = {
-      name        = substr(join("-", compact([local.prefix, "cdnprof", local.suffix])), 0, 260)
-      name_unique = substr(join("-", compact([local.prefix, "cdnprof", local.suffix_unique])), 0, 260)
-      dashes      = true
-      slug        = "cdnprof"
-      min_length  = 1
-      max_length  = 260
-      scope       = "resourceGroup"
-      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$"
     }
     cognitive_account = {
       name        = substr(join("-", compact([local.prefix, "cog", local.suffix])), 0, 64)
@@ -3707,10 +3687,6 @@ locals {
       valid_name        = length(regexall(local.az.bot_web_app.regex, local.az.bot_web_app.name)) > 0 && length(local.az.bot_web_app.name) > local.az.bot_web_app.min_length
       valid_name_unique = length(regexall(local.az.bot_web_app.regex, local.az.bot_web_app.name_unique)) > 0
     }
-    cdn_endpoint = {
-      valid_name        = length(regexall(local.az.cdn_endpoint.regex, local.az.cdn_endpoint.name)) > 0 && length(local.az.cdn_endpoint.name) > local.az.cdn_endpoint.min_length
-      valid_name_unique = length(regexall(local.az.cdn_endpoint.regex, local.az.cdn_endpoint.name_unique)) > 0
-    }
     cdn_frontdoor_custom_domain = {
       valid_name        = length(regexall(local.az.cdn_frontdoor_custom_domain.regex, local.az.cdn_frontdoor_custom_domain.name)) > 0 && length(local.az.cdn_frontdoor_custom_domain.name) > local.az.cdn_frontdoor_custom_domain.min_length
       valid_name_unique = length(regexall(local.az.cdn_frontdoor_custom_domain.regex, local.az.cdn_frontdoor_custom_domain.name_unique)) > 0
@@ -3754,10 +3730,6 @@ locals {
     cdn_frontdoor_security_policy = {
       valid_name        = length(regexall(local.az.cdn_frontdoor_security_policy.regex, local.az.cdn_frontdoor_security_policy.name)) > 0 && length(local.az.cdn_frontdoor_security_policy.name) > local.az.cdn_frontdoor_security_policy.min_length
       valid_name_unique = length(regexall(local.az.cdn_frontdoor_security_policy.regex, local.az.cdn_frontdoor_security_policy.name_unique)) > 0
-    }
-    cdn_profile = {
-      valid_name        = length(regexall(local.az.cdn_profile.regex, local.az.cdn_profile.name)) > 0 && length(local.az.cdn_profile.name) > local.az.cdn_profile.min_length
-      valid_name_unique = length(regexall(local.az.cdn_profile.regex, local.az.cdn_profile.name_unique)) > 0
     }
     cognitive_account = {
       valid_name        = length(regexall(local.az.cognitive_account.regex, local.az.cognitive_account.name)) > 0 && length(local.az.cognitive_account.name) > local.az.cognitive_account.min_length

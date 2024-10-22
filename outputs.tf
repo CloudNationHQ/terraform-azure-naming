@@ -206,11 +206,6 @@ output "bot_web_app" {
   description = "Bot Web App"
 }
 
-output "cdn_endpoint" {
-  value       = local.az.cdn_endpoint
-  description = "Cdn Endpoint"
-}
-
 output "cdn_frontdoor_custom_domain" {
   value       = local.az.cdn_frontdoor_custom_domain
   description = "Cdn Frontdoor Custom Domain"
@@ -264,11 +259,6 @@ output "cdn_frontdoor_secret" {
 output "cdn_frontdoor_security_policy" {
   value       = local.az.cdn_frontdoor_security_policy
   description = "Cdn Frontdoor Security Policy"
-}
-
-output "cdn_profile" {
-  value       = local.az.cdn_profile
-  description = "Cdn Profile"
 }
 
 output "cognitive_account" {
