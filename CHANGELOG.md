@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.18.0...v0.18.1) (2024-10-22)
+
+
+### Bug Fixes
+
+* remove legacy cdn profile resources ([#60](https://github.com/CloudNationHQ/terraform-azure-naming/issues/60)) ([01d82c3](https://github.com/CloudNationHQ/terraform-azure-naming/commit/01d82c3ef231c5d6d5785d22fc674b90be4beb5c))
+
 ## [0.18.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.17.1...v0.18.0) (2024-10-22)
 
 
