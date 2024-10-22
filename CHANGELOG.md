@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.17.1...v0.18.0) (2024-10-22)
+
+
+### Features
+
+* add several cdn frontdoor resources ([#58](https://github.com/CloudNationHQ/terraform-azure-naming/issues/58)) ([1e0e185](https://github.com/CloudNationHQ/terraform-azure-naming/commit/1e0e1851c73011509b494d8aec3c8c2ecd4d07a8))
+
 ## [0.17.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.17.0...v0.17.1) (2024-10-01)
 
 
