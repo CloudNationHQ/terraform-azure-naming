@@ -385,24 +385,6 @@
   slug: cfdsp
   dashes: true
 
-- name: cdn_profile
-  length:
-    min: 1
-    max: 260
-  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$'
-  scope: resourceGroup
-  slug: cdnprof
-  dashes: true
-
-- name: cdn_endpoint
-  length:
-    min: 1
-    max: 50
-  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,48}[a-zA-Z0-9]$'
-  scope: global
-  slug: cdn
-  dashes: true
-
 - name: cognitive_account
   length:
     min: 2
