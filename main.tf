@@ -443,7 +443,117 @@ locals {
       min_length  = 1
       max_length  = 50
       scope       = "global"
-      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,48}[a-zA-Z0-9]$"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,48}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_custom_domain = {
+      name        = substr(join("-", compact([local.prefix, "cfdcd", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "cfdcd", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "cfdcd"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_endpoint = {
+      name        = substr(join("-", compact([local.prefix, "cfde", local.suffix])), 0, 46)
+      name_unique = substr(join("-", compact([local.prefix, "cfde", local.suffix_unique])), 0, 46)
+      dashes      = true
+      slug        = "cfde"
+      min_length  = 1
+      max_length  = 46
+      scope       = "global"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,44}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_firewall_policy = {
+      name        = substr(join("", compact([local.prefix_safe, "cfdfp", local.suffix_safe])), 0, 128)
+      name_unique = substr(join("", compact([local.prefix_safe, "cfdfp", local.suffix_unique_safe])), 0, 128)
+      dashes      = false
+      slug        = "cfdfp"
+      min_length  = 1
+      max_length  = 128
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z][0-9a-zA-Z]{0,127}$"
+    }
+    cdn_frontdoor_origin = {
+      name        = substr(join("-", compact([local.prefix, "cfdo", local.suffix])), 0, 90)
+      name_unique = substr(join("-", compact([local.prefix, "cfdo", local.suffix_unique])), 0, 90)
+      dashes      = true
+      slug        = "cfdo"
+      min_length  = 1
+      max_length  = 90
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_origin_group = {
+      name        = substr(join("-", compact([local.prefix, "cfdog", local.suffix])), 0, 90)
+      name_unique = substr(join("-", compact([local.prefix, "cfdog", local.suffix_unique])), 0, 90)
+      dashes      = true
+      slug        = "cfdog"
+      min_length  = 1
+      max_length  = 90
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_profile = {
+      name        = substr(join("-", compact([local.prefix, "cfdp", local.suffix])), 0, 90)
+      name_unique = substr(join("-", compact([local.prefix, "cfdp", local.suffix_unique])), 0, 90)
+      dashes      = true
+      slug        = "cfdp"
+      min_length  = 1
+      max_length  = 90
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_route = {
+      name        = substr(join("-", compact([local.prefix, "cfdroute", local.suffix])), 0, 90)
+      name_unique = substr(join("-", compact([local.prefix, "cfdroute", local.suffix_unique])), 0, 90)
+      dashes      = true
+      slug        = "cfdroute"
+      min_length  = 1
+      max_length  = 90
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_rule = {
+      name        = substr(join("", compact([local.prefix_safe, "cfdr", local.suffix_safe])), 0, 60)
+      name_unique = substr(join("", compact([local.prefix_safe, "cfdr", local.suffix_unique_safe])), 0, 60)
+      dashes      = false
+      slug        = "cfdr"
+      min_length  = 1
+      max_length  = 60
+      scope       = "parent"
+      regex       = "^[a-zA-Z][a-zA-Z0-9]{0,59}$"
+    }
+    cdn_frontdoor_rule_set = {
+      name        = substr(join("", compact([local.prefix_safe, "cfdrs", local.suffix_safe])), 0, 60)
+      name_unique = substr(join("", compact([local.prefix_safe, "cfdrs", local.suffix_unique_safe])), 0, 60)
+      dashes      = false
+      slug        = "cfdrs"
+      min_length  = 1
+      max_length  = 60
+      scope       = "parent"
+      regex       = "^[a-zA-Z][a-zA-Z0-9]{0,59}$"
+    }
+    cdn_frontdoor_secret = {
+      name        = substr(join("-", compact([local.prefix, "cfds", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "cfds", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "cfds"
+      min_length  = 2
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$"
+    }
+    cdn_frontdoor_security_policy = {
+      name        = substr(join("-", compact([local.prefix, "cfdsp", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "cfdsp", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "cfdsp"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[0-9A-Za-z_-]{1,260}$"
     }
     cdn_profile = {
       name        = substr(join("-", compact([local.prefix, "cdnprof", local.suffix])), 0, 260)
@@ -453,7 +563,7 @@ locals {
       min_length  = 1
       max_length  = 260
       scope       = "resourceGroup"
-      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$"
     }
     cognitive_account = {
       name        = substr(join("-", compact([local.prefix, "cog", local.suffix])), 0, 64)
@@ -3600,6 +3710,50 @@ locals {
     cdn_endpoint = {
       valid_name        = length(regexall(local.az.cdn_endpoint.regex, local.az.cdn_endpoint.name)) > 0 && length(local.az.cdn_endpoint.name) > local.az.cdn_endpoint.min_length
       valid_name_unique = length(regexall(local.az.cdn_endpoint.regex, local.az.cdn_endpoint.name_unique)) > 0
+    }
+    cdn_frontdoor_custom_domain = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_custom_domain.regex, local.az.cdn_frontdoor_custom_domain.name)) > 0 && length(local.az.cdn_frontdoor_custom_domain.name) > local.az.cdn_frontdoor_custom_domain.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_custom_domain.regex, local.az.cdn_frontdoor_custom_domain.name_unique)) > 0
+    }
+    cdn_frontdoor_endpoint = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_endpoint.regex, local.az.cdn_frontdoor_endpoint.name)) > 0 && length(local.az.cdn_frontdoor_endpoint.name) > local.az.cdn_frontdoor_endpoint.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_endpoint.regex, local.az.cdn_frontdoor_endpoint.name_unique)) > 0
+    }
+    cdn_frontdoor_firewall_policy = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_firewall_policy.regex, local.az.cdn_frontdoor_firewall_policy.name)) > 0 && length(local.az.cdn_frontdoor_firewall_policy.name) > local.az.cdn_frontdoor_firewall_policy.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_firewall_policy.regex, local.az.cdn_frontdoor_firewall_policy.name_unique)) > 0
+    }
+    cdn_frontdoor_origin = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_origin.regex, local.az.cdn_frontdoor_origin.name)) > 0 && length(local.az.cdn_frontdoor_origin.name) > local.az.cdn_frontdoor_origin.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_origin.regex, local.az.cdn_frontdoor_origin.name_unique)) > 0
+    }
+    cdn_frontdoor_origin_group = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_origin_group.regex, local.az.cdn_frontdoor_origin_group.name)) > 0 && length(local.az.cdn_frontdoor_origin_group.name) > local.az.cdn_frontdoor_origin_group.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_origin_group.regex, local.az.cdn_frontdoor_origin_group.name_unique)) > 0
+    }
+    cdn_frontdoor_profile = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_profile.regex, local.az.cdn_frontdoor_profile.name)) > 0 && length(local.az.cdn_frontdoor_profile.name) > local.az.cdn_frontdoor_profile.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_profile.regex, local.az.cdn_frontdoor_profile.name_unique)) > 0
+    }
+    cdn_frontdoor_route = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_route.regex, local.az.cdn_frontdoor_route.name)) > 0 && length(local.az.cdn_frontdoor_route.name) > local.az.cdn_frontdoor_route.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_route.regex, local.az.cdn_frontdoor_route.name_unique)) > 0
+    }
+    cdn_frontdoor_rule = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_rule.regex, local.az.cdn_frontdoor_rule.name)) > 0 && length(local.az.cdn_frontdoor_rule.name) > local.az.cdn_frontdoor_rule.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_rule.regex, local.az.cdn_frontdoor_rule.name_unique)) > 0
+    }
+    cdn_frontdoor_rule_set = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_rule_set.regex, local.az.cdn_frontdoor_rule_set.name)) > 0 && length(local.az.cdn_frontdoor_rule_set.name) > local.az.cdn_frontdoor_rule_set.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_rule_set.regex, local.az.cdn_frontdoor_rule_set.name_unique)) > 0
+    }
+    cdn_frontdoor_secret = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_secret.regex, local.az.cdn_frontdoor_secret.name)) > 0 && length(local.az.cdn_frontdoor_secret.name) > local.az.cdn_frontdoor_secret.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_secret.regex, local.az.cdn_frontdoor_secret.name_unique)) > 0
+    }
+    cdn_frontdoor_security_policy = {
+      valid_name        = length(regexall(local.az.cdn_frontdoor_security_policy.regex, local.az.cdn_frontdoor_security_policy.name)) > 0 && length(local.az.cdn_frontdoor_security_policy.name) > local.az.cdn_frontdoor_security_policy.min_length
+      valid_name_unique = length(regexall(local.az.cdn_frontdoor_security_policy.regex, local.az.cdn_frontdoor_security_policy.name_unique)) > 0
     }
     cdn_profile = {
       valid_name        = length(regexall(local.az.cdn_profile.regex, local.az.cdn_profile.name)) > 0 && length(local.az.cdn_profile.name) > local.az.cdn_profile.min_length

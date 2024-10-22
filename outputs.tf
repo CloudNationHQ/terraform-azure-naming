@@ -211,6 +211,61 @@ output "cdn_endpoint" {
   description = "Cdn Endpoint"
 }
 
+output "cdn_frontdoor_custom_domain" {
+  value       = local.az.cdn_frontdoor_custom_domain
+  description = "Cdn Frontdoor Custom Domain"
+}
+
+output "cdn_frontdoor_endpoint" {
+  value       = local.az.cdn_frontdoor_endpoint
+  description = "Cdn Frontdoor Endpoint"
+}
+
+output "cdn_frontdoor_firewall_policy" {
+  value       = local.az.cdn_frontdoor_firewall_policy
+  description = "Cdn Frontdoor Firewall Policy"
+}
+
+output "cdn_frontdoor_origin" {
+  value       = local.az.cdn_frontdoor_origin
+  description = "Cdn Frontdoor Origin"
+}
+
+output "cdn_frontdoor_origin_group" {
+  value       = local.az.cdn_frontdoor_origin_group
+  description = "Cdn Frontdoor Origin Group"
+}
+
+output "cdn_frontdoor_profile" {
+  value       = local.az.cdn_frontdoor_profile
+  description = "Cdn Frontdoor Profile"
+}
+
+output "cdn_frontdoor_route" {
+  value       = local.az.cdn_frontdoor_route
+  description = "Cdn Frontdoor Route"
+}
+
+output "cdn_frontdoor_rule" {
+  value       = local.az.cdn_frontdoor_rule
+  description = "Cdn Frontdoor Rule"
+}
+
+output "cdn_frontdoor_rule_set" {
+  value       = local.az.cdn_frontdoor_rule_set
+  description = "Cdn Frontdoor Rule Set"
+}
+
+output "cdn_frontdoor_secret" {
+  value       = local.az.cdn_frontdoor_secret
+  description = "Cdn Frontdoor Secret"
+}
+
+output "cdn_frontdoor_security_policy" {
+  value       = local.az.cdn_frontdoor_security_policy
+  description = "Cdn Frontdoor Security Policy"
+}
+
 output "cdn_profile" {
   value       = local.az.cdn_profile
   description = "Cdn Profile"

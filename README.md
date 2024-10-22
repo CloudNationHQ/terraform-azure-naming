@@ -109,6 +109,17 @@ No modules.
 | <a name="output_bot_connection"></a> [bot\_connection](#output\_bot\_connection) | Bot Connection |
 | <a name="output_bot_web_app"></a> [bot\_web\_app](#output\_bot\_web\_app) | Bot Web App |
 | <a name="output_cdn_endpoint"></a> [cdn\_endpoint](#output\_cdn\_endpoint) | Cdn Endpoint |
+| <a name="output_cdn_frontdoor_custom_domain"></a> [cdn\_frontdoor\_custom\_domain](#output\_cdn\_frontdoor\_custom\_domain) | Cdn Frontdoor Custom Domain |
+| <a name="output_cdn_frontdoor_endpoint"></a> [cdn\_frontdoor\_endpoint](#output\_cdn\_frontdoor\_endpoint) | Cdn Frontdoor Endpoint |
+| <a name="output_cdn_frontdoor_firewall_policy"></a> [cdn\_frontdoor\_firewall\_policy](#output\_cdn\_frontdoor\_firewall\_policy) | Cdn Frontdoor Firewall Policy |
+| <a name="output_cdn_frontdoor_origin"></a> [cdn\_frontdoor\_origin](#output\_cdn\_frontdoor\_origin) | Cdn Frontdoor Origin |
+| <a name="output_cdn_frontdoor_origin_group"></a> [cdn\_frontdoor\_origin\_group](#output\_cdn\_frontdoor\_origin\_group) | Cdn Frontdoor Origin Group |
+| <a name="output_cdn_frontdoor_profile"></a> [cdn\_frontdoor\_profile](#output\_cdn\_frontdoor\_profile) | Cdn Frontdoor Profile |
+| <a name="output_cdn_frontdoor_route"></a> [cdn\_frontdoor\_route](#output\_cdn\_frontdoor\_route) | Cdn Frontdoor Route |
+| <a name="output_cdn_frontdoor_rule"></a> [cdn\_frontdoor\_rule](#output\_cdn\_frontdoor\_rule) | Cdn Frontdoor Rule |
+| <a name="output_cdn_frontdoor_rule_set"></a> [cdn\_frontdoor\_rule\_set](#output\_cdn\_frontdoor\_rule\_set) | Cdn Frontdoor Rule Set |
+| <a name="output_cdn_frontdoor_secret"></a> [cdn\_frontdoor\_secret](#output\_cdn\_frontdoor\_secret) | Cdn Frontdoor Secret |
+| <a name="output_cdn_frontdoor_security_policy"></a> [cdn\_frontdoor\_security\_policy](#output\_cdn\_frontdoor\_security\_policy) | Cdn Frontdoor Security Policy |
 | <a name="output_cdn_profile"></a> [cdn\_profile](#output\_cdn\_profile) | Cdn Profile |
 | <a name="output_cognitive_account"></a> [cognitive\_account](#output\_cognitive\_account) | Cognitive Account |
 | <a name="output_cognitive_deployment"></a> [cognitive\_deployment](#output\_cognitive\_deployment) | Cognitive Deployment |
