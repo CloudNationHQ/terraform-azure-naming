@@ -286,22 +286,121 @@
   slug: bot
   dashes: true
 
-- name: cdn_endpoint
+- name: cdn_frontdoor_custom_domain
   length:
     min: 1
-    max: 50
-  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{1,48}[a-zA-Z0-9]$'
+    max: 260
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$'
+  scope: parent
+  slug: cfdcd
+  dashes: true
+
+- name: cdn_frontdoor_endpoint
+  length:
+    min: 1
+    max: 46
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,44}[a-zA-Z0-9]$'
   scope: global
-  slug: cdn
+  slug: cfde
+  dashes: true
+
+- name: cdn_frontdoor_firewall_policy
+  length:
+    min: 1
+    max: 128
+  regex: '^[a-zA-Z][0-9a-zA-Z]{0,127}$'
+  scope: resourceGroup
+  slug: cfdfp
+  dashes: false
+
+- name: cdn_frontdoor_origin
+  length:
+    min: 1
+    max: 90
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$'
+  scope: parent
+  slug: cfdo
+  dashes: true
+
+- name: cdn_frontdoor_origin_group
+  length:
+    min: 1
+    max: 90
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$'
+  scope: parent
+  slug: cfdog
+  dashes: true
+
+- name: cdn_frontdoor_profile
+  length:
+    min: 1
+    max: 90
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$'
+  scope: resourceGroup
+  slug: cfdp
+  dashes: true
+
+- name: cdn_frontdoor_route
+  length:
+    min: 1
+    max: 90
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,88}[a-zA-Z0-9]$'
+  scope: parent
+  slug: cfdroute
+  dashes: true
+
+- name: cdn_frontdoor_rule
+  length:
+    min: 1
+    max: 60
+  regex: '^[a-zA-Z][a-zA-Z0-9]{0,59}$'
+  scope: parent
+  slug: cfdr
+  dashes: false
+
+- name: cdn_frontdoor_rule_set
+  length:
+    min: 1
+    max: 60
+  regex: '^[a-zA-Z][a-zA-Z0-9]{0,59}$'
+  scope: parent
+  slug: cfdrs
+  dashes: false
+
+- name: cdn_frontdoor_secret
+  length:
+    min: 2
+    max: 260
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$'
+  scope: parent
+  slug: cfds
+  dashes: true
+
+- name: cdn_frontdoor_security_policy
+  length:
+    min: 1
+    max: 260
+  regex: '^[0-9A-Za-z_-]{1,260}$'
+  scope: parent
+  slug: cfdsp
   dashes: true
 
 - name: cdn_profile
   length:
     min: 1
     max: 260
-  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{1,258}[a-zA-Z0-9]$'
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,258}[a-zA-Z0-9]$'
   scope: resourceGroup
   slug: cdnprof
+  dashes: true
+
+- name: cdn_endpoint
+  length:
+    min: 1
+    max: 50
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,48}[a-zA-Z0-9]$'
+  scope: global
+  slug: cdn
   dashes: true
 
 - name: cognitive_account
