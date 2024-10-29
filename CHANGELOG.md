@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.19.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.18.1...v0.19.0) (2024-10-29)
+
+
+### Features
+
+* add automation webhook ([#62](https://github.com/CloudNationHQ/terraform-azure-naming/issues/62)) ([5efa586](https://github.com/CloudNationHQ/terraform-azure-naming/commit/5efa586dac1240bffb8142d8f9afaa562555032a))
+
 ## [0.18.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.18.0...v0.18.1) (2024-10-22)
 
 
