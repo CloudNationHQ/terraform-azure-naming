@@ -95,6 +95,7 @@ No modules.
 | <a name="output_automation_runbook"></a> [automation\_runbook](#output\_automation\_runbook) | Automation Runbook |
 | <a name="output_automation_schedule"></a> [automation\_schedule](#output\_automation\_schedule) | Automation Schedule |
 | <a name="output_automation_variable"></a> [automation\_variable](#output\_automation\_variable) | Automation Variable |
+| <a name="output_automation_webhook"></a> [automation\_webhook](#output\_automation\_webhook) | Automation Webhook |
 | <a name="output_availability_set"></a> [availability\_set](#output\_availability\_set) | Availability Set |
 | <a name="output_bastion_host"></a> [bastion\_host](#output\_bastion\_host) | Bastion Host |
 | <a name="output_batch_account"></a> [batch\_account](#output\_batch\_account) | Batch Account |

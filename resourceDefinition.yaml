@@ -169,6 +169,15 @@
   slug: aavar
   dashes: true
 
+- name: automation_webhook
+  length:
+    min: 1
+    max: 128
+  regex: '^[^<>*%:.?+/ ]{1,128}$'
+  scope: parent
+  slug: aawh
+  dashes: true
+
 - name: availability_set
   length:
     min: 1

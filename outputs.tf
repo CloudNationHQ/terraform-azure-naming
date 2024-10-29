@@ -141,6 +141,11 @@ output "automation_variable" {
   description = "Automation Variable"
 }
 
+output "automation_webhook" {
+  value       = local.az.automation_webhook
+  description = "Automation Webhook"
+}
+
 output "availability_set" {
   value       = local.az.availability_set
   description = "Availability Set"
