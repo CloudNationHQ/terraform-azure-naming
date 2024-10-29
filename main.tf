@@ -305,6 +305,16 @@ locals {
       scope       = "parent"
       regex       = "^[^<>*%:.?+/ ]{1,128}$"
     }
+    automation_webhook = {
+      name        = substr(join("-", compact([local.prefix, "aawh", local.suffix])), 0, 128)
+      name_unique = substr(join("-", compact([local.prefix, "aawh", local.suffix_unique])), 0, 128)
+      dashes      = true
+      slug        = "aawh"
+      min_length  = 1
+      max_length  = 128
+      scope       = "parent"
+      regex       = "^[^<>*%:.?+/ ]{1,128}$"
+    }
     availability_set = {
       name        = substr(join("-", compact([local.prefix, "avail", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "avail", local.suffix_unique])), 0, 80)
@@ -3634,6 +3644,10 @@ locals {
     automation_variable = {
       valid_name        = length(regexall(local.az.automation_variable.regex, local.az.automation_variable.name)) > 0 && length(local.az.automation_variable.name) > local.az.automation_variable.min_length
       valid_name_unique = length(regexall(local.az.automation_variable.regex, local.az.automation_variable.name_unique)) > 0
+    }
+    automation_webhook = {
+      valid_name        = length(regexall(local.az.automation_webhook.regex, local.az.automation_webhook.name)) > 0 && length(local.az.automation_webhook.name) > local.az.automation_webhook.min_length
+      valid_name_unique = length(regexall(local.az.automation_webhook.regex, local.az.automation_webhook.name_unique)) > 0
     }
     availability_set = {
       valid_name        = length(regexall(local.az.availability_set.regex, local.az.availability_set.name)) > 0 && length(local.az.availability_set.name) > local.az.availability_set.min_length
