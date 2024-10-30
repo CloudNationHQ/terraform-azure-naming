@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.19.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.19.0...v0.19.1) (2024-10-30)
+
+
+### Bug Fixes
+
+* add support for sql managed instance naming ([#64](https://github.com/CloudNationHQ/terraform-azure-naming/issues/64)) ([f977cd3](https://github.com/CloudNationHQ/terraform-azure-naming/commit/f977cd3f2be8f68acb450690647f5bc8b99464af))
+
 ## [0.19.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.18.1...v0.19.0) (2024-10-29)
 
 
