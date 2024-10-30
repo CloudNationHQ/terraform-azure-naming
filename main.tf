@@ -2945,6 +2945,16 @@ locals {
       scope       = "parent"
       regex       = "^[^<>*%:?\\\\+\\\\/]+[^<>*%:.?\\\\+\\\\/]$"
     }
+    sql_managed_instance = {
+      name        = substr(join("-", compact([local.prefix, "sqlmi", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "sqlmi", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "sqlmi"
+      min_length  = 1
+      max_length  = 63
+      scope       = "global"
+      regex       = "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
+    }
     sql_server = {
       name        = substr(join("-", compact([local.prefix, "sql", local.suffix])), 0, 63)
       name_unique = substr(join("-", compact([local.prefix, "sql", local.suffix_unique])), 0, 63)
@@ -4700,6 +4710,10 @@ locals {
     sql_firewall_rule = {
       valid_name        = length(regexall(local.az.sql_firewall_rule.regex, local.az.sql_firewall_rule.name)) > 0 && length(local.az.sql_firewall_rule.name) > local.az.sql_firewall_rule.min_length
       valid_name_unique = length(regexall(local.az.sql_firewall_rule.regex, local.az.sql_firewall_rule.name_unique)) > 0
+    }
+    sql_managed_instance = {
+      valid_name        = length(regexall(local.az.sql_managed_instance.regex, local.az.sql_managed_instance.name)) > 0 && length(local.az.sql_managed_instance.name) > local.az.sql_managed_instance.min_length
+      valid_name_unique = length(regexall(local.az.sql_managed_instance.regex, local.az.sql_managed_instance.name_unique)) > 0
     }
     sql_server = {
       valid_name        = length(regexall(local.az.sql_server.regex, local.az.sql_server.name)) > 0 && length(local.az.sql_server.name) > local.az.sql_server.min_length

@@ -359,6 +359,7 @@ No modules.
 | <a name="output_sql_elasticpool"></a> [sql\_elasticpool](#output\_sql\_elasticpool) | Sql Elasticpool |
 | <a name="output_sql_failover_group"></a> [sql\_failover\_group](#output\_sql\_failover\_group) | Sql Failover Group |
 | <a name="output_sql_firewall_rule"></a> [sql\_firewall\_rule](#output\_sql\_firewall\_rule) | Sql Firewall Rule |
+| <a name="output_sql_managed_instance"></a> [sql\_managed\_instance](#output\_sql\_managed\_instance) | Sql Managed Instance |
 | <a name="output_sql_server"></a> [sql\_server](#output\_sql\_server) | Sql Server |
 | <a name="output_storage_account"></a> [storage\_account](#output\_storage\_account) | Storage Account |
 | <a name="output_storage_blob"></a> [storage\_blob](#output\_storage\_blob) | Storage Blob |
