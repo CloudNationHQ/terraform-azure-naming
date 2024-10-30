@@ -1461,6 +1461,11 @@ output "sql_firewall_rule" {
   description = "Sql Firewall Rule"
 }
 
+output "sql_managed_instance" {
+  value       = local.az.sql_managed_instance
+  description = "Sql Managed Instance"
+}
+
 output "sql_server" {
   value       = local.az.sql_server
   description = "Sql Server"
