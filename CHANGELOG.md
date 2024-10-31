@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.19.1...v0.20.0) (2024-10-31)
+
+
+### Features
+
+* make use of interfaces to improve idempotency and modularity ([#66](https://github.com/CloudNationHQ/terraform-azure-naming/issues/66)) ([640cfda](https://github.com/CloudNationHQ/terraform-azure-naming/commit/640cfda9e792d228ce5368c7e6b9371c27ea1a0d))
+
 ## [0.19.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.19.0...v0.19.1) (2024-10-30)
 
 
