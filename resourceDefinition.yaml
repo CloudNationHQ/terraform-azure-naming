@@ -2869,3 +2869,12 @@
   scope: resourceGroup
   slug: appiwt
   dashes: true
+
+- name: web_application_firewall_policy
+  length:
+    min: 1
+    max: 80
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9]{0,78}[a-zA-Z0-9]$'
+  scope: global
+  slug: wafw
+  dashes: false

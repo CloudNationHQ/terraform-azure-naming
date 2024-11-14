@@ -1741,6 +1741,11 @@ output "vpn_site" {
   description = "Vpn Site"
 }
 
+output "web_application_firewall_policy" {
+  value       = local.az.web_application_firewall_policy
+  description = "Web Application Firewall Policy"
+}
+
 output "web_pubsub" {
   value       = local.az.web_pubsub
   description = "Web Pubsub"

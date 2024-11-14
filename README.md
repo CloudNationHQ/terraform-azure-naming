@@ -417,6 +417,7 @@ No modules.
 | <a name="output_virtual_wan"></a> [virtual\_wan](#output\_virtual\_wan) | Virtual Wan |
 | <a name="output_vpn_gateway_connection"></a> [vpn\_gateway\_connection](#output\_vpn\_gateway\_connection) | Vpn Gateway Connection |
 | <a name="output_vpn_site"></a> [vpn\_site](#output\_vpn\_site) | Vpn Site |
+| <a name="output_web_application_firewall_policy"></a> [web\_application\_firewall\_policy](#output\_web\_application\_firewall\_policy) | Web Application Firewall Policy |
 | <a name="output_web_pubsub"></a> [web\_pubsub](#output\_web\_pubsub) | Web Pubsub |
 | <a name="output_web_pubsub_hub"></a> [web\_pubsub\_hub](#output\_web\_pubsub\_hub) | Web Pubsub Hub |
 | <a name="output_windows_virtual_machine"></a> [windows\_virtual\_machine](#output\_windows\_virtual\_machine) | Windows Virtual Machine |

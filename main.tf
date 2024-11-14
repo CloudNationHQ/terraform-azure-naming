@@ -3505,6 +3505,16 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
     }
+    web_application_firewall_policy = {
+      name        = substr(join("", compact([local.prefix_safe, "wafw", local.suffix_safe])), 0, 80)
+      name_unique = substr(join("", compact([local.prefix_safe, "wafw", local.suffix_unique_safe])), 0, 80)
+      dashes      = false
+      slug        = "wafw"
+      min_length  = 1
+      max_length  = 80
+      scope       = "global"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9]{0,78}[a-zA-Z0-9]$"
+    }
     web_pubsub = {
       name        = substr(join("-", compact([local.prefix, "ps", local.suffix])), 0, 63)
       name_unique = substr(join("-", compact([local.prefix, "ps", local.suffix_unique])), 0, 63)
@@ -4934,6 +4944,10 @@ locals {
     vpn_site = {
       valid_name        = length(regexall(local.az.vpn_site.regex, local.az.vpn_site.name)) > 0 && length(local.az.vpn_site.name) > local.az.vpn_site.min_length
       valid_name_unique = length(regexall(local.az.vpn_site.regex, local.az.vpn_site.name_unique)) > 0
+    }
+    web_application_firewall_policy = {
+      valid_name        = length(regexall(local.az.web_application_firewall_policy.regex, local.az.web_application_firewall_policy.name)) > 0 && length(local.az.web_application_firewall_policy.name) > local.az.web_application_firewall_policy.min_length
+      valid_name_unique = length(regexall(local.az.web_application_firewall_policy.regex, local.az.web_application_firewall_policy.name_unique)) > 0
     }
     web_pubsub = {
       valid_name        = length(regexall(local.az.web_pubsub.regex, local.az.web_pubsub.name)) > 0 && length(local.az.web_pubsub.name) > local.az.web_pubsub.min_length
