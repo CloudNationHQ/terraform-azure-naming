@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.21.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.20.0...v0.21.0) (2024-11-14)
+
+
+### Features
+
+* add support for web application firewall policy ([#68](https://github.com/CloudNationHQ/terraform-azure-naming/issues/68)) ([1148d6c](https://github.com/CloudNationHQ/terraform-azure-naming/commit/1148d6cfbdf2efdf1e22ce90fba67addf273becf))
+
 ## [0.20.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.19.1...v0.20.0) (2024-10-31)
 
 
