@@ -1071,6 +1071,11 @@ output "mysql_virtual_network_rule" {
   description = "Mysql Virtual Network Rule"
 }
 
+output "nat_gateway" {
+  value       = local.az.nat_gateway
+  description = "Nat Gateway"
+}
+
 output "netapp_account" {
   value       = local.az.netapp_account
   description = "Netapp Account"
