@@ -2173,7 +2173,7 @@ locals {
       min_length  = 1
       max_length  = 80
       scope       = "resourceGroup"
-      regex       = "^(?=.{1,80}$)[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9]([a-zA-Z0-9]|-){0,77}[a-zA-Z0-9]$"
     }
     netapp_account = {
       name        = substr(join("-", compact([local.prefix, "ana", local.suffix])), 0, 128)
