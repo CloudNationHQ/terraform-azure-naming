@@ -416,6 +416,7 @@ No modules.
 | <a name="output_virtual_network_gateway_connection"></a> [virtual\_network\_gateway\_connection](#output\_virtual\_network\_gateway\_connection) | Virtual Network Gateway Connection |
 | <a name="output_virtual_network_peering"></a> [virtual\_network\_peering](#output\_virtual\_network\_peering) | Virtual Network Peering |
 | <a name="output_virtual_wan"></a> [virtual\_wan](#output\_virtual\_wan) | Virtual Wan |
+| <a name="output_vpn_gateway"></a> [vpn\_gateway](#output\_vpn\_gateway) | Vpn Gateway |
 | <a name="output_vpn_gateway_connection"></a> [vpn\_gateway\_connection](#output\_vpn\_gateway\_connection) | Vpn Gateway Connection |
 | <a name="output_vpn_site"></a> [vpn\_site](#output\_vpn\_site) | Vpn Site |
 | <a name="output_web_application_firewall_policy"></a> [web\_application\_firewall\_policy](#output\_web\_application\_firewall\_policy) | Web Application Firewall Policy |

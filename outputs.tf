@@ -1736,6 +1736,11 @@ output "virtual_wan" {
   description = "Virtual Wan"
 }
 
+output "vpn_gateway" {
+  value       = local.vpn_gateway
+  description = "Vpn Gateway"
+}
+
 output "vpn_gateway_connection" {
   value       = local.az.vpn_gateway_connection
   description = "Vpn Gateway Connection"
