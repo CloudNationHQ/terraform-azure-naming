@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.23.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.22.0...v0.23.0) (2025-01-20)
+
+
+### Features
+
+* add vpn gateway naming ([#72](https://github.com/CloudNationHQ/terraform-azure-naming/issues/72)) ([cd9fe3f](https://github.com/CloudNationHQ/terraform-azure-naming/commit/cd9fe3f4e74e61434f1445033e46333cb515c2c1))
+
 ## [0.22.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.21.0...v0.22.0) (2024-11-18)
 
 
