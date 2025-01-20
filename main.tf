@@ -1,13 +1,3 @@
-terraform {
-  required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.6"
-    }
-  }
-  required_version = "~> 1.0"
-}
-
 resource "random_string" "main" {
   length  = 60
   special = false
@@ -3495,6 +3485,16 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
     }
+    vpn_gateway = {
+      name        = substr(join("-", compact([local.prefix, "vpng", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "vpng", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "vpng"
+      min_length  = 1
+      max_length  = 80
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
+    }
     vpn_gateway_connection = {
       name        = substr(join("-", compact([local.prefix, "vcn", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "vcn", local.suffix_unique])), 0, 80)
@@ -4950,6 +4950,10 @@ locals {
     virtual_wan = {
       valid_name        = length(regexall(local.az.virtual_wan.regex, local.az.virtual_wan.name)) > 0 && length(local.az.virtual_wan.name) > local.az.virtual_wan.min_length
       valid_name_unique = length(regexall(local.az.virtual_wan.regex, local.az.virtual_wan.name_unique)) > 0
+    }
+    vpn_gateway = {
+      valid_name        = length(regexall(local.az.vpn_gateway.regex, local.az.vpn_gateway.name)) > 0 && length(local.az.vpn_gateway.name) > local.az.vpn_gateway.min_length
+      valid_name_unique = length(regexall(local.az.vpn_gateway.regex, local.az.vpn_gateway.name_unique)) > 0
     }
     vpn_gateway_connection = {
       valid_name        = length(regexall(local.az.vpn_gateway_connection.regex, local.az.vpn_gateway_connection.name)) > 0 && length(local.az.vpn_gateway_connection.name) > local.az.vpn_gateway_connection.min_length
