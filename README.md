@@ -426,6 +426,10 @@ No modules.
 | <a name="output_windows_virtual_machine_scale_set"></a> [windows\_virtual\_machine\_scale\_set](#output\_windows\_virtual\_machine\_scale\_set) | Windows Virtual Machine Scale Set |
 <!-- END_TF_DOCS -->
 
+## Testing
+
+For more information, please see our testing [guidelines](./TESTING.md)
+
 ## Notes
 
 Full examples detailing all usages, along with integrations with dependency modules, are located in the examples directory
@@ -443,3 +447,7 @@ Module is maintained by [these awesome contributors](https://github.com/cloudnat
 ## License
 
 MIT Licensed. See [LICENSE](./LICENSE) for full details.
+
+## References
+
+- [Documentation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
