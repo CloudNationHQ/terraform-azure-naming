@@ -281,7 +281,7 @@ No modules.
 | <a name="output_mysql_flexible_server_firewall_rule"></a> [mysql\_flexible\_server\_firewall\_rule](#output\_mysql\_flexible\_server\_firewall\_rule) | Mysql Flexible Server Firewall Rule |
 | <a name="output_mysql_server"></a> [mysql\_server](#output\_mysql\_server) | Mysql Server |
 | <a name="output_mysql_virtual_network_rule"></a> [mysql\_virtual\_network\_rule](#output\_mysql\_virtual\_network\_rule) | Mysql Virtual Network Rule |
-| <a name="output_nat_gateway"></a> [nat\_gateway](#output\_nat\_gateway) | NAT Gateway |
+| <a name="output_nat_gateway"></a> [nat\_gateway](#output\_nat\_gateway) | Nat Gateway |
 | <a name="output_netapp_account"></a> [netapp\_account](#output\_netapp\_account) | Netapp Account |
 | <a name="output_netapp_pool"></a> [netapp\_pool](#output\_netapp\_pool) | Netapp Pool |
 | <a name="output_netapp_snapshot"></a> [netapp\_snapshot](#output\_netapp\_snapshot) | Netapp Snapshot |
