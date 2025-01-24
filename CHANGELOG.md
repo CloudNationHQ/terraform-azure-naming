@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.23.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.23.0...v0.23.1) (2025-01-24)
+
+
+### Bug Fixes
+
+* changed template to generate main file without the provider and fixed invalid nat gateway regex ([#74](https://github.com/CloudNationHQ/terraform-azure-naming/issues/74)) ([b8661a9](https://github.com/CloudNationHQ/terraform-azure-naming/commit/b8661a923fb02f5aca87de176e95d8a4c0fa12d1))
+
 ## [0.23.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.22.0...v0.23.0) (2025-01-20)
 
 
