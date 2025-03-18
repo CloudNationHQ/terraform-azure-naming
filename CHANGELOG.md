@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.24.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.23.1...v0.24.0) (2025-03-18)
+
+
+### Features
+
+* format documentation to include type definitions ([#76](https://github.com/CloudNationHQ/terraform-azure-naming/issues/76)) ([91dbb9c](https://github.com/CloudNationHQ/terraform-azure-naming/commit/91dbb9cd0689b5767cec936801c33cb01cdc4937))
+
 ## [0.23.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.23.0...v0.23.1) (2025-01-24)
 
 
