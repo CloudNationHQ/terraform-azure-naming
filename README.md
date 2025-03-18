@@ -4,10 +4,13 @@ This terraform module streamlines Azure resource naming, using regular expressio
 
 ## Features
 
-- ensures consistent naming across all resources.
-- generates resource slugs for standardized naming.
-- optionally randomizes names for globally unique identifiers.
-- validates names using regular expressions for compliance.
+Ensures consistent naming across all resources.
+
+Generates resource slugs for standardized naming.
+
+Optionally randomizes names for globally unique identifiers.
+
+Validates names using regular expressions for compliance.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
