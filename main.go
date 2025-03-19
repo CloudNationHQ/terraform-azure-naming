@@ -103,7 +103,7 @@ func (l *YAMLResourceLoader) CountUniqueResources() (int, error) {
 	return len(uniqueNames), nil
 }
 
-func (l *YAMLResourceLoader) loadYAMLFile(filename string, data interface{}) error {
+func (l *YAMLResourceLoader) loadYAMLFile(filename string, data any) error {
 	content, err := l.fileSystem.ReadFile(filename)
 	if err != nil {
 		return fmt.Errorf("failed to read file %s: %w", filename, err)
@@ -181,7 +181,7 @@ func (p *DefaultTemplateProcessor) GenerateFiles(resources []Resource) error {
 	return nil
 }
 
-func (p *DefaultTemplateProcessor) generateFile(filename, templateName string, tmpl *template.Template, data interface{}) error {
+func (p *DefaultTemplateProcessor) generateFile(filename, templateName string, tmpl *template.Template, data any) error {
 	var output strings.Builder
 	if err := tmpl.ExecuteTemplate(&output, templateName, data); err != nil {
 		return fmt.Errorf("failed to execute template %s: %w", templateName, err)
