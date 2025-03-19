@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
+- <a name="provider_random"></a> [random](#provider\_random) (3.7.1)
 
 ## Resources
 
