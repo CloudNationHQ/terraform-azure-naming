@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.24.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.24.0...v0.24.1) (2025-03-19)
+
+
+### Bug Fixes
+
+* replace interface with any for modern Go idiom ([#78](https://github.com/CloudNationHQ/terraform-azure-naming/issues/78)) ([1302003](https://github.com/CloudNationHQ/terraform-azure-naming/commit/1302003600cdbdd5dfeb50929a3bd6628eb785c0))
+
 ## [0.24.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.23.1...v0.24.0) (2025-03-18)
 
 
