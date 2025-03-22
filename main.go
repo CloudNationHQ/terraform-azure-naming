@@ -27,6 +27,7 @@ type Length struct {
 	Max int `yaml:"max"`
 }
 
+
 type ResourceLoader interface {
 	LoadResources() ([]Resource, error)
 	CountUniqueResources() (int, error)
