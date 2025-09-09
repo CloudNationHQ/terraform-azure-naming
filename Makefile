@@ -7,9 +7,26 @@ all: build init format validate docs
 	@rm -f terraform.tfstate.backup
 	@rm -f .terraform.lock.hcl
 
+TEST_ARGS := $(if $(skip-destroy),-skip-destroy=$(skip-destroy)) \
+             $(if $(exception),-exception=$(exception)) \
+             $(if $(example),-example=$(example)) \
+             $(if $(local),-local=$(local))
+
+test:
+	cd tests && go test -v -timeout 60m -run '^TestApplyNoError$$' -args $(TEST_ARGS) .
+
+test-sequential:
+	cd tests && go test -v -timeout 60m -run '^TestApplyAllSequential$$' -args $(TEST_ARGS) .
+
+test-parallel:
+	cd tests && go test -v -timeout 60m -run '^TestApplyAllParallel$$' -args $(TEST_ARGS) .
+
+test-local:
+	cd tests && go test -v -timeout 60m -run '^TestApplyAllLocal$$' -args $(TEST_ARGS) .
+
 install:
 	@command -v terraform >/dev/null 2>&1 || go install github.com/hashicorp/terraform@v1.2.5
-	@command -v terraform-docs >/dev/null 2>&1 || go install github.com/terraform-docs/terraform-docs@v0.16.0
+	@command -v terraform-docs >/dev/null 2>&1 || go install github.com/terraform-docs/terraform-docs@latest
 
 build: install generate
 
