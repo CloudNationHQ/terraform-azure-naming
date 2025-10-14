@@ -66,8 +66,8 @@ output "resource_group_with_prefix_suffix" {
 output "unique_seeds" {
   description = "Unique seeds from different configurations"
   value = {
-    basic        = module.naming.unique-seed
-    with_suffix  = module.naming_with_suffix.unique-seed
-    custom_seed  = module.naming_custom_seed.unique-seed
+    basic       = module.naming.unique-seed
+    with_suffix = module.naming_with_suffix.unique-seed
+    custom_seed = module.naming_custom_seed.unique-seed
   }
 }
