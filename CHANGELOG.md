@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.25.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.24.1...v0.25.0) (2025-10-14)
+
+
+### Features
+
+* add virtual network manager naming ([#82](https://github.com/CloudNationHQ/terraform-azure-naming/issues/82)) ([2c94b99](https://github.com/CloudNationHQ/terraform-azure-naming/commit/2c94b999cd90c73d1857456980662ee5fe6f005e))
+
 ## [0.24.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.24.0...v0.24.1) (2025-03-19)
 
 
