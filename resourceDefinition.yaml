@@ -1834,7 +1834,6 @@
   slug: sqlmi
   dashes: true
 
-
 - name: storage_account
   length:
     min: 3
@@ -2184,6 +2183,15 @@
   regex: '^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$'
   scope: parent
   slug: vpeer
+  dashes: true
+
+- name: virtual_network_manager
+  length:
+    min: 1
+    max: 80
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-._]{0,62}[a-zA-Z0-9_]$'
+  scope: resourceGroup
+  slug: vnm
   dashes: true
 
 - name: virtual_wan

@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (3.7.2)
+- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
 
 ## Resources
 
@@ -1470,6 +1470,10 @@ Description: Virtual Network Gateway
 
 Description: Virtual Network Gateway Connection
 
+### <a name="output_virtual_network_manager"></a> [virtual\_network\_manager](#output\_virtual\_network\_manager)
+
+Description: Virtual Network Manager
+
 ### <a name="output_virtual_network_peering"></a> [virtual\_network\_peering](#output\_virtual\_network\_peering)
 
 Description: Virtual Network Peering
@@ -1523,15 +1527,15 @@ For more information, please see our testing [guidelines](./TESTING.md)
 
 Full examples detailing all usages, along with integrations with dependency modules, are located in the examples directory
 
-## Authors
-
-Module is maintained by [these awesome contributors](https://github.com/cloudnationhq/terraform-azure-naming/graphs/contributors).
-
-## Contributing
+## Contributors
 
 We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
 
-For more information, please see our contribution [guidelines](./CONTRIBUTING.md).
+For more information, please see our contribution [guidelines](./CONTRIBUTING.md). <br><br>
+
+<a href="https://github.com/cloudnationhq/terraform-azure-naming/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cloudnationhq/terraform-azure-naming" />
+</a>
 
 ## License
 
