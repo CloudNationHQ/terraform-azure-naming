@@ -1470,11 +1470,11 @@ Description: Virtual Network Gateway
 
 Description: Virtual Network Gateway Connection
 
-### <a name="output_virtual_network_peering"></a> [virtual\_network\_peering](#output\_virtual\_network\_peering)
+### <a name="output_virtual_network_manager"></a> [virtual\_network\_manager](#output\_virtual\_network\_manager) | Virtual Network Manager |
 
 Description: Virtual Network Manager
 
-### <a name="output_virtual_network_manager"></a> [virtual\_network\_manager](#output\_virtual\_network\_manager) | Virtual Network Manager |
+### <a name="output_virtual_network_peering"></a> [virtual\_network\_peering](#output\_virtual\_network\_peering)
 
 Description: Virtual Network Peering
 
