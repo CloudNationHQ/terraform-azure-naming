@@ -596,10 +596,10 @@ locals {
       regex       = "^[a-zA-Z0-9-_]{1,63}$"
     }
     containerGroups = {
-      name        = substr(join("-", compact([local.prefix, "cg", local.suffix])), 0, 63)
-      name_unique = substr(join("-", compact([local.prefix, "cg", local.suffix_unique])), 0, 63)
+      name        = substr(join("-", compact([local.prefix, "ci", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "ci", local.suffix_unique])), 0, 63)
       dashes      = true
-      slug        = "cg"
+      slug        = "ci"
       min_length  = 1
       max_length  = 63
       scope       = "resourceGroup"
@@ -3470,7 +3470,7 @@ locals {
       name_unique = substr(join("-", compact([local.prefix, "vnm", local.suffix_unique])), 0, 80)
       dashes      = true
       slug        = "vnm"
-      min_length  = 2
+      min_length  = 1
       max_length  = 80
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,62}[a-zA-Z0-9_]$"
