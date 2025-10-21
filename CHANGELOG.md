@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.25.2](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.25.1...v0.25.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* naming issues container instances ([#86](https://github.com/CloudNationHQ/terraform-azure-naming/issues/86)) ([098eacf](https://github.com/CloudNationHQ/terraform-azure-naming/commit/098eacf11ee07e24839100a6342f6401e477b4cc))
+
 ## [0.25.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.25.0...v0.25.1) (2025-10-21)
 
 
