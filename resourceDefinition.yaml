@@ -436,7 +436,7 @@
     max: 63
   regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$'
   scope: resourceGroup
-  slug: cg
+  slug: ci
   dashes: true
 
 - name: container_registry
