@@ -1834,6 +1834,15 @@
   slug: sqlmi
   dashes: true
 
+- name: static_web_app
+  length:
+    min: 1
+    max: 60
+  regex: '^[0-9a-zA-Z-]{1,60}$'
+  scope: resourceGroup
+  slug: stapp
+  dashes: true
+
 - name: storage_account
   length:
     min: 3

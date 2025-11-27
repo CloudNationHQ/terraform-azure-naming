@@ -2965,6 +2965,16 @@ locals {
       scope       = "global"
       regex       = "^[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"
     }
+    static_web_app = {
+      name        = substr(join("-", compact([local.prefix, "stapp", local.suffix])), 0, 60)
+      name_unique = substr(join("-", compact([local.prefix, "stapp", local.suffix_unique])), 0, 60)
+      dashes      = true
+      slug        = "stapp"
+      min_length  = 1
+      max_length  = 60
+      scope       = "resourceGroup"
+      regex       = "^[0-9a-zA-Z-]{1,60}$"
+    }
     storage_account = {
       name        = substr(join("", compact([local.prefix_safe, "st", local.suffix_safe])), 0, 24)
       name_unique = substr(join("", compact([local.prefix_safe, "st", local.suffix_unique_safe])), 0, 24)
@@ -4752,6 +4762,10 @@ locals {
     sql_server = {
       valid_name        = length(regexall(local.az.sql_server.regex, local.az.sql_server.name)) > 0 && length(local.az.sql_server.name) > local.az.sql_server.min_length
       valid_name_unique = length(regexall(local.az.sql_server.regex, local.az.sql_server.name_unique)) > 0
+    }
+    static_web_app = {
+      valid_name        = length(regexall(local.az.static_web_app.regex, local.az.static_web_app.name)) > 0 && length(local.az.static_web_app.name) > local.az.static_web_app.min_length
+      valid_name_unique = length(regexall(local.az.static_web_app.regex, local.az.static_web_app.name_unique)) > 0
     }
     storage_account = {
       valid_name        = length(regexall(local.az.storage_account.regex, local.az.storage_account.name)) > 0 && length(local.az.storage_account.name) > local.az.storage_account.min_length
