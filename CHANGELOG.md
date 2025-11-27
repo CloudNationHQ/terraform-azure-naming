@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.25.2...v0.26.0) (2025-11-27)
+
+
+### Features
+
+* add static webapp support ([#88](https://github.com/CloudNationHQ/terraform-azure-naming/issues/88)) ([738f444](https://github.com/CloudNationHQ/terraform-azure-naming/commit/738f444eef57a112e7de21aca16cac7e01bd8d88))
+
 ## [0.25.2](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.25.1...v0.25.2) (2025-10-21)
 
 
