@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
+- <a name="provider_random"></a> [random](#provider\_random) (3.7.2)
 
 ## Resources
 
@@ -1261,6 +1261,10 @@ Description: Sql Managed Instance
 ### <a name="output_sql_server"></a> [sql\_server](#output\_sql\_server)
 
 Description: Sql Server
+
+### <a name="output_static_web_app"></a> [static\_web\_app](#output\_static\_web\_app)
+
+Description: Static Web App
 
 ### <a name="output_storage_account"></a> [storage\_account](#output\_storage\_account)
 
