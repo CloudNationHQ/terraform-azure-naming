@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.0...v0.26.1) (2026-03-02)
+
+
+### Bug Fixes
+
+* add logic app standard ([#91](https://github.com/CloudNationHQ/terraform-azure-naming/issues/91)) ([d26d31c](https://github.com/CloudNationHQ/terraform-azure-naming/commit/d26d31ca26d4486c8e15a8a8f608ffe496565fe1))
+
 ## [0.26.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.25.2...v0.26.0) (2025-11-27)
 
 
