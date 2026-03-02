@@ -946,6 +946,11 @@ output "logic_app_workflow" {
   description = "Logic App Workflow"
 }
 
+output "logic_app_standard" {
+  value       = local.az.logic_app_standard
+  description = "Logic App Standard"
+}
+
 output "machine_learning_compute_instance" {
   value       = local.az.machine_learning_compute_instance
   description = "Machine Learning Compute Instance"
@@ -1785,5 +1790,3 @@ output "windows_virtual_machine_scale_set" {
   value       = local.az.windows_virtual_machine_scale_set
   description = "Windows Virtual Machine Scale Set"
 }
-
-

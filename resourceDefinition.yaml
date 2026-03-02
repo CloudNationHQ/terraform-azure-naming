@@ -1150,6 +1150,15 @@
   slug: logic
   dashes: true
 
+- name: logic_app_standard
+  length:
+    min: 1
+    max: 80
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$'
+  scope: resourceGroup
+  slug: logic
+  dashes: true
+
 - name: machine_learning_workspace
   length:
     min: 1
