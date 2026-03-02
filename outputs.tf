@@ -956,6 +956,7 @@ output "machine_learning_compute_instance" {
   description = "Machine Learning Compute Instance"
 }
 
+
 output "machine_learning_workspace" {
   value       = local.az.machine_learning_workspace
   description = "Machine Learning Workspace"
