@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (3.7.2)
+- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
 
 ## Resources
 
@@ -821,6 +821,10 @@ Description: Logic App Action Http
 ### <a name="output_logic_app_integration_account"></a> [logic\_app\_integration\_account](#output\_logic\_app\_integration\_account)
 
 Description: Logic App Integration Account
+
+### <a name="output_logic_app_standard"></a> [logic\_app\_standard](#output\_logic\_app\_standard)
+
+Description: Logic App Standard
 
 ### <a name="output_logic_app_trigger_custom"></a> [logic\_app\_trigger\_custom](#output\_logic\_app\_trigger\_custom)
 
