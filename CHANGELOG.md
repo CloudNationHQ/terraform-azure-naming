@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.2](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.1...v0.26.2) (2026-03-04)
+
+
+### Bug Fixes
+
+* add bvault resource ([#93](https://github.com/CloudNationHQ/terraform-azure-naming/issues/93)) ([810048c](https://github.com/CloudNationHQ/terraform-azure-naming/commit/810048c12c06d1126d5a65839964013d2e553abd))
+
 ## [0.26.1](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.0...v0.26.1) (2026-03-02)
 
 
