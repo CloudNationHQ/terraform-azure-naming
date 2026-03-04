@@ -187,7 +187,7 @@
   slug: avail
   dashes: true
 
-- name: backup_policy_vm
+- name: backup_policy
   length:
     min: 3
     max: 150

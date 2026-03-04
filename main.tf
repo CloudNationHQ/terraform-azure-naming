@@ -315,7 +315,7 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,78}[a-zA-Z0-9_]$"
     }
-    backup_policy_vm = {
+    backup_policy = {
       name        = substr(join("-", compact([local.prefix, "bkpol", local.suffix])), 0, 150)
       name_unique = substr(join("-", compact([local.prefix, "bkpol", local.suffix_unique])), 0, 150)
       dashes      = true
@@ -3733,9 +3733,9 @@ locals {
       valid_name        = length(regexall(local.az.availability_set.regex, local.az.availability_set.name)) > 0 && length(local.az.availability_set.name) > local.az.availability_set.min_length
       valid_name_unique = length(regexall(local.az.availability_set.regex, local.az.availability_set.name_unique)) > 0
     }
-    backup_policy_vm = {
-      valid_name        = length(regexall(local.az.backup_policy_vm.regex, local.az.backup_policy_vm.name)) > 0 && length(local.az.backup_policy_vm.name) > local.az.backup_policy_vm.min_length
-      valid_name_unique = length(regexall(local.az.backup_policy_vm.regex, local.az.backup_policy_vm.name_unique)) > 0
+    backup_policy = {
+      valid_name        = length(regexall(local.az.backup_policy.regex, local.az.backup_policy.name)) > 0 && length(local.az.backup_policy.name) > local.az.backup_policy.min_length
+      valid_name_unique = length(regexall(local.az.backup_policy.regex, local.az.backup_policy.name_unique)) > 0
     }
     bastion_host = {
       valid_name        = length(regexall(local.az.bastion_host.regex, local.az.bastion_host.name)) > 0 && length(local.az.bastion_host.name) > local.az.bastion_host.min_length

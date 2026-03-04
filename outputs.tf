@@ -151,9 +151,9 @@ output "availability_set" {
   description = "Availability Set"
 }
 
-output "backup_policy_vm" {
-  value       = local.az.backup_policy_vm
-  description = "Backup Policy Vm"
+output "backup_policy" {
+  value       = local.az.backup_policy
+  description = "Backup Policy"
 }
 
 output "bastion_host" {

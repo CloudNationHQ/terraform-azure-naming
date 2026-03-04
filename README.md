@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
+- <a name="provider_random"></a> [random](#provider\_random) (3.8.1)
 
 ## Resources
 
@@ -202,9 +202,9 @@ Description: Automation Webhook
 
 Description: Availability Set
 
-### <a name="output_backup_policy_vm"></a> [backup\_policy\_vm](#output\_backup\_policy\_vm)
+### <a name="output_backup_policy"></a> [backup\_policy](#output\_backup\_policy)
 
-Description: Backup Policy Vm
+Description: Backup Policy
 
 ### <a name="output_bastion_host"></a> [bastion\_host](#output\_bastion\_host)
 
