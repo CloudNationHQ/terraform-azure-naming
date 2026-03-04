@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
+- <a name="provider_random"></a> [random](#provider\_random) (3.8.1)
 
 ## Resources
 
@@ -201,6 +201,10 @@ Description: Automation Webhook
 ### <a name="output_availability_set"></a> [availability\_set](#output\_availability\_set)
 
 Description: Availability Set
+
+### <a name="output_backup_policy"></a> [backup\_policy](#output\_backup\_policy)
+
+Description: Backup Policy
 
 ### <a name="output_bastion_host"></a> [bastion\_host](#output\_bastion\_host)
 
@@ -437,6 +441,10 @@ Description: Data Lake Store
 ### <a name="output_data_lake_store_firewall_rule"></a> [data\_lake\_store\_firewall\_rule](#output\_data\_lake\_store\_firewall\_rule)
 
 Description: Data Lake Store Firewall Rule
+
+### <a name="output_data_protection_backup_vault"></a> [data\_protection\_backup\_vault](#output\_data\_protection\_backup\_vault)
+
+Description: Data Protection Backup Vault
 
 ### <a name="output_database_migration_project"></a> [database\_migration\_project](#output\_database\_migration\_project)
 

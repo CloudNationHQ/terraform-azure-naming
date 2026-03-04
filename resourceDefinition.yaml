@@ -187,6 +187,15 @@
   slug: avail
   dashes: true
 
+- name: backup_policy
+  length:
+    min: 3
+    max: 150
+  regex: '^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
+  scope: parent
+  slug: bkpol
+  dashes: true
+
 - name: bastion_host
   length:
     min: 1
@@ -653,6 +662,15 @@
   regex: '^[a-zA-Z0-9-_]{3,50}$'
   scope: parent
   slug: dlsfw
+  dashes: true
+
+- name: data_protection_backup_vault
+  length:
+    min: 2
+    max: 50
+  regex: '^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
+  scope: resourceGroup
+  slug: bvault
   dashes: true
 
 - name: database_migration_project

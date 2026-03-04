@@ -151,6 +151,11 @@ output "availability_set" {
   description = "Availability Set"
 }
 
+output "backup_policy" {
+  value       = local.az.backup_policy
+  description = "Backup Policy"
+}
+
 output "bastion_host" {
   value       = local.az.bastion_host
   description = "Bastion Host"
@@ -444,6 +449,11 @@ output "data_lake_store" {
 output "data_lake_store_firewall_rule" {
   value       = local.az.data_lake_store_firewall_rule
   description = "Data Lake Store Firewall Rule"
+}
+
+output "data_protection_backup_vault" {
+  value       = local.az.data_protection_backup_vault
+  description = "Data Protection Backup Vault"
 }
 
 output "database_migration_project" {
@@ -926,6 +936,11 @@ output "logic_app_integration_account" {
   description = "Logic App Integration Account"
 }
 
+output "logic_app_standard" {
+  value       = local.az.logic_app_standard
+  description = "Logic App Standard"
+}
+
 output "logic_app_trigger_custom" {
   value       = local.az.logic_app_trigger_custom
   description = "Logic App Trigger Custom"
@@ -944,11 +959,6 @@ output "logic_app_trigger_recurrence" {
 output "logic_app_workflow" {
   value       = local.az.logic_app_workflow
   description = "Logic App Workflow"
-}
-
-output "logic_app_standard" {
-  value       = local.az.logic_app_standard
-  description = "Logic App Standard"
 }
 
 output "machine_learning_compute_instance" {
@@ -1790,3 +1800,5 @@ output "windows_virtual_machine_scale_set" {
   value       = local.az.windows_virtual_machine_scale_set
   description = "Windows Virtual Machine Scale Set"
 }
+
+
