@@ -446,6 +446,11 @@ output "data_lake_store_firewall_rule" {
   description = "Data Lake Store Firewall Rule"
 }
 
+output "data_protection_backup_vault" {
+  value       = local.az.data_protection_backup_vault
+  description = "Data Protection Backup Vault"
+}
+
 output "database_migration_project" {
   value       = local.az.database_migration_project
   description = "Database Migration Project"

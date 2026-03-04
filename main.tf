@@ -905,6 +905,16 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9-_]{3,50}$"
     }
+    data_protection_backup_vault = {
+      name        = substr(join("-", compact([local.prefix, "bvault", local.suffix])), 0, 50)
+      name_unique = substr(join("-", compact([local.prefix, "bvault", local.suffix_unique])), 0, 50)
+      dashes      = true
+      slug        = "bvault"
+      min_length  = 2
+      max_length  = 50
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+    }
     database_migration_project = {
       name        = substr(join("-", compact([local.prefix, "migr", local.suffix])), 0, 57)
       name_unique = substr(join("-", compact([local.prefix, "migr", local.suffix_unique])), 0, 57)
@@ -3948,6 +3958,10 @@ locals {
     data_lake_store_firewall_rule = {
       valid_name        = length(regexall(local.az.data_lake_store_firewall_rule.regex, local.az.data_lake_store_firewall_rule.name)) > 0 && length(local.az.data_lake_store_firewall_rule.name) > local.az.data_lake_store_firewall_rule.min_length
       valid_name_unique = length(regexall(local.az.data_lake_store_firewall_rule.regex, local.az.data_lake_store_firewall_rule.name_unique)) > 0
+    }
+    data_protection_backup_vault = {
+      valid_name        = length(regexall(local.az.data_protection_backup_vault.regex, local.az.data_protection_backup_vault.name)) > 0 && length(local.az.data_protection_backup_vault.name) > local.az.data_protection_backup_vault.min_length
+      valid_name_unique = length(regexall(local.az.data_protection_backup_vault.regex, local.az.data_protection_backup_vault.name_unique)) > 0
     }
     database_migration_project = {
       valid_name        = length(regexall(local.az.database_migration_project.regex, local.az.database_migration_project.name)) > 0 && length(local.az.database_migration_project.name) > local.az.database_migration_project.min_length
