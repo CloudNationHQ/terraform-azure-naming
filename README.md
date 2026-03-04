@@ -438,6 +438,10 @@ Description: Data Lake Store
 
 Description: Data Lake Store Firewall Rule
 
+### <a name="output_data_protection_backup_vault"></a> [data\_protection\_backup\_vault](#output\_data\_protection\_backup\_vault)
+
+Description: Data Protection Backup Vault
+
 ### <a name="output_database_migration_project"></a> [database\_migration\_project](#output\_database\_migration\_project)
 
 Description: Database Migration Project
