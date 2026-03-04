@@ -202,6 +202,10 @@ Description: Automation Webhook
 
 Description: Availability Set
 
+### <a name="output_backup_policy_vm"></a> [backup\_policy\_vm](#output\_backup\_policy\_vm)
+
+Description: Backup Policy Vm
+
 ### <a name="output_bastion_host"></a> [bastion\_host](#output\_bastion\_host)
 
 Description: Bastion Host
