@@ -191,7 +191,7 @@
   length:
     min: 3
     max: 150
-  regex: '^(?=.{3,150}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
+  regex: '^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
   scope: parent
   slug: bkpol
   dashes: true
@@ -668,7 +668,7 @@
   length:
     min: 2
     max: 50
-  regex: '^(?=.{2,50}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
+  regex: '^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
   scope: resourceGroup
   slug: bvault
   dashes: true

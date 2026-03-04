@@ -323,7 +323,7 @@ locals {
       min_length  = 3
       max_length  = 150
       scope       = "parent"
-      regex       = "^(?=.{3,150}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
     }
     bastion_host = {
       name        = substr(join("-", compact([local.prefix, "bas", local.suffix])), 0, 80)
@@ -923,7 +923,7 @@ locals {
       min_length  = 2
       max_length  = 50
       scope       = "resourceGroup"
-      regex       = "^(?=.{2,50}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
     }
     database_migration_project = {
       name        = substr(join("-", compact([local.prefix, "migr", local.suffix])), 0, 57)
