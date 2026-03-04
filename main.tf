@@ -2,14 +2,14 @@ resource "random_string" "main" {
   length  = 60
   special = false
   upper   = false
-  numeric = var.unique-include-numbers
+  numeric  = var.unique-include-numbers
 }
 
 resource "random_string" "first_letter" {
   length  = 1
   special = false
   upper   = false
-  numeric = false
+  numeric  = false
 }
 
 locals {
@@ -314,6 +314,16 @@ locals {
       max_length  = 80
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,78}[a-zA-Z0-9_]$"
+    }
+    backup_policy_vm = {
+      name        = substr(join("-", compact([local.prefix, "bkpol", local.suffix])), 0, 150)
+      name_unique = substr(join("-", compact([local.prefix, "bkpol", local.suffix_unique])), 0, 150)
+      dashes      = true
+      slug        = "bkpol"
+      min_length  = 3
+      max_length  = 150
+      scope       = "parent"
+      regex       = "^(?=.{3,150}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
     }
     bastion_host = {
       name        = substr(join("-", compact([local.prefix, "bas", local.suffix])), 0, 80)
@@ -913,7 +923,7 @@ locals {
       min_length  = 2
       max_length  = 50
       scope       = "resourceGroup"
-      regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+      regex       = "^(?=.{2,50}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
     }
     database_migration_project = {
       name        = substr(join("-", compact([local.prefix, "migr", local.suffix])), 0, 57)
@@ -1875,6 +1885,16 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[0-9A-Za-z\\\\(\\\\-\\\\)\\\\_\\\\.]{1,80}$"
     }
+    logic_app_standard = {
+      name        = substr(join("-", compact([local.prefix, "logic", local.suffix])), 0, 80)
+      name_unique = substr(join("-", compact([local.prefix, "logic", local.suffix_unique])), 0, 80)
+      dashes      = true
+      slug        = "logic"
+      min_length  = 1
+      max_length  = 80
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
+    }
     logic_app_trigger_custom = {
       name        = substr(join("-", compact([local.prefix, "lapptc", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "lapptc", local.suffix_unique])), 0, 80)
@@ -1906,16 +1926,6 @@ locals {
       regex       = "^[0-9A-Za-z\\\\(\\\\-\\\\)\\\\_\\\\.]{1,80}$"
     }
     logic_app_workflow = {
-      name        = substr(join("-", compact([local.prefix, "logic", local.suffix])), 0, 80)
-      name_unique = substr(join("-", compact([local.prefix, "logic", local.suffix_unique])), 0, 80)
-      dashes      = true
-      slug        = "logic"
-      min_length  = 1
-      max_length  = 80
-      scope       = "resourceGroup"
-      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$"
-    }
-    logic_app_standard = {
       name        = substr(join("-", compact([local.prefix, "logic", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "logic", local.suffix_unique])), 0, 80)
       dashes      = true
@@ -3723,6 +3733,10 @@ locals {
       valid_name        = length(regexall(local.az.availability_set.regex, local.az.availability_set.name)) > 0 && length(local.az.availability_set.name) > local.az.availability_set.min_length
       valid_name_unique = length(regexall(local.az.availability_set.regex, local.az.availability_set.name_unique)) > 0
     }
+    backup_policy_vm = {
+      valid_name        = length(regexall(local.az.backup_policy_vm.regex, local.az.backup_policy_vm.name)) > 0 && length(local.az.backup_policy_vm.name) > local.az.backup_policy_vm.min_length
+      valid_name_unique = length(regexall(local.az.backup_policy_vm.regex, local.az.backup_policy_vm.name_unique)) > 0
+    }
     bastion_host = {
       valid_name        = length(regexall(local.az.bastion_host.regex, local.az.bastion_host.name)) > 0 && length(local.az.bastion_host.name) > local.az.bastion_host.min_length
       valid_name_unique = length(regexall(local.az.bastion_host.regex, local.az.bastion_host.name_unique)) > 0
@@ -4347,6 +4361,10 @@ locals {
       valid_name        = length(regexall(local.az.logic_app_integration_account.regex, local.az.logic_app_integration_account.name)) > 0 && length(local.az.logic_app_integration_account.name) > local.az.logic_app_integration_account.min_length
       valid_name_unique = length(regexall(local.az.logic_app_integration_account.regex, local.az.logic_app_integration_account.name_unique)) > 0
     }
+    logic_app_standard = {
+      valid_name        = length(regexall(local.az.logic_app_standard.regex, local.az.logic_app_standard.name)) > 0 && length(local.az.logic_app_standard.name) > local.az.logic_app_standard.min_length
+      valid_name_unique = length(regexall(local.az.logic_app_standard.regex, local.az.logic_app_standard.name_unique)) > 0
+    }
     logic_app_trigger_custom = {
       valid_name        = length(regexall(local.az.logic_app_trigger_custom.regex, local.az.logic_app_trigger_custom.name)) > 0 && length(local.az.logic_app_trigger_custom.name) > local.az.logic_app_trigger_custom.min_length
       valid_name_unique = length(regexall(local.az.logic_app_trigger_custom.regex, local.az.logic_app_trigger_custom.name_unique)) > 0
@@ -4362,10 +4380,6 @@ locals {
     logic_app_workflow = {
       valid_name        = length(regexall(local.az.logic_app_workflow.regex, local.az.logic_app_workflow.name)) > 0 && length(local.az.logic_app_workflow.name) > local.az.logic_app_workflow.min_length
       valid_name_unique = length(regexall(local.az.logic_app_workflow.regex, local.az.logic_app_workflow.name_unique)) > 0
-    }
-    logic_app_standard = {
-      valid_name        = length(regexall(local.az.logic_app_standard.regex, local.az.logic_app_standard.name)) > 0 && length(local.az.logic_app_standard.name) > local.az.logic_app_standard.min_length
-      valid_name_unique = length(regexall(local.az.logic_app_standard.regex, local.az.logic_app_standard.name_unique)) > 0
     }
     machine_learning_compute_instance = {
       valid_name        = length(regexall(local.az.machine_learning_compute_instance.regex, local.az.machine_learning_compute_instance.name)) > 0 && length(local.az.machine_learning_compute_instance.name) > local.az.machine_learning_compute_instance.min_length

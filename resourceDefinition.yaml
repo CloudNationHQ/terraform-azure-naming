@@ -187,6 +187,15 @@
   slug: avail
   dashes: true
 
+- name: backup_policy_vm
+  length:
+    min: 3
+    max: 150
+  regex: '^(?=.{3,150}$)[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$'
+  scope: parent
+  slug: bkpol
+  dashes: true
+
 - name: bastion_host
   length:
     min: 1

@@ -151,6 +151,11 @@ output "availability_set" {
   description = "Availability Set"
 }
 
+output "backup_policy_vm" {
+  value       = local.az.backup_policy_vm
+  description = "Backup Policy Vm"
+}
+
 output "bastion_host" {
   value       = local.az.bastion_host
   description = "Bastion Host"
@@ -931,6 +936,11 @@ output "logic_app_integration_account" {
   description = "Logic App Integration Account"
 }
 
+output "logic_app_standard" {
+  value       = local.az.logic_app_standard
+  description = "Logic App Standard"
+}
+
 output "logic_app_trigger_custom" {
   value       = local.az.logic_app_trigger_custom
   description = "Logic App Trigger Custom"
@@ -949,11 +959,6 @@ output "logic_app_trigger_recurrence" {
 output "logic_app_workflow" {
   value       = local.az.logic_app_workflow
   description = "Logic App Workflow"
-}
-
-output "logic_app_standard" {
-  value       = local.az.logic_app_standard
-  description = "Logic App Standard"
 }
 
 output "machine_learning_compute_instance" {
@@ -1795,3 +1800,5 @@ output "windows_virtual_machine_scale_set" {
   value       = local.az.windows_virtual_machine_scale_set
   description = "Windows Virtual Machine Scale Set"
 }
+
+
