@@ -981,6 +981,11 @@ output "managed_disk" {
   description = "Managed Disk"
 }
 
+output "managed_redis" {
+  value       = local.az.managed_redis
+  description = "Managed Redis"
+}
+
 output "maps_account" {
   value       = local.az.maps_account
   description = "Maps Account"

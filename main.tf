@@ -2,14 +2,14 @@ resource "random_string" "main" {
   length  = 60
   special = false
   upper   = false
-  numeric = var.unique-include-numbers
+  numeric  = var.unique-include-numbers
 }
 
 resource "random_string" "first_letter" {
   length  = 1
   special = false
   upper   = false
-  numeric = false
+  numeric  = false
 }
 
 locals {
@@ -1974,6 +1974,16 @@ locals {
       max_length  = 80
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9_]{1,80}$"
+    }
+    managed_redis = {
+      name        = substr(join("-", compact([local.prefix, "amr", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "amr", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "amr"
+      min_length  = 1
+      max_length  = 63
+      scope       = "global"
+      regex       = "^[a-zA-Z0-9-_]{1,63}$"
     }
     maps_account = {
       name        = substr(join("-", compact([local.prefix, "map", local.suffix])), 0, 98)
@@ -4396,6 +4406,10 @@ locals {
     managed_disk = {
       valid_name        = length(regexall(local.az.managed_disk.regex, local.az.managed_disk.name)) > 0 && length(local.az.managed_disk.name) > local.az.managed_disk.min_length
       valid_name_unique = length(regexall(local.az.managed_disk.regex, local.az.managed_disk.name_unique)) > 0
+    }
+    managed_redis = {
+      valid_name        = length(regexall(local.az.managed_redis.regex, local.az.managed_redis.name)) > 0 && length(local.az.managed_redis.name) > local.az.managed_redis.min_length
+      valid_name_unique = length(regexall(local.az.managed_redis.regex, local.az.managed_redis.name_unique)) > 0
     }
     maps_account = {
       valid_name        = length(regexall(local.az.maps_account.regex, local.az.maps_account.name)) > 0 && length(local.az.maps_account.name) > local.az.maps_account.min_length
