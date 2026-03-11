@@ -6,6 +6,7 @@
 ### Bug Fixes
 
 * add managed redis naming ([#95](https://github.com/CloudNationHQ/terraform-azure-naming/issues/95)) ([949658b](https://github.com/CloudNationHQ/terraform-azure-naming/commit/949658b558913c3bde9e45fc0aef02fa812a4b12))
+* add datafactory naming
 
 ## [0.26.2](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.1...v0.26.2) (2026-03-04)
 
