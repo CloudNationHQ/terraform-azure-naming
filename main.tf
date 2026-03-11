@@ -765,6 +765,116 @@ locals {
       scope       = "global"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
     }
+    data_factory_credential_service_principal = {
+      name        = substr(join("-", compact([local.prefix, "adfcredsp", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfcredsp", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfcredsp"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_credential_user_managed_identity = {
+      name        = substr(join("-", compact([local.prefix, "adfcredumi", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfcredumi", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfcredumi"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_custom_dataset = {
+      name        = substr(join("-", compact([local.prefix, "adfds", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfds", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfds"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_data_flow = {
+      name        = substr(join("-", compact([local.prefix, "adfdf", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfdf", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfdf"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_azure_blob = {
+      name        = substr(join("-", compact([local.prefix, "adfblob", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfblob", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfblob"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_azure_sql_table = {
+      name        = substr(join("-", compact([local.prefix, "adfazuretbl", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfazuretbl", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfazuretbl"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_binary = {
+      name        = substr(join("-", compact([local.prefix, "adfbin", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfbin", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfbin"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_cosmosdb_sqlapi = {
+      name        = substr(join("-", compact([local.prefix, "adfcosapi", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfcosapi", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfcosapi"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_delimited_text = {
+      name        = substr(join("-", compact([local.prefix, "adfcsv", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfcsv", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfcsv"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_http = {
+      name        = substr(join("-", compact([local.prefix, "adfhttp", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfhttp", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfhttp"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_dataset_json = {
+      name        = substr(join("-", compact([local.prefix, "adfjson", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfjson", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfjson"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
     data_factory_dataset_mysql = {
       name        = substr(join("-", compact([local.prefix, "adfmysql", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "adfmysql", local.suffix_unique])), 0, 260)
@@ -774,6 +884,16 @@ locals {
       max_length  = 260
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{1,258}[a-zA-Z0-9]$"
+    }
+    data_factory_dataset_parquet = {
+      name        = substr(join("-", compact([local.prefix, "adfparq", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfparq", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfparq"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
     }
     data_factory_dataset_postgresql = {
       name        = substr(join("-", compact([local.prefix, "adfpsql", local.suffix])), 0, 260)
@@ -785,6 +905,16 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{1,258}[a-zA-Z0-9]$"
     }
+    data_factory_dataset_snowflake = {
+      name        = substr(join("-", compact([local.prefix, "adfsnow", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsnow", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsnow"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
     data_factory_dataset_sql_server_table = {
       name        = substr(join("-", compact([local.prefix, "adfmssql", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "adfmssql", local.suffix_unique])), 0, 260)
@@ -795,6 +925,36 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{1,258}[a-zA-Z0-9]$"
     }
+    data_factory_flowlet_data_flow = {
+      name        = substr(join("-", compact([local.prefix, "adffl", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adffl", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adffl"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_integration_runtime_azure = {
+      name        = substr(join("-", compact([local.prefix, "adfiraz", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "adfiraz", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "adfiraz"
+      min_length  = 3
+      max_length  = 63
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
+    }
+    data_factory_integration_runtime_azure_ssis = {
+      name        = substr(join("-", compact([local.prefix, "adfirssis", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "adfirssis", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "adfirssis"
+      min_length  = 3
+      max_length  = 63
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
+    }
     data_factory_integration_runtime_managed = {
       name        = substr(join("-", compact([local.prefix, "adfir", local.suffix])), 0, 63)
       name_unique = substr(join("-", compact([local.prefix, "adfir", local.suffix_unique])), 0, 63)
@@ -804,6 +964,116 @@ locals {
       max_length  = 63
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
+    }
+    data_factory_integration_runtime_self_hosted = {
+      name        = substr(join("-", compact([local.prefix, "adfirsh", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "adfirsh", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "adfirsh"
+      min_length  = 3
+      max_length  = 63
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$"
+    }
+    data_factory_linked_custom_service = {
+      name        = substr(join("-", compact([local.prefix, "adfsvcs", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvcs", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvcs"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_blob_storage = {
+      name        = substr(join("-", compact([local.prefix, "adfsvblob", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvblob", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvblob"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_databricks = {
+      name        = substr(join("-", compact([local.prefix, "adfsvdbr", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvdbr", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvdbr"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_file_storage = {
+      name        = substr(join("-", compact([local.prefix, "adfsvfile", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvfile", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvfile"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_function = {
+      name        = substr(join("-", compact([local.prefix, "adfsvfunc", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvfunc", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvfunc"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_search = {
+      name        = substr(join("-", compact([local.prefix, "adfsvsch", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvsch", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvsch"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_sql_database = {
+      name        = substr(join("-", compact([local.prefix, "adfsvazuresql", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvazuresql", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvazuresql"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_azure_table_storage = {
+      name        = substr(join("-", compact([local.prefix, "adfsvaztbl", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvaztbl", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvaztbl"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_cosmosdb = {
+      name        = substr(join("-", compact([local.prefix, "adfsvcos", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvcos", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvcos"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_cosmosdb_mongoapi = {
+      name        = substr(join("-", compact([local.prefix, "adfsvcosmo", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvcosmo", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvcosmo"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
     }
     data_factory_linked_service_data_lake_storage_gen2 = {
       name        = substr(join("-", compact([local.prefix, "adfsvst", local.suffix])), 0, 260)
@@ -825,11 +1095,41 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
     }
+    data_factory_linked_service_kusto = {
+      name        = substr(join("-", compact([local.prefix, "adfsvkusto", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvkusto", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvkusto"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
     data_factory_linked_service_mysql = {
       name        = substr(join("-", compact([local.prefix, "adfsvmysql", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "adfsvmysql", local.suffix_unique])), 0, 260)
       dashes      = true
       slug        = "adfsvmysql"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_odata = {
+      name        = substr(join("-", compact([local.prefix, "adfsvod", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvod", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvod"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_odbc = {
+      name        = substr(join("-", compact([local.prefix, "adfsvodbc", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvodbc", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvodbc"
       min_length  = 1
       max_length  = 260
       scope       = "parent"
@@ -845,11 +1145,71 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
     }
+    data_factory_linked_service_sftp = {
+      name        = substr(join("-", compact([local.prefix, "adfsvsftp", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvsftp", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvsftp"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_snowflake = {
+      name        = substr(join("-", compact([local.prefix, "adfsvsnow", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvsnow", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvsnow"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_sql_managed_instance = {
+      name        = substr(join("-", compact([local.prefix, "adfsvmi", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvmi", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvmi"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
     data_factory_linked_service_sql_server = {
       name        = substr(join("-", compact([local.prefix, "adfsvmssql", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "adfsvmssql", local.suffix_unique])), 0, 260)
       dashes      = true
       slug        = "adfsvmssql"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_synapse = {
+      name        = substr(join("-", compact([local.prefix, "adfsvsyn", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvsyn", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvsyn"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_linked_service_web = {
+      name        = substr(join("-", compact([local.prefix, "adfsvweb", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfsvweb", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfsvweb"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_managed_private_endpoint = {
+      name        = substr(join("-", compact([local.prefix, "adfpe", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adfpe", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adfpe"
       min_length  = 1
       max_length  = 260
       scope       = "parent"
@@ -865,11 +1225,41 @@ locals {
       scope       = "parent"
       regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{1,258}[a-zA-Z0-9]$"
     }
+    data_factory_trigger_blob_event = {
+      name        = substr(join("-", compact([local.prefix, "adftgblob", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adftgblob", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adftgblob"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_trigger_custom_event = {
+      name        = substr(join("-", compact([local.prefix, "adftgce", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adftgce", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adftgce"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
     data_factory_trigger_schedule = {
       name        = substr(join("-", compact([local.prefix, "adftg", local.suffix])), 0, 260)
       name_unique = substr(join("-", compact([local.prefix, "adftg", local.suffix_unique])), 0, 260)
       dashes      = true
       slug        = "adftg"
+      min_length  = 1
+      max_length  = 260
+      scope       = "parent"
+      regex       = "^[a-zA-Z0-9][^<>*%:.?\\\\+\\/]{0,258}$"
+    }
+    data_factory_trigger_tumbling_window = {
+      name        = substr(join("-", compact([local.prefix, "adftgtw", local.suffix])), 0, 260)
+      name_unique = substr(join("-", compact([local.prefix, "adftgtw", local.suffix_unique])), 0, 260)
+      dashes      = true
+      slug        = "adftgtw"
       min_length  = 1
       max_length  = 260
       scope       = "parent"
@@ -3913,21 +4303,129 @@ locals {
       valid_name        = length(regexall(local.az.data_factory.regex, local.az.data_factory.name)) > 0 && length(local.az.data_factory.name) > local.az.data_factory.min_length
       valid_name_unique = length(regexall(local.az.data_factory.regex, local.az.data_factory.name_unique)) > 0
     }
+    data_factory_credential_service_principal = {
+      valid_name        = length(regexall(local.az.data_factory_credential_service_principal.regex, local.az.data_factory_credential_service_principal.name)) > 0 && length(local.az.data_factory_credential_service_principal.name) > local.az.data_factory_credential_service_principal.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_credential_service_principal.regex, local.az.data_factory_credential_service_principal.name_unique)) > 0
+    }
+    data_factory_credential_user_managed_identity = {
+      valid_name        = length(regexall(local.az.data_factory_credential_user_managed_identity.regex, local.az.data_factory_credential_user_managed_identity.name)) > 0 && length(local.az.data_factory_credential_user_managed_identity.name) > local.az.data_factory_credential_user_managed_identity.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_credential_user_managed_identity.regex, local.az.data_factory_credential_user_managed_identity.name_unique)) > 0
+    }
+    data_factory_custom_dataset = {
+      valid_name        = length(regexall(local.az.data_factory_custom_dataset.regex, local.az.data_factory_custom_dataset.name)) > 0 && length(local.az.data_factory_custom_dataset.name) > local.az.data_factory_custom_dataset.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_custom_dataset.regex, local.az.data_factory_custom_dataset.name_unique)) > 0
+    }
+    data_factory_data_flow = {
+      valid_name        = length(regexall(local.az.data_factory_data_flow.regex, local.az.data_factory_data_flow.name)) > 0 && length(local.az.data_factory_data_flow.name) > local.az.data_factory_data_flow.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_data_flow.regex, local.az.data_factory_data_flow.name_unique)) > 0
+    }
+    data_factory_dataset_azure_blob = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_azure_blob.regex, local.az.data_factory_dataset_azure_blob.name)) > 0 && length(local.az.data_factory_dataset_azure_blob.name) > local.az.data_factory_dataset_azure_blob.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_azure_blob.regex, local.az.data_factory_dataset_azure_blob.name_unique)) > 0
+    }
+    data_factory_dataset_azure_sql_table = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_azure_sql_table.regex, local.az.data_factory_dataset_azure_sql_table.name)) > 0 && length(local.az.data_factory_dataset_azure_sql_table.name) > local.az.data_factory_dataset_azure_sql_table.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_azure_sql_table.regex, local.az.data_factory_dataset_azure_sql_table.name_unique)) > 0
+    }
+    data_factory_dataset_binary = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_binary.regex, local.az.data_factory_dataset_binary.name)) > 0 && length(local.az.data_factory_dataset_binary.name) > local.az.data_factory_dataset_binary.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_binary.regex, local.az.data_factory_dataset_binary.name_unique)) > 0
+    }
+    data_factory_dataset_cosmosdb_sqlapi = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_cosmosdb_sqlapi.regex, local.az.data_factory_dataset_cosmosdb_sqlapi.name)) > 0 && length(local.az.data_factory_dataset_cosmosdb_sqlapi.name) > local.az.data_factory_dataset_cosmosdb_sqlapi.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_cosmosdb_sqlapi.regex, local.az.data_factory_dataset_cosmosdb_sqlapi.name_unique)) > 0
+    }
+    data_factory_dataset_delimited_text = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_delimited_text.regex, local.az.data_factory_dataset_delimited_text.name)) > 0 && length(local.az.data_factory_dataset_delimited_text.name) > local.az.data_factory_dataset_delimited_text.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_delimited_text.regex, local.az.data_factory_dataset_delimited_text.name_unique)) > 0
+    }
+    data_factory_dataset_http = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_http.regex, local.az.data_factory_dataset_http.name)) > 0 && length(local.az.data_factory_dataset_http.name) > local.az.data_factory_dataset_http.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_http.regex, local.az.data_factory_dataset_http.name_unique)) > 0
+    }
+    data_factory_dataset_json = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_json.regex, local.az.data_factory_dataset_json.name)) > 0 && length(local.az.data_factory_dataset_json.name) > local.az.data_factory_dataset_json.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_json.regex, local.az.data_factory_dataset_json.name_unique)) > 0
+    }
     data_factory_dataset_mysql = {
       valid_name        = length(regexall(local.az.data_factory_dataset_mysql.regex, local.az.data_factory_dataset_mysql.name)) > 0 && length(local.az.data_factory_dataset_mysql.name) > local.az.data_factory_dataset_mysql.min_length
       valid_name_unique = length(regexall(local.az.data_factory_dataset_mysql.regex, local.az.data_factory_dataset_mysql.name_unique)) > 0
+    }
+    data_factory_dataset_parquet = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_parquet.regex, local.az.data_factory_dataset_parquet.name)) > 0 && length(local.az.data_factory_dataset_parquet.name) > local.az.data_factory_dataset_parquet.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_parquet.regex, local.az.data_factory_dataset_parquet.name_unique)) > 0
     }
     data_factory_dataset_postgresql = {
       valid_name        = length(regexall(local.az.data_factory_dataset_postgresql.regex, local.az.data_factory_dataset_postgresql.name)) > 0 && length(local.az.data_factory_dataset_postgresql.name) > local.az.data_factory_dataset_postgresql.min_length
       valid_name_unique = length(regexall(local.az.data_factory_dataset_postgresql.regex, local.az.data_factory_dataset_postgresql.name_unique)) > 0
     }
+    data_factory_dataset_snowflake = {
+      valid_name        = length(regexall(local.az.data_factory_dataset_snowflake.regex, local.az.data_factory_dataset_snowflake.name)) > 0 && length(local.az.data_factory_dataset_snowflake.name) > local.az.data_factory_dataset_snowflake.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_dataset_snowflake.regex, local.az.data_factory_dataset_snowflake.name_unique)) > 0
+    }
     data_factory_dataset_sql_server_table = {
       valid_name        = length(regexall(local.az.data_factory_dataset_sql_server_table.regex, local.az.data_factory_dataset_sql_server_table.name)) > 0 && length(local.az.data_factory_dataset_sql_server_table.name) > local.az.data_factory_dataset_sql_server_table.min_length
       valid_name_unique = length(regexall(local.az.data_factory_dataset_sql_server_table.regex, local.az.data_factory_dataset_sql_server_table.name_unique)) > 0
     }
+    data_factory_flowlet_data_flow = {
+      valid_name        = length(regexall(local.az.data_factory_flowlet_data_flow.regex, local.az.data_factory_flowlet_data_flow.name)) > 0 && length(local.az.data_factory_flowlet_data_flow.name) > local.az.data_factory_flowlet_data_flow.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_flowlet_data_flow.regex, local.az.data_factory_flowlet_data_flow.name_unique)) > 0
+    }
+    data_factory_integration_runtime_azure = {
+      valid_name        = length(regexall(local.az.data_factory_integration_runtime_azure.regex, local.az.data_factory_integration_runtime_azure.name)) > 0 && length(local.az.data_factory_integration_runtime_azure.name) > local.az.data_factory_integration_runtime_azure.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_integration_runtime_azure.regex, local.az.data_factory_integration_runtime_azure.name_unique)) > 0
+    }
+    data_factory_integration_runtime_azure_ssis = {
+      valid_name        = length(regexall(local.az.data_factory_integration_runtime_azure_ssis.regex, local.az.data_factory_integration_runtime_azure_ssis.name)) > 0 && length(local.az.data_factory_integration_runtime_azure_ssis.name) > local.az.data_factory_integration_runtime_azure_ssis.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_integration_runtime_azure_ssis.regex, local.az.data_factory_integration_runtime_azure_ssis.name_unique)) > 0
+    }
     data_factory_integration_runtime_managed = {
       valid_name        = length(regexall(local.az.data_factory_integration_runtime_managed.regex, local.az.data_factory_integration_runtime_managed.name)) > 0 && length(local.az.data_factory_integration_runtime_managed.name) > local.az.data_factory_integration_runtime_managed.min_length
       valid_name_unique = length(regexall(local.az.data_factory_integration_runtime_managed.regex, local.az.data_factory_integration_runtime_managed.name_unique)) > 0
+    }
+    data_factory_integration_runtime_self_hosted = {
+      valid_name        = length(regexall(local.az.data_factory_integration_runtime_self_hosted.regex, local.az.data_factory_integration_runtime_self_hosted.name)) > 0 && length(local.az.data_factory_integration_runtime_self_hosted.name) > local.az.data_factory_integration_runtime_self_hosted.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_integration_runtime_self_hosted.regex, local.az.data_factory_integration_runtime_self_hosted.name_unique)) > 0
+    }
+    data_factory_linked_custom_service = {
+      valid_name        = length(regexall(local.az.data_factory_linked_custom_service.regex, local.az.data_factory_linked_custom_service.name)) > 0 && length(local.az.data_factory_linked_custom_service.name) > local.az.data_factory_linked_custom_service.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_custom_service.regex, local.az.data_factory_linked_custom_service.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_blob_storage = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_blob_storage.regex, local.az.data_factory_linked_service_azure_blob_storage.name)) > 0 && length(local.az.data_factory_linked_service_azure_blob_storage.name) > local.az.data_factory_linked_service_azure_blob_storage.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_blob_storage.regex, local.az.data_factory_linked_service_azure_blob_storage.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_databricks = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_databricks.regex, local.az.data_factory_linked_service_azure_databricks.name)) > 0 && length(local.az.data_factory_linked_service_azure_databricks.name) > local.az.data_factory_linked_service_azure_databricks.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_databricks.regex, local.az.data_factory_linked_service_azure_databricks.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_file_storage = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_file_storage.regex, local.az.data_factory_linked_service_azure_file_storage.name)) > 0 && length(local.az.data_factory_linked_service_azure_file_storage.name) > local.az.data_factory_linked_service_azure_file_storage.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_file_storage.regex, local.az.data_factory_linked_service_azure_file_storage.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_function = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_function.regex, local.az.data_factory_linked_service_azure_function.name)) > 0 && length(local.az.data_factory_linked_service_azure_function.name) > local.az.data_factory_linked_service_azure_function.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_function.regex, local.az.data_factory_linked_service_azure_function.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_search = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_search.regex, local.az.data_factory_linked_service_azure_search.name)) > 0 && length(local.az.data_factory_linked_service_azure_search.name) > local.az.data_factory_linked_service_azure_search.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_search.regex, local.az.data_factory_linked_service_azure_search.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_sql_database = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_sql_database.regex, local.az.data_factory_linked_service_azure_sql_database.name)) > 0 && length(local.az.data_factory_linked_service_azure_sql_database.name) > local.az.data_factory_linked_service_azure_sql_database.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_sql_database.regex, local.az.data_factory_linked_service_azure_sql_database.name_unique)) > 0
+    }
+    data_factory_linked_service_azure_table_storage = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_azure_table_storage.regex, local.az.data_factory_linked_service_azure_table_storage.name)) > 0 && length(local.az.data_factory_linked_service_azure_table_storage.name) > local.az.data_factory_linked_service_azure_table_storage.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_azure_table_storage.regex, local.az.data_factory_linked_service_azure_table_storage.name_unique)) > 0
+    }
+    data_factory_linked_service_cosmosdb = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_cosmosdb.regex, local.az.data_factory_linked_service_cosmosdb.name)) > 0 && length(local.az.data_factory_linked_service_cosmosdb.name) > local.az.data_factory_linked_service_cosmosdb.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_cosmosdb.regex, local.az.data_factory_linked_service_cosmosdb.name_unique)) > 0
+    }
+    data_factory_linked_service_cosmosdb_mongoapi = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_cosmosdb_mongoapi.regex, local.az.data_factory_linked_service_cosmosdb_mongoapi.name)) > 0 && length(local.az.data_factory_linked_service_cosmosdb_mongoapi.name) > local.az.data_factory_linked_service_cosmosdb_mongoapi.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_cosmosdb_mongoapi.regex, local.az.data_factory_linked_service_cosmosdb_mongoapi.name_unique)) > 0
     }
     data_factory_linked_service_data_lake_storage_gen2 = {
       valid_name        = length(regexall(local.az.data_factory_linked_service_data_lake_storage_gen2.regex, local.az.data_factory_linked_service_data_lake_storage_gen2.name)) > 0 && length(local.az.data_factory_linked_service_data_lake_storage_gen2.name) > local.az.data_factory_linked_service_data_lake_storage_gen2.min_length
@@ -3937,25 +4435,73 @@ locals {
       valid_name        = length(regexall(local.az.data_factory_linked_service_key_vault.regex, local.az.data_factory_linked_service_key_vault.name)) > 0 && length(local.az.data_factory_linked_service_key_vault.name) > local.az.data_factory_linked_service_key_vault.min_length
       valid_name_unique = length(regexall(local.az.data_factory_linked_service_key_vault.regex, local.az.data_factory_linked_service_key_vault.name_unique)) > 0
     }
+    data_factory_linked_service_kusto = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_kusto.regex, local.az.data_factory_linked_service_kusto.name)) > 0 && length(local.az.data_factory_linked_service_kusto.name) > local.az.data_factory_linked_service_kusto.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_kusto.regex, local.az.data_factory_linked_service_kusto.name_unique)) > 0
+    }
     data_factory_linked_service_mysql = {
       valid_name        = length(regexall(local.az.data_factory_linked_service_mysql.regex, local.az.data_factory_linked_service_mysql.name)) > 0 && length(local.az.data_factory_linked_service_mysql.name) > local.az.data_factory_linked_service_mysql.min_length
       valid_name_unique = length(regexall(local.az.data_factory_linked_service_mysql.regex, local.az.data_factory_linked_service_mysql.name_unique)) > 0
+    }
+    data_factory_linked_service_odata = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_odata.regex, local.az.data_factory_linked_service_odata.name)) > 0 && length(local.az.data_factory_linked_service_odata.name) > local.az.data_factory_linked_service_odata.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_odata.regex, local.az.data_factory_linked_service_odata.name_unique)) > 0
+    }
+    data_factory_linked_service_odbc = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_odbc.regex, local.az.data_factory_linked_service_odbc.name)) > 0 && length(local.az.data_factory_linked_service_odbc.name) > local.az.data_factory_linked_service_odbc.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_odbc.regex, local.az.data_factory_linked_service_odbc.name_unique)) > 0
     }
     data_factory_linked_service_postgresql = {
       valid_name        = length(regexall(local.az.data_factory_linked_service_postgresql.regex, local.az.data_factory_linked_service_postgresql.name)) > 0 && length(local.az.data_factory_linked_service_postgresql.name) > local.az.data_factory_linked_service_postgresql.min_length
       valid_name_unique = length(regexall(local.az.data_factory_linked_service_postgresql.regex, local.az.data_factory_linked_service_postgresql.name_unique)) > 0
     }
+    data_factory_linked_service_sftp = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_sftp.regex, local.az.data_factory_linked_service_sftp.name)) > 0 && length(local.az.data_factory_linked_service_sftp.name) > local.az.data_factory_linked_service_sftp.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_sftp.regex, local.az.data_factory_linked_service_sftp.name_unique)) > 0
+    }
+    data_factory_linked_service_snowflake = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_snowflake.regex, local.az.data_factory_linked_service_snowflake.name)) > 0 && length(local.az.data_factory_linked_service_snowflake.name) > local.az.data_factory_linked_service_snowflake.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_snowflake.regex, local.az.data_factory_linked_service_snowflake.name_unique)) > 0
+    }
+    data_factory_linked_service_sql_managed_instance = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_sql_managed_instance.regex, local.az.data_factory_linked_service_sql_managed_instance.name)) > 0 && length(local.az.data_factory_linked_service_sql_managed_instance.name) > local.az.data_factory_linked_service_sql_managed_instance.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_sql_managed_instance.regex, local.az.data_factory_linked_service_sql_managed_instance.name_unique)) > 0
+    }
     data_factory_linked_service_sql_server = {
       valid_name        = length(regexall(local.az.data_factory_linked_service_sql_server.regex, local.az.data_factory_linked_service_sql_server.name)) > 0 && length(local.az.data_factory_linked_service_sql_server.name) > local.az.data_factory_linked_service_sql_server.min_length
       valid_name_unique = length(regexall(local.az.data_factory_linked_service_sql_server.regex, local.az.data_factory_linked_service_sql_server.name_unique)) > 0
+    }
+    data_factory_linked_service_synapse = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_synapse.regex, local.az.data_factory_linked_service_synapse.name)) > 0 && length(local.az.data_factory_linked_service_synapse.name) > local.az.data_factory_linked_service_synapse.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_synapse.regex, local.az.data_factory_linked_service_synapse.name_unique)) > 0
+    }
+    data_factory_linked_service_web = {
+      valid_name        = length(regexall(local.az.data_factory_linked_service_web.regex, local.az.data_factory_linked_service_web.name)) > 0 && length(local.az.data_factory_linked_service_web.name) > local.az.data_factory_linked_service_web.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_linked_service_web.regex, local.az.data_factory_linked_service_web.name_unique)) > 0
+    }
+    data_factory_managed_private_endpoint = {
+      valid_name        = length(regexall(local.az.data_factory_managed_private_endpoint.regex, local.az.data_factory_managed_private_endpoint.name)) > 0 && length(local.az.data_factory_managed_private_endpoint.name) > local.az.data_factory_managed_private_endpoint.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_managed_private_endpoint.regex, local.az.data_factory_managed_private_endpoint.name_unique)) > 0
     }
     data_factory_pipeline = {
       valid_name        = length(regexall(local.az.data_factory_pipeline.regex, local.az.data_factory_pipeline.name)) > 0 && length(local.az.data_factory_pipeline.name) > local.az.data_factory_pipeline.min_length
       valid_name_unique = length(regexall(local.az.data_factory_pipeline.regex, local.az.data_factory_pipeline.name_unique)) > 0
     }
+    data_factory_trigger_blob_event = {
+      valid_name        = length(regexall(local.az.data_factory_trigger_blob_event.regex, local.az.data_factory_trigger_blob_event.name)) > 0 && length(local.az.data_factory_trigger_blob_event.name) > local.az.data_factory_trigger_blob_event.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_trigger_blob_event.regex, local.az.data_factory_trigger_blob_event.name_unique)) > 0
+    }
+    data_factory_trigger_custom_event = {
+      valid_name        = length(regexall(local.az.data_factory_trigger_custom_event.regex, local.az.data_factory_trigger_custom_event.name)) > 0 && length(local.az.data_factory_trigger_custom_event.name) > local.az.data_factory_trigger_custom_event.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_trigger_custom_event.regex, local.az.data_factory_trigger_custom_event.name_unique)) > 0
+    }
     data_factory_trigger_schedule = {
       valid_name        = length(regexall(local.az.data_factory_trigger_schedule.regex, local.az.data_factory_trigger_schedule.name)) > 0 && length(local.az.data_factory_trigger_schedule.name) > local.az.data_factory_trigger_schedule.min_length
       valid_name_unique = length(regexall(local.az.data_factory_trigger_schedule.regex, local.az.data_factory_trigger_schedule.name_unique)) > 0
+    }
+    data_factory_trigger_tumbling_window = {
+      valid_name        = length(regexall(local.az.data_factory_trigger_tumbling_window.regex, local.az.data_factory_trigger_tumbling_window.name)) > 0 && length(local.az.data_factory_trigger_tumbling_window.name) > local.az.data_factory_trigger_tumbling_window.min_length
+      valid_name_unique = length(regexall(local.az.data_factory_trigger_tumbling_window.regex, local.az.data_factory_trigger_tumbling_window.name_unique)) > 0
     }
     data_lake_analytics_account = {
       valid_name        = length(regexall(local.az.data_lake_analytics_account.regex, local.az.data_lake_analytics_account.name)) > 0 && length(local.az.data_lake_analytics_account.name) > local.az.data_lake_analytics_account.min_length

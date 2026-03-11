@@ -376,9 +376,69 @@ output "data_factory" {
   description = "Data Factory"
 }
 
+output "data_factory_credential_service_principal" {
+  value       = local.az.data_factory_credential_service_principal
+  description = "Data Factory Credential Service Principal"
+}
+
+output "data_factory_credential_user_managed_identity" {
+  value       = local.az.data_factory_credential_user_managed_identity
+  description = "Data Factory Credential User Managed Identity"
+}
+
+output "data_factory_custom_dataset" {
+  value       = local.az.data_factory_custom_dataset
+  description = "Data Factory Custom Dataset"
+}
+
+output "data_factory_data_flow" {
+  value       = local.az.data_factory_data_flow
+  description = "Data Factory Data Flow"
+}
+
+output "data_factory_dataset_azure_blob" {
+  value       = local.az.data_factory_dataset_azure_blob
+  description = "Data Factory Dataset Azure Blob"
+}
+
+output "data_factory_dataset_azure_sql_table" {
+  value       = local.az.data_factory_dataset_azure_sql_table
+  description = "Data Factory Dataset Azure Sql Table"
+}
+
+output "data_factory_dataset_binary" {
+  value       = local.az.data_factory_dataset_binary
+  description = "Data Factory Dataset Binary"
+}
+
+output "data_factory_dataset_cosmosdb_sqlapi" {
+  value       = local.az.data_factory_dataset_cosmosdb_sqlapi
+  description = "Data Factory Dataset Cosmosdb Sqlapi"
+}
+
+output "data_factory_dataset_delimited_text" {
+  value       = local.az.data_factory_dataset_delimited_text
+  description = "Data Factory Dataset Delimited Text"
+}
+
+output "data_factory_dataset_http" {
+  value       = local.az.data_factory_dataset_http
+  description = "Data Factory Dataset Http"
+}
+
+output "data_factory_dataset_json" {
+  value       = local.az.data_factory_dataset_json
+  description = "Data Factory Dataset Json"
+}
+
 output "data_factory_dataset_mysql" {
   value       = local.az.data_factory_dataset_mysql
   description = "Data Factory Dataset Mysql"
+}
+
+output "data_factory_dataset_parquet" {
+  value       = local.az.data_factory_dataset_parquet
+  description = "Data Factory Dataset Parquet"
 }
 
 output "data_factory_dataset_postgresql" {
@@ -386,14 +446,89 @@ output "data_factory_dataset_postgresql" {
   description = "Data Factory Dataset Postgresql"
 }
 
+output "data_factory_dataset_snowflake" {
+  value       = local.az.data_factory_dataset_snowflake
+  description = "Data Factory Dataset Snowflake"
+}
+
 output "data_factory_dataset_sql_server_table" {
   value       = local.az.data_factory_dataset_sql_server_table
   description = "Data Factory Dataset Sql Server Table"
 }
 
+output "data_factory_flowlet_data_flow" {
+  value       = local.az.data_factory_flowlet_data_flow
+  description = "Data Factory Flowlet Data Flow"
+}
+
+output "data_factory_integration_runtime_azure" {
+  value       = local.az.data_factory_integration_runtime_azure
+  description = "Data Factory Integration Runtime Azure"
+}
+
+output "data_factory_integration_runtime_azure_ssis" {
+  value       = local.az.data_factory_integration_runtime_azure_ssis
+  description = "Data Factory Integration Runtime Azure Ssis"
+}
+
 output "data_factory_integration_runtime_managed" {
   value       = local.az.data_factory_integration_runtime_managed
   description = "Data Factory Integration Runtime Managed"
+}
+
+output "data_factory_integration_runtime_self_hosted" {
+  value       = local.az.data_factory_integration_runtime_self_hosted
+  description = "Data Factory Integration Runtime Self Hosted"
+}
+
+output "data_factory_linked_custom_service" {
+  value       = local.az.data_factory_linked_custom_service
+  description = "Data Factory Linked Custom Service"
+}
+
+output "data_factory_linked_service_azure_blob_storage" {
+  value       = local.az.data_factory_linked_service_azure_blob_storage
+  description = "Data Factory Linked Service Azure Blob Storage"
+}
+
+output "data_factory_linked_service_azure_databricks" {
+  value       = local.az.data_factory_linked_service_azure_databricks
+  description = "Data Factory Linked Service Azure Databricks"
+}
+
+output "data_factory_linked_service_azure_file_storage" {
+  value       = local.az.data_factory_linked_service_azure_file_storage
+  description = "Data Factory Linked Service Azure File Storage"
+}
+
+output "data_factory_linked_service_azure_function" {
+  value       = local.az.data_factory_linked_service_azure_function
+  description = "Data Factory Linked Service Azure Function"
+}
+
+output "data_factory_linked_service_azure_search" {
+  value       = local.az.data_factory_linked_service_azure_search
+  description = "Data Factory Linked Service Azure Search"
+}
+
+output "data_factory_linked_service_azure_sql_database" {
+  value       = local.az.data_factory_linked_service_azure_sql_database
+  description = "Data Factory Linked Service Azure Sql Database"
+}
+
+output "data_factory_linked_service_azure_table_storage" {
+  value       = local.az.data_factory_linked_service_azure_table_storage
+  description = "Data Factory Linked Service Azure Table Storage"
+}
+
+output "data_factory_linked_service_cosmosdb" {
+  value       = local.az.data_factory_linked_service_cosmosdb
+  description = "Data Factory Linked Service Cosmosdb"
+}
+
+output "data_factory_linked_service_cosmosdb_mongoapi" {
+  value       = local.az.data_factory_linked_service_cosmosdb_mongoapi
+  description = "Data Factory Linked Service Cosmosdb Mongoapi"
 }
 
 output "data_factory_linked_service_data_lake_storage_gen2" {
@@ -406,9 +541,24 @@ output "data_factory_linked_service_key_vault" {
   description = "Data Factory Linked Service Key Vault"
 }
 
+output "data_factory_linked_service_kusto" {
+  value       = local.az.data_factory_linked_service_kusto
+  description = "Data Factory Linked Service Kusto"
+}
+
 output "data_factory_linked_service_mysql" {
   value       = local.az.data_factory_linked_service_mysql
   description = "Data Factory Linked Service Mysql"
+}
+
+output "data_factory_linked_service_odata" {
+  value       = local.az.data_factory_linked_service_odata
+  description = "Data Factory Linked Service Odata"
+}
+
+output "data_factory_linked_service_odbc" {
+  value       = local.az.data_factory_linked_service_odbc
+  description = "Data Factory Linked Service Odbc"
 }
 
 output "data_factory_linked_service_postgresql" {
@@ -416,9 +566,39 @@ output "data_factory_linked_service_postgresql" {
   description = "Data Factory Linked Service Postgresql"
 }
 
+output "data_factory_linked_service_sftp" {
+  value       = local.az.data_factory_linked_service_sftp
+  description = "Data Factory Linked Service Sftp"
+}
+
+output "data_factory_linked_service_snowflake" {
+  value       = local.az.data_factory_linked_service_snowflake
+  description = "Data Factory Linked Service Snowflake"
+}
+
+output "data_factory_linked_service_sql_managed_instance" {
+  value       = local.az.data_factory_linked_service_sql_managed_instance
+  description = "Data Factory Linked Service Sql Managed Instance"
+}
+
 output "data_factory_linked_service_sql_server" {
   value       = local.az.data_factory_linked_service_sql_server
   description = "Data Factory Linked Service Sql Server"
+}
+
+output "data_factory_linked_service_synapse" {
+  value       = local.az.data_factory_linked_service_synapse
+  description = "Data Factory Linked Service Synapse"
+}
+
+output "data_factory_linked_service_web" {
+  value       = local.az.data_factory_linked_service_web
+  description = "Data Factory Linked Service Web"
+}
+
+output "data_factory_managed_private_endpoint" {
+  value       = local.az.data_factory_managed_private_endpoint
+  description = "Data Factory Managed Private Endpoint"
 }
 
 output "data_factory_pipeline" {
@@ -426,9 +606,24 @@ output "data_factory_pipeline" {
   description = "Data Factory Pipeline"
 }
 
+output "data_factory_trigger_blob_event" {
+  value       = local.az.data_factory_trigger_blob_event
+  description = "Data Factory Trigger Blob Event"
+}
+
+output "data_factory_trigger_custom_event" {
+  value       = local.az.data_factory_trigger_custom_event
+  description = "Data Factory Trigger Custom Event"
+}
+
 output "data_factory_trigger_schedule" {
   value       = local.az.data_factory_trigger_schedule
   description = "Data Factory Trigger Schedule"
+}
+
+output "data_factory_trigger_tumbling_window" {
+  value       = local.az.data_factory_trigger_tumbling_window
+  description = "Data Factory Trigger Tumbling Window"
 }
 
 output "data_lake_analytics_account" {
