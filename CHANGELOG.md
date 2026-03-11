@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.27.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.3...v0.27.0) (2026-03-11)
+
+
+### Features
+
+* trigger release ([#102](https://github.com/CloudNationHQ/terraform-azure-naming/issues/102)) ([ccf7450](https://github.com/CloudNationHQ/terraform-azure-naming/commit/ccf74506fc430d55f14c13e9f38b40f938c46bb1))
+
 ## [0.26.3](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.2...v0.26.3) (2026-03-11)
 
 
