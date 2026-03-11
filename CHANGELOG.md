@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.3](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.2...v0.26.3) (2026-03-11)
+
+
+### Bug Fixes
+
+* add managed redis naming ([#95](https://github.com/CloudNationHQ/terraform-azure-naming/issues/95)) ([949658b](https://github.com/CloudNationHQ/terraform-azure-naming/commit/949658b558913c3bde9e45fc0aef02fa812a4b12))
+
 ## [0.26.2](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.1...v0.26.2) (2026-03-04)
 
 
