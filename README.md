@@ -382,129 +382,21 @@ Description: Data Collection Rule
 
 Description: Data Factory
 
-### <a name="output_data_factory_credential_service_principal"></a> [data\_factory\_credential\_service\_principal](#output\_data\_factory\_credential\_service\_principal)
-
-Description: Data Factory Credential Service Principal
-
-### <a name="output_data_factory_credential_user_managed_identity"></a> [data\_factory\_credential\_user\_managed\_identity](#output\_data\_factory\_credential\_user\_managed\_identity)
-
-Description: Data Factory Credential User Managed Identity
-
-### <a name="output_data_factory_custom_dataset"></a> [data\_factory\_custom\_dataset](#output\_data\_factory\_custom\_dataset)
-
-Description: Data Factory Custom Dataset
-
-### <a name="output_data_factory_data_flow"></a> [data\_factory\_data\_flow](#output\_data\_factory\_data\_flow)
-
-Description: Data Factory Data Flow
-
-### <a name="output_data_factory_dataset_azure_blob"></a> [data\_factory\_dataset\_azure\_blob](#output\_data\_factory\_dataset\_azure\_blob)
-
-Description: Data Factory Dataset Azure Blob
-
-### <a name="output_data_factory_dataset_azure_sql_table"></a> [data\_factory\_dataset\_azure\_sql\_table](#output\_data\_factory\_dataset\_azure\_sql\_table)
-
-Description: Data Factory Dataset Azure Sql Table
-
-### <a name="output_data_factory_dataset_binary"></a> [data\_factory\_dataset\_binary](#output\_data\_factory\_dataset\_binary)
-
-Description: Data Factory Dataset Binary
-
-### <a name="output_data_factory_dataset_cosmosdb_sqlapi"></a> [data\_factory\_dataset\_cosmosdb\_sqlapi](#output\_data\_factory\_dataset\_cosmosdb\_sqlapi)
-
-Description: Data Factory Dataset Cosmosdb Sqlapi
-
-### <a name="output_data_factory_dataset_delimited_text"></a> [data\_factory\_dataset\_delimited\_text](#output\_data\_factory\_dataset\_delimited\_text)
-
-Description: Data Factory Dataset Delimited Text
-
-### <a name="output_data_factory_dataset_http"></a> [data\_factory\_dataset\_http](#output\_data\_factory\_dataset\_http)
-
-Description: Data Factory Dataset Http
-
-### <a name="output_data_factory_dataset_json"></a> [data\_factory\_dataset\_json](#output\_data\_factory\_dataset\_json)
-
-Description: Data Factory Dataset Json
-
 ### <a name="output_data_factory_dataset_mysql"></a> [data\_factory\_dataset\_mysql](#output\_data\_factory\_dataset\_mysql)
 
 Description: Data Factory Dataset Mysql
-
-### <a name="output_data_factory_dataset_parquet"></a> [data\_factory\_dataset\_parquet](#output\_data\_factory\_dataset\_parquet)
-
-Description: Data Factory Dataset Parquet
 
 ### <a name="output_data_factory_dataset_postgresql"></a> [data\_factory\_dataset\_postgresql](#output\_data\_factory\_dataset\_postgresql)
 
 Description: Data Factory Dataset Postgresql
 
-### <a name="output_data_factory_dataset_snowflake"></a> [data\_factory\_dataset\_snowflake](#output\_data\_factory\_dataset\_snowflake)
-
-Description: Data Factory Dataset Snowflake
-
 ### <a name="output_data_factory_dataset_sql_server_table"></a> [data\_factory\_dataset\_sql\_server\_table](#output\_data\_factory\_dataset\_sql\_server\_table)
 
 Description: Data Factory Dataset Sql Server Table
 
-### <a name="output_data_factory_flowlet_data_flow"></a> [data\_factory\_flowlet\_data\_flow](#output\_data\_factory\_flowlet\_data\_flow)
-
-Description: Data Factory Flowlet Data Flow
-
-### <a name="output_data_factory_integration_runtime_azure"></a> [data\_factory\_integration\_runtime\_azure](#output\_data\_factory\_integration\_runtime\_azure)
-
-Description: Data Factory Integration Runtime Azure
-
-### <a name="output_data_factory_integration_runtime_azure_ssis"></a> [data\_factory\_integration\_runtime\_azure\_ssis](#output\_data\_factory\_integration\_runtime\_azure\_ssis)
-
-Description: Data Factory Integration Runtime Azure Ssis
-
 ### <a name="output_data_factory_integration_runtime_managed"></a> [data\_factory\_integration\_runtime\_managed](#output\_data\_factory\_integration\_runtime\_managed)
 
 Description: Data Factory Integration Runtime Managed
-
-### <a name="output_data_factory_integration_runtime_self_hosted"></a> [data\_factory\_integration\_runtime\_self\_hosted](#output\_data\_factory\_integration\_runtime\_self\_hosted)
-
-Description: Data Factory Integration Runtime Self Hosted
-
-### <a name="output_data_factory_linked_custom_service"></a> [data\_factory\_linked\_custom\_service](#output\_data\_factory\_linked\_custom\_service)
-
-Description: Data Factory Linked Custom Service
-
-### <a name="output_data_factory_linked_service_azure_blob_storage"></a> [data\_factory\_linked\_service\_azure\_blob\_storage](#output\_data\_factory\_linked\_service\_azure\_blob\_storage)
-
-Description: Data Factory Linked Service Azure Blob Storage
-
-### <a name="output_data_factory_linked_service_azure_databricks"></a> [data\_factory\_linked\_service\_azure\_databricks](#output\_data\_factory\_linked\_service\_azure\_databricks)
-
-Description: Data Factory Linked Service Azure Databricks
-
-### <a name="output_data_factory_linked_service_azure_file_storage"></a> [data\_factory\_linked\_service\_azure\_file\_storage](#output\_data\_factory\_linked\_service\_azure\_file\_storage)
-
-Description: Data Factory Linked Service Azure File Storage
-
-### <a name="output_data_factory_linked_service_azure_function"></a> [data\_factory\_linked\_service\_azure\_function](#output\_data\_factory\_linked\_service\_azure\_function)
-
-Description: Data Factory Linked Service Azure Function
-
-### <a name="output_data_factory_linked_service_azure_search"></a> [data\_factory\_linked\_service\_azure\_search](#output\_data\_factory\_linked\_service\_azure\_search)
-
-Description: Data Factory Linked Service Azure Search
-
-### <a name="output_data_factory_linked_service_azure_sql_database"></a> [data\_factory\_linked\_service\_azure\_sql\_database](#output\_data\_factory\_linked\_service\_azure\_sql\_database)
-
-Description: Data Factory Linked Service Azure Sql Database
-
-### <a name="output_data_factory_linked_service_azure_table_storage"></a> [data\_factory\_linked\_service\_azure\_table\_storage](#output\_data\_factory\_linked\_service\_azure\_table\_storage)
-
-Description: Data Factory Linked Service Azure Table Storage
-
-### <a name="output_data_factory_linked_service_cosmosdb"></a> [data\_factory\_linked\_service\_cosmosdb](#output\_data\_factory\_linked\_service\_cosmosdb)
-
-Description: Data Factory Linked Service Cosmosdb
-
-### <a name="output_data_factory_linked_service_cosmosdb_mongoapi"></a> [data\_factory\_linked\_service\_cosmosdb\_mongoapi](#output\_data\_factory\_linked\_service\_cosmosdb\_mongoapi)
-
-Description: Data Factory Linked Service Cosmosdb Mongoapi
 
 ### <a name="output_data_factory_linked_service_data_lake_storage_gen2"></a> [data\_factory\_linked\_service\_data\_lake\_storage\_gen2](#output\_data\_factory\_linked\_service\_data\_lake\_storage\_gen2)
 
@@ -514,73 +406,25 @@ Description: Data Factory Linked Service Data Lake Storage Gen2
 
 Description: Data Factory Linked Service Key Vault
 
-### <a name="output_data_factory_linked_service_kusto"></a> [data\_factory\_linked\_service\_kusto](#output\_data\_factory\_linked\_service\_kusto)
-
-Description: Data Factory Linked Service Kusto
-
 ### <a name="output_data_factory_linked_service_mysql"></a> [data\_factory\_linked\_service\_mysql](#output\_data\_factory\_linked\_service\_mysql)
 
 Description: Data Factory Linked Service Mysql
-
-### <a name="output_data_factory_linked_service_odata"></a> [data\_factory\_linked\_service\_odata](#output\_data\_factory\_linked\_service\_odata)
-
-Description: Data Factory Linked Service Odata
-
-### <a name="output_data_factory_linked_service_odbc"></a> [data\_factory\_linked\_service\_odbc](#output\_data\_factory\_linked\_service\_odbc)
-
-Description: Data Factory Linked Service Odbc
 
 ### <a name="output_data_factory_linked_service_postgresql"></a> [data\_factory\_linked\_service\_postgresql](#output\_data\_factory\_linked\_service\_postgresql)
 
 Description: Data Factory Linked Service Postgresql
 
-### <a name="output_data_factory_linked_service_sftp"></a> [data\_factory\_linked\_service\_sftp](#output\_data\_factory\_linked\_service\_sftp)
-
-Description: Data Factory Linked Service Sftp
-
-### <a name="output_data_factory_linked_service_snowflake"></a> [data\_factory\_linked\_service\_snowflake](#output\_data\_factory\_linked\_service\_snowflake)
-
-Description: Data Factory Linked Service Snowflake
-
-### <a name="output_data_factory_linked_service_sql_managed_instance"></a> [data\_factory\_linked\_service\_sql\_managed\_instance](#output\_data\_factory\_linked\_service\_sql\_managed\_instance)
-
-Description: Data Factory Linked Service Sql Managed Instance
-
 ### <a name="output_data_factory_linked_service_sql_server"></a> [data\_factory\_linked\_service\_sql\_server](#output\_data\_factory\_linked\_service\_sql\_server)
 
 Description: Data Factory Linked Service Sql Server
-
-### <a name="output_data_factory_linked_service_synapse"></a> [data\_factory\_linked\_service\_synapse](#output\_data\_factory\_linked\_service\_synapse)
-
-Description: Data Factory Linked Service Synapse
-
-### <a name="output_data_factory_linked_service_web"></a> [data\_factory\_linked\_service\_web](#output\_data\_factory\_linked\_service\_web)
-
-Description: Data Factory Linked Service Web
-
-### <a name="output_data_factory_managed_private_endpoint"></a> [data\_factory\_managed\_private\_endpoint](#output\_data\_factory\_managed\_private\_endpoint)
-
-Description: Data Factory Managed Private Endpoint
 
 ### <a name="output_data_factory_pipeline"></a> [data\_factory\_pipeline](#output\_data\_factory\_pipeline)
 
 Description: Data Factory Pipeline
 
-### <a name="output_data_factory_trigger_blob_event"></a> [data\_factory\_trigger\_blob\_event](#output\_data\_factory\_trigger\_blob\_event)
-
-Description: Data Factory Trigger Blob Event
-
-### <a name="output_data_factory_trigger_custom_event"></a> [data\_factory\_trigger\_custom\_event](#output\_data\_factory\_trigger\_custom\_event)
-
-Description: Data Factory Trigger Custom Event
-
 ### <a name="output_data_factory_trigger_schedule"></a> [data\_factory\_trigger\_schedule](#output\_data\_factory\_trigger\_schedule)
 
 Description: Data Factory Trigger Schedule
-
-### <a name="output_data_factory_trigger_tumbling_window"></a> [data\_factory\_trigger\_tumbling\_window](#output\_data\_factory\_trigger\_tumbling\_window)
-
-Description: Data Factory Trigger Tumbling Window
 
 ### <a name="output_data_lake_analytics_account"></a> [data\_lake\_analytics\_account](#output\_data\_lake\_analytics\_account)
 
