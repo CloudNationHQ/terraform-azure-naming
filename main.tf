@@ -2,14 +2,14 @@ resource "random_string" "main" {
   length  = 60
   special = false
   upper   = false
-  numeric = var.unique-include-numbers
+  numeric  = var.unique-include-numbers
 }
 
 resource "random_string" "first_letter" {
   length  = 1
   special = false
   upper   = false
-  numeric = false
+  numeric  = false
 }
 
 locals {
@@ -34,6 +34,16 @@ locals {
       max_length  = 75
       scope       = "global"
       regex       = "^[a-zA-Z0-9-]{1,75}$"
+    }
+    ai_foundry = {
+      name        = substr(join("-", compact([local.prefix, "aif", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "aif", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "aif"
+      min_length  = 2
+      max_length  = 64
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
     }
     aks_node_pool_linux = {
       name        = substr(join("", compact([local.prefix_safe, "npl", local.suffix_safe])), 0, 11)
@@ -4020,6 +4030,10 @@ locals {
     aadb2c_directory = {
       valid_name        = length(regexall(local.az.aadb2c_directory.regex, local.az.aadb2c_directory.name)) > 0 && length(local.az.aadb2c_directory.name) > local.az.aadb2c_directory.min_length
       valid_name_unique = length(regexall(local.az.aadb2c_directory.regex, local.az.aadb2c_directory.name_unique)) > 0
+    }
+    ai_foundry = {
+      valid_name        = length(regexall(local.az.ai_foundry.regex, local.az.ai_foundry.name)) > 0 && length(local.az.ai_foundry.name) > local.az.ai_foundry.min_length
+      valid_name_unique = length(regexall(local.az.ai_foundry.regex, local.az.ai_foundry.name_unique)) > 0
     }
     aks_node_pool_linux = {
       valid_name        = length(regexall(local.az.aks_node_pool_linux.regex, local.az.aks_node_pool_linux.name)) > 0 && length(local.az.aks_node_pool_linux.name) > local.az.aks_node_pool_linux.min_length
