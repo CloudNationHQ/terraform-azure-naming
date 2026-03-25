@@ -1385,6 +1385,26 @@ locals {
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9-_]{3,30}$"
     }
+    dev_center = {
+      name        = substr(join("-", compact([local.prefix, "dc", local.suffix])), 0, 26)
+      name_unique = substr(join("-", compact([local.prefix, "dc", local.suffix_unique])), 0, 26)
+      dashes      = true
+      slug        = "dc"
+      min_length  = 3
+      max_length  = 26
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9-]{3,26}$"
+    }
+    dev_center_project = {
+      name        = substr(join("-", compact([local.prefix, "dcp", local.suffix])), 0, 63)
+      name_unique = substr(join("-", compact([local.prefix, "dcp", local.suffix_unique])), 0, 63)
+      dashes      = true
+      slug        = "dcp"
+      min_length  = 3
+      max_length  = 63
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9-]{3,63}$"
+    }
     dev_test_lab = {
       name        = substr(join("-", compact([local.prefix, "lab", local.suffix])), 0, 50)
       name_unique = substr(join("-", compact([local.prefix, "lab", local.suffix_unique])), 0, 50)
@@ -2364,6 +2384,16 @@ locals {
       max_length  = 60
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-._]{0,58}[a-zA-Z0-9_]$"
+    }
+    managed_devops_pool = {
+      name        = substr(join("-", compact([local.prefix, "mdp", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "mdp", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "mdp"
+      min_length  = 1
+      max_length  = 64
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-.]{0,63}$"
     }
     managed_disk = {
       name        = substr(join("-", compact([local.prefix, "dsk", local.suffix])), 0, 80)
@@ -4571,6 +4601,14 @@ locals {
       valid_name        = length(regexall(local.az.databricks_workspace.regex, local.az.databricks_workspace.name)) > 0 && length(local.az.databricks_workspace.name) > local.az.databricks_workspace.min_length
       valid_name_unique = length(regexall(local.az.databricks_workspace.regex, local.az.databricks_workspace.name_unique)) > 0
     }
+    dev_center = {
+      valid_name        = length(regexall(local.az.dev_center.regex, local.az.dev_center.name)) > 0 && length(local.az.dev_center.name) > local.az.dev_center.min_length
+      valid_name_unique = length(regexall(local.az.dev_center.regex, local.az.dev_center.name_unique)) > 0
+    }
+    dev_center_project = {
+      valid_name        = length(regexall(local.az.dev_center_project.regex, local.az.dev_center_project.name)) > 0 && length(local.az.dev_center_project.name) > local.az.dev_center_project.min_length
+      valid_name_unique = length(regexall(local.az.dev_center_project.regex, local.az.dev_center_project.name_unique)) > 0
+    }
     dev_test_lab = {
       valid_name        = length(regexall(local.az.dev_test_lab.regex, local.az.dev_test_lab.name)) > 0 && length(local.az.dev_test_lab.name) > local.az.dev_test_lab.min_length
       valid_name_unique = length(regexall(local.az.dev_test_lab.regex, local.az.dev_test_lab.name_unique)) > 0
@@ -4962,6 +5000,10 @@ locals {
     maintenance_configuration = {
       valid_name        = length(regexall(local.az.maintenance_configuration.regex, local.az.maintenance_configuration.name)) > 0 && length(local.az.maintenance_configuration.name) > local.az.maintenance_configuration.min_length
       valid_name_unique = length(regexall(local.az.maintenance_configuration.regex, local.az.maintenance_configuration.name_unique)) > 0
+    }
+    managed_devops_pool = {
+      valid_name        = length(regexall(local.az.managed_devops_pool.regex, local.az.managed_devops_pool.name)) > 0 && length(local.az.managed_devops_pool.name) > local.az.managed_devops_pool.min_length
+      valid_name_unique = length(regexall(local.az.managed_devops_pool.regex, local.az.managed_devops_pool.name_unique)) > 0
     }
     managed_disk = {
       valid_name        = length(regexall(local.az.managed_disk.regex, local.az.managed_disk.name)) > 0 && length(local.az.managed_disk.name) > local.az.managed_disk.min_length

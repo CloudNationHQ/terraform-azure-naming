@@ -25,7 +25,7 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- <a name="provider_random"></a> [random](#provider\_random) (~> 3.6)
+- <a name="provider_random"></a> [random](#provider\_random) (3.8.1)
 
 ## Resources
 
@@ -630,6 +630,14 @@ Description: Databricks Standard Cluster
 
 Description: Databricks Workspace
 
+### <a name="output_dev_center"></a> [dev\_center](#output\_dev\_center)
+
+Description: Dev Center
+
+### <a name="output_dev_center_project"></a> [dev\_center\_project](#output\_dev\_center\_project)
+
+Description: Dev Center Project
+
 ### <a name="output_dev_test_lab"></a> [dev\_test\_lab](#output\_dev\_test\_lab)
 
 Description: Dev Test Lab
@@ -1021,6 +1029,10 @@ Description: Machine Learning Workspace
 ### <a name="output_maintenance_configuration"></a> [maintenance\_configuration](#output\_maintenance\_configuration)
 
 Description: Maintenance Configuration
+
+### <a name="output_managed_devops_pool"></a> [managed\_devops\_pool](#output\_managed\_devops\_pool)
+
+Description: Managed Devops Pool
 
 ### <a name="output_managed_disk"></a> [managed\_disk](#output\_managed\_disk)
 

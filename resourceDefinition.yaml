@@ -1060,6 +1060,24 @@
   slug: dbw
   dashes: true
 
+- name: dev_center
+  length:
+    min: 3
+    max: 26
+  regex: '^[a-zA-Z0-9-]{3,26}$'
+  scope: resourceGroup
+  slug: dc
+  dashes: true
+
+- name: dev_center_project
+  length:
+    min: 3
+    max: 63
+  regex: '^[a-zA-Z0-9-]{3,63}$'
+  scope: resourceGroup
+  slug: dcp
+  dashes: true
+
 - name: dev_test_lab
   length:
     min: 1
@@ -1544,6 +1562,15 @@
   regex: '^[^<>*%:.?\\+\\/]{1,259}[^<>*%:.?\\+\\/ ]$'
   scope: resourceGroup
   slug: mlw
+  dashes: true
+
+- name: managed_devops_pool
+  length:
+    min: 1
+    max: 64
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-.]{0,63}$'
+  scope: resourceGroup
+  slug: mdp
   dashes: true
 
 - name: managed_disk
