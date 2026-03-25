@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.29.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.28.0...v0.29.0) (2026-03-25)
+
+
+### Features
+
+* add dev center and managed devops pool outputs ([#106](https://github.com/CloudNationHQ/terraform-azure-naming/issues/106)) ([0356cad](https://github.com/CloudNationHQ/terraform-azure-naming/commit/0356cad37bba4cf3b8cc3ac7deccc11359612842))
+
 ## [0.28.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.27.0...v0.28.0) (2026-03-25)
 
 
