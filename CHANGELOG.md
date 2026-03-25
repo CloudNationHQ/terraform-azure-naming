@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.28.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.27.0...v0.28.0) (2026-03-25)
+
+
+### Features
+
+* add foundry account naming ([#104](https://github.com/CloudNationHQ/terraform-azure-naming/issues/104)) ([7f85787](https://github.com/CloudNationHQ/terraform-azure-naming/commit/7f857874d9354e083f7cbd3d9872b65a6c9c1c2f))
+
 ## [0.27.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.26.3...v0.27.0) (2026-03-11)
 
 
