@@ -90,6 +90,10 @@ The following outputs are exported:
 
 Description: Aadb2c Directory
 
+### <a name="output_ai_foundry"></a> [ai\_foundry](#output\_ai\_foundry)
+
+Description: Ai Foundry
+
 ### <a name="output_aks_node_pool_linux"></a> [aks\_node\_pool\_linux](#output\_aks\_node\_pool\_linux)
 
 Description: Aks Node Pool Linux

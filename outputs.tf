@@ -11,6 +11,11 @@ output "aadb2c_directory" {
   description = "Aadb2c Directory"
 }
 
+output "ai_foundry" {
+  value       = local.az.ai_foundry
+  description = "Ai Foundry"
+}
+
 output "aks_node_pool_linux" {
   value       = local.az.aks_node_pool_linux
   description = "Aks Node Pool Linux"
