@@ -686,6 +686,16 @@ output "databricks_workspace" {
   description = "Databricks Workspace"
 }
 
+output "dev_center" {
+  value       = local.az.dev_center
+  description = "Dev Center"
+}
+
+output "dev_center_project" {
+  value       = local.az.dev_center_project
+  description = "Dev Center Project"
+}
+
 output "dev_test_lab" {
   value       = local.az.dev_test_lab
   description = "Dev Test Lab"
@@ -1174,6 +1184,11 @@ output "machine_learning_workspace" {
 output "maintenance_configuration" {
   value       = local.az.maintenance_configuration
   description = "Maintenance Configuration"
+}
+
+output "managed_devops_pool" {
+  value       = local.az.managed_devops_pool
+  description = "Managed Devops Pool"
 }
 
 output "managed_disk" {
