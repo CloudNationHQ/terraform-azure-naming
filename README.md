@@ -306,17 +306,49 @@ Description: Cdn Frontdoor Security Policy
 
 Description: Cognitive Account
 
+### <a name="output_cognitive_computer_vision"></a> [cognitive\_computer\_vision](#output\_cognitive\_computer\_vision)
+
+Description: Cognitive Computer Vision
+
+### <a name="output_cognitive_content_moderator"></a> [cognitive\_content\_moderator](#output\_cognitive\_content\_moderator)
+
+Description: Cognitive Content Moderator
+
+### <a name="output_cognitive_content_safety"></a> [cognitive\_content\_safety](#output\_cognitive\_content\_safety)
+
+Description: Cognitive Content Safety
+
 ### <a name="output_cognitive_deployment"></a> [cognitive\_deployment](#output\_cognitive\_deployment)
 
 Description: Cognitive Deployment
 
+### <a name="output_cognitive_face"></a> [cognitive\_face](#output\_cognitive\_face)
+
+Description: Cognitive Face
+
+### <a name="output_cognitive_form_recognizer"></a> [cognitive\_form\_recognizer](#output\_cognitive\_form\_recognizer)
+
+Description: Cognitive Form Recognizer
+
+### <a name="output_cognitive_openai"></a> [cognitive\_openai](#output\_cognitive\_openai)
+
+Description: Cognitive Openai
+
+### <a name="output_cognitive_speech_services"></a> [cognitive\_speech\_services](#output\_cognitive\_speech\_services)
+
+Description: Cognitive Speech Services
+
+### <a name="output_cognitive_text_analytics"></a> [cognitive\_text\_analytics](#output\_cognitive\_text\_analytics)
+
+Description: Cognitive Text Analytics
+
+### <a name="output_cognitive_text_translation"></a> [cognitive\_text\_translation](#output\_cognitive\_text\_translation)
+
+Description: Cognitive Text Translation
+
 ### <a name="output_communication_service"></a> [communication\_service](#output\_communication\_service)
 
 Description: Communication Service
-
-### <a name="output_computer_vision"></a> [computer\_vision](#output\_computer\_vision)
-
-Description: Computer Vision
 
 ### <a name="output_consumption_budget_resource_group"></a> [consumption\_budget\_resource\_group](#output\_consumption\_budget\_resource\_group)
 
@@ -710,10 +742,6 @@ Description: Dns Txt Record
 
 Description: Dns Zone
 
-### <a name="output_document_intelligence"></a> [document\_intelligence](#output\_document\_intelligence)
-
-Description: Document Intelligence
-
 ### <a name="output_eventgrid_domain"></a> [eventgrid\_domain](#output\_eventgrid\_domain)
 
 Description: Eventgrid Domain
@@ -761,10 +789,6 @@ Description: Express Route Circuit
 ### <a name="output_express_route_gateway"></a> [express\_route\_gateway](#output\_express\_route\_gateway)
 
 Description: Express Route Gateway
-
-### <a name="output_face_api"></a> [face\_api](#output\_face\_api)
-
-Description: Face Api
 
 ### <a name="output_firewall"></a> [firewall](#output\_firewall)
 
@@ -937,10 +961,6 @@ Description: Kusto Database
 ### <a name="output_kusto_eventhub_data_connection"></a> [kusto\_eventhub\_data\_connection](#output\_kusto\_eventhub\_data\_connection)
 
 Description: Kusto Eventhub Data Connection
-
-### <a name="output_language_service"></a> [language\_service](#output\_language\_service)
-
-Description: Language Service
 
 ### <a name="output_lb"></a> [lb](#output\_lb)
 
@@ -1206,10 +1226,6 @@ Description: Notification Hub Authorization Rule
 
 Description: Notification Hub Namespace
 
-### <a name="output_openai_service"></a> [openai\_service](#output\_openai\_service)
-
-Description: Openai Service
-
 ### <a name="output_point_to_site_vpn_gateway"></a> [point\_to\_site\_vpn\_gateway](#output\_point\_to\_site\_vpn\_gateway)
 
 Description: Point To Site Vpn Gateway
@@ -1450,10 +1466,6 @@ Description: Signalr Service
 
 Description: Snapshots
 
-### <a name="output_speech_service"></a> [speech\_service](#output\_speech\_service)
-
-Description: Speech Service
-
 ### <a name="output_sql_elasticpool"></a> [sql\_elasticpool](#output\_sql\_elasticpool)
 
 Description: Sql Elasticpool
@@ -1625,10 +1637,6 @@ Description: Template Deployment
 ### <a name="output_traffic_manager_profile"></a> [traffic\_manager\_profile](#output\_traffic\_manager\_profile)
 
 Description: Traffic Manager Profile
-
-### <a name="output_translator_service"></a> [translator\_service](#output\_translator\_service)
-
-Description: Translator Service
 
 ### <a name="output_unique-seed"></a> [unique-seed](#output\_unique-seed)
 

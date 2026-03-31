@@ -281,19 +281,59 @@ output "cognitive_account" {
   description = "Cognitive Account"
 }
 
+output "cognitive_computer_vision" {
+  value       = local.az.cognitive_computer_vision
+  description = "Cognitive Computer Vision"
+}
+
+output "cognitive_content_moderator" {
+  value       = local.az.cognitive_content_moderator
+  description = "Cognitive Content Moderator"
+}
+
+output "cognitive_content_safety" {
+  value       = local.az.cognitive_content_safety
+  description = "Cognitive Content Safety"
+}
+
 output "cognitive_deployment" {
   value       = local.az.cognitive_deployment
   description = "Cognitive Deployment"
 }
 
+output "cognitive_face" {
+  value       = local.az.cognitive_face
+  description = "Cognitive Face"
+}
+
+output "cognitive_form_recognizer" {
+  value       = local.az.cognitive_form_recognizer
+  description = "Cognitive Form Recognizer"
+}
+
+output "cognitive_openai" {
+  value       = local.az.cognitive_openai
+  description = "Cognitive Openai"
+}
+
+output "cognitive_speech_services" {
+  value       = local.az.cognitive_speech_services
+  description = "Cognitive Speech Services"
+}
+
+output "cognitive_text_analytics" {
+  value       = local.az.cognitive_text_analytics
+  description = "Cognitive Text Analytics"
+}
+
+output "cognitive_text_translation" {
+  value       = local.az.cognitive_text_translation
+  description = "Cognitive Text Translation"
+}
+
 output "communication_service" {
   value       = local.az.communication_service
   description = "Communication Service"
-}
-
-output "computer_vision" {
-  value       = local.az.computer_vision
-  description = "Computer Vision"
 }
 
 output "consumption_budget_resource_group" {
@@ -786,11 +826,6 @@ output "dns_zone" {
   description = "Dns Zone"
 }
 
-output "document_intelligence" {
-  value       = local.az.document_intelligence
-  description = "Document Intelligence"
-}
-
 output "eventgrid_domain" {
   value       = local.az.eventgrid_domain
   description = "Eventgrid Domain"
@@ -849,11 +884,6 @@ output "express_route_circuit" {
 output "express_route_gateway" {
   value       = local.az.express_route_gateway
   description = "Express Route Gateway"
-}
-
-output "face_api" {
-  value       = local.az.face_api
-  description = "Face Api"
 }
 
 output "firewall" {
@@ -1069,11 +1099,6 @@ output "kusto_database" {
 output "kusto_eventhub_data_connection" {
   value       = local.az.kusto_eventhub_data_connection
   description = "Kusto Eventhub Data Connection"
-}
-
-output "language_service" {
-  value       = local.az.language_service
-  description = "Language Service"
 }
 
 output "lb" {
@@ -1406,11 +1431,6 @@ output "notification_hub_namespace" {
   description = "Notification Hub Namespace"
 }
 
-output "openai_service" {
-  value       = local.az.openai_service
-  description = "Openai Service"
-}
-
 output "point_to_site_vpn_gateway" {
   value       = local.az.point_to_site_vpn_gateway
   description = "Point To Site Vpn Gateway"
@@ -1711,11 +1731,6 @@ output "snapshots" {
   description = "Snapshots"
 }
 
-output "speech_service" {
-  value       = local.az.speech_service
-  description = "Speech Service"
-}
-
 output "sql_elasticpool" {
   value       = local.az.sql_elasticpool
   description = "Sql Elasticpool"
@@ -1929,11 +1944,6 @@ output "template_deployment" {
 output "traffic_manager_profile" {
   value       = local.az.traffic_manager_profile
   description = "Traffic Manager Profile"
-}
-
-output "translator_service" {
-  value       = local.az.translator_service
-  description = "Translator Service"
 }
 
 output "user_assigned_identity" {
