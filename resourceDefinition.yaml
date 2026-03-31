@@ -412,6 +412,15 @@
   slug: cfdsp
   dashes: true
 
+- name: computer_vision
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: cv
+  dashes: true
+
 - name: cognitive_account
   length:
     min: 2
@@ -1123,6 +1132,15 @@
   slug: dns
   dashes: true
 
+- name: document_intelligence
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: di
+  dashes: true
+
 - name: eventgrid_domain
   length:
     min: 3
@@ -1229,6 +1247,15 @@
   regex: '^[a-zA-Z0-9][a-zA-Z0-9-._]{0,78}[a-zA-Z0-9_]$'
   scope: resourceGroup
   slug: ergw
+  dashes: true
+
+- name: face_api
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: face
   dashes: true
 
 - name: firewall
@@ -1481,6 +1508,15 @@
   regex: '^[a-zA-Z0-9- .]{1,40}$'
   scope: parent
   slug: kehc
+  dashes: true
+
+- name: language_service
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: lang
   dashes: true
 
 - name: lb
@@ -1852,6 +1888,15 @@
   slug: nhns
   dashes: true
 
+- name: openai_service
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: oai
+  dashes: true
+
 - name: point_to_site_vpn_gateway
   length:
     min: 1
@@ -2212,6 +2257,15 @@
   slug: snap
   dashes: true
 
+- name: speech_service
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: spch
+  dashes: true
+
 - name: sql_elasticpool
   length:
     min: 1
@@ -2534,6 +2588,15 @@
   regex: '^[a-zA-Z0-9][a-zA-Z0-9-.]{0,61}[a-zA-Z0-9_]$'
   scope: global
   slug: traf
+  dashes: true
+
+- name: translator_service
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: trsl
   dashes: true
 
 - name: user_assigned_identity
