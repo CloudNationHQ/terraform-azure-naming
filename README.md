@@ -306,9 +306,45 @@ Description: Cdn Frontdoor Security Policy
 
 Description: Cognitive Account
 
+### <a name="output_cognitive_computer_vision"></a> [cognitive\_computer\_vision](#output\_cognitive\_computer\_vision)
+
+Description: Cognitive Computer Vision
+
+### <a name="output_cognitive_content_moderator"></a> [cognitive\_content\_moderator](#output\_cognitive\_content\_moderator)
+
+Description: Cognitive Content Moderator
+
+### <a name="output_cognitive_content_safety"></a> [cognitive\_content\_safety](#output\_cognitive\_content\_safety)
+
+Description: Cognitive Content Safety
+
 ### <a name="output_cognitive_deployment"></a> [cognitive\_deployment](#output\_cognitive\_deployment)
 
 Description: Cognitive Deployment
+
+### <a name="output_cognitive_face"></a> [cognitive\_face](#output\_cognitive\_face)
+
+Description: Cognitive Face
+
+### <a name="output_cognitive_form_recognizer"></a> [cognitive\_form\_recognizer](#output\_cognitive\_form\_recognizer)
+
+Description: Cognitive Form Recognizer
+
+### <a name="output_cognitive_openai"></a> [cognitive\_openai](#output\_cognitive\_openai)
+
+Description: Cognitive Openai
+
+### <a name="output_cognitive_speech_services"></a> [cognitive\_speech\_services](#output\_cognitive\_speech\_services)
+
+Description: Cognitive Speech Services
+
+### <a name="output_cognitive_text_analytics"></a> [cognitive\_text\_analytics](#output\_cognitive\_text\_analytics)
+
+Description: Cognitive Text Analytics
+
+### <a name="output_cognitive_text_translation"></a> [cognitive\_text\_translation](#output\_cognitive\_text\_translation)
+
+Description: Cognitive Text Translation
 
 ### <a name="output_communication_service"></a> [communication\_service](#output\_communication\_service)
 

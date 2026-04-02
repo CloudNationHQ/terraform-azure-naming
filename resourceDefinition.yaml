@@ -416,9 +416,90 @@
   length:
     min: 2
     max: 64
-  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{1,62}[a-zA-Z0-9]$'
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
   scope: resourceGroup
   slug: cog
+  dashes: true
+
+- name: cognitive_computer_vision
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: cv
+  dashes: true
+
+- name: cognitive_content_moderator
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: cm
+  dashes: true
+
+- name: cognitive_content_safety
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: cs
+  dashes: true
+
+- name: cognitive_face
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: face
+  dashes: true
+
+- name: cognitive_form_recognizer
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: di
+  dashes: true
+
+- name: cognitive_openai
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: oai
+  dashes: true
+
+- name: cognitive_speech_services
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: spch
+  dashes: true
+
+- name: cognitive_text_analytics
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: lang
+  dashes: true
+
+- name: cognitive_text_translation
+  length:
+    min: 2
+    max: 64
+  regex: '^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$'
+  scope: global
+  slug: trsl
   dashes: true
 
 - name: container_app

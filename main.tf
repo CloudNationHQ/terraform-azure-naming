@@ -573,7 +573,37 @@ locals {
       min_length  = 2
       max_length  = 64
       scope       = "resourceGroup"
-      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,62}[a-zA-Z0-9]$"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_computer_vision = {
+      name        = substr(join("-", compact([local.prefix, "cv", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "cv", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "cv"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_content_moderator = {
+      name        = substr(join("-", compact([local.prefix, "cm", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "cm", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "cm"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_content_safety = {
+      name        = substr(join("-", compact([local.prefix, "cs", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "cs", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "cs"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
     }
     cognitive_deployment = {
       name        = substr(join("-", compact([local.prefix, "cog", local.suffix])), 0, 64)
@@ -584,6 +614,66 @@ locals {
       max_length  = 64
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_face = {
+      name        = substr(join("-", compact([local.prefix, "face", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "face", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "face"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_form_recognizer = {
+      name        = substr(join("-", compact([local.prefix, "di", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "di", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "di"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_openai = {
+      name        = substr(join("-", compact([local.prefix, "oai", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "oai", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "oai"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_speech_services = {
+      name        = substr(join("-", compact([local.prefix, "spch", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "spch", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "spch"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_text_analytics = {
+      name        = substr(join("-", compact([local.prefix, "lang", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "lang", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "lang"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
+    }
+    cognitive_text_translation = {
+      name        = substr(join("-", compact([local.prefix, "trsl", local.suffix])), 0, 64)
+      name_unique = substr(join("-", compact([local.prefix, "trsl", local.suffix_unique])), 0, 64)
+      dashes      = true
+      slug        = "trsl"
+      min_length  = 2
+      max_length  = 64
+      scope       = "global"
+      regex       = "^[a-zA-Z][a-zA-Z0-9-]{0,62}[a-zA-Z0-9]$"
     }
     communication_service = {
       name        = substr(join("-", compact([local.prefix, "acs", local.suffix])), 0, 64)
@@ -4277,9 +4367,45 @@ locals {
       valid_name        = length(regexall(local.az.cognitive_account.regex, local.az.cognitive_account.name)) > 0 && length(local.az.cognitive_account.name) > local.az.cognitive_account.min_length
       valid_name_unique = length(regexall(local.az.cognitive_account.regex, local.az.cognitive_account.name_unique)) > 0
     }
+    cognitive_computer_vision = {
+      valid_name        = length(regexall(local.az.cognitive_computer_vision.regex, local.az.cognitive_computer_vision.name)) > 0 && length(local.az.cognitive_computer_vision.name) > local.az.cognitive_computer_vision.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_computer_vision.regex, local.az.cognitive_computer_vision.name_unique)) > 0
+    }
+    cognitive_content_moderator = {
+      valid_name        = length(regexall(local.az.cognitive_content_moderator.regex, local.az.cognitive_content_moderator.name)) > 0 && length(local.az.cognitive_content_moderator.name) > local.az.cognitive_content_moderator.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_content_moderator.regex, local.az.cognitive_content_moderator.name_unique)) > 0
+    }
+    cognitive_content_safety = {
+      valid_name        = length(regexall(local.az.cognitive_content_safety.regex, local.az.cognitive_content_safety.name)) > 0 && length(local.az.cognitive_content_safety.name) > local.az.cognitive_content_safety.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_content_safety.regex, local.az.cognitive_content_safety.name_unique)) > 0
+    }
     cognitive_deployment = {
       valid_name        = length(regexall(local.az.cognitive_deployment.regex, local.az.cognitive_deployment.name)) > 0 && length(local.az.cognitive_deployment.name) > local.az.cognitive_deployment.min_length
       valid_name_unique = length(regexall(local.az.cognitive_deployment.regex, local.az.cognitive_deployment.name_unique)) > 0
+    }
+    cognitive_face = {
+      valid_name        = length(regexall(local.az.cognitive_face.regex, local.az.cognitive_face.name)) > 0 && length(local.az.cognitive_face.name) > local.az.cognitive_face.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_face.regex, local.az.cognitive_face.name_unique)) > 0
+    }
+    cognitive_form_recognizer = {
+      valid_name        = length(regexall(local.az.cognitive_form_recognizer.regex, local.az.cognitive_form_recognizer.name)) > 0 && length(local.az.cognitive_form_recognizer.name) > local.az.cognitive_form_recognizer.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_form_recognizer.regex, local.az.cognitive_form_recognizer.name_unique)) > 0
+    }
+    cognitive_openai = {
+      valid_name        = length(regexall(local.az.cognitive_openai.regex, local.az.cognitive_openai.name)) > 0 && length(local.az.cognitive_openai.name) > local.az.cognitive_openai.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_openai.regex, local.az.cognitive_openai.name_unique)) > 0
+    }
+    cognitive_speech_services = {
+      valid_name        = length(regexall(local.az.cognitive_speech_services.regex, local.az.cognitive_speech_services.name)) > 0 && length(local.az.cognitive_speech_services.name) > local.az.cognitive_speech_services.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_speech_services.regex, local.az.cognitive_speech_services.name_unique)) > 0
+    }
+    cognitive_text_analytics = {
+      valid_name        = length(regexall(local.az.cognitive_text_analytics.regex, local.az.cognitive_text_analytics.name)) > 0 && length(local.az.cognitive_text_analytics.name) > local.az.cognitive_text_analytics.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_text_analytics.regex, local.az.cognitive_text_analytics.name_unique)) > 0
+    }
+    cognitive_text_translation = {
+      valid_name        = length(regexall(local.az.cognitive_text_translation.regex, local.az.cognitive_text_translation.name)) > 0 && length(local.az.cognitive_text_translation.name) > local.az.cognitive_text_translation.min_length
+      valid_name_unique = length(regexall(local.az.cognitive_text_translation.regex, local.az.cognitive_text_translation.name_unique)) > 0
     }
     communication_service = {
       valid_name        = length(regexall(local.az.communication_service.regex, local.az.communication_service.name)) > 0 && length(local.az.communication_service.name) > local.az.communication_service.min_length

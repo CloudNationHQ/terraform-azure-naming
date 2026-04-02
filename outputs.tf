@@ -281,9 +281,54 @@ output "cognitive_account" {
   description = "Cognitive Account"
 }
 
+output "cognitive_computer_vision" {
+  value       = local.az.cognitive_computer_vision
+  description = "Cognitive Computer Vision"
+}
+
+output "cognitive_content_moderator" {
+  value       = local.az.cognitive_content_moderator
+  description = "Cognitive Content Moderator"
+}
+
+output "cognitive_content_safety" {
+  value       = local.az.cognitive_content_safety
+  description = "Cognitive Content Safety"
+}
+
 output "cognitive_deployment" {
   value       = local.az.cognitive_deployment
   description = "Cognitive Deployment"
+}
+
+output "cognitive_face" {
+  value       = local.az.cognitive_face
+  description = "Cognitive Face"
+}
+
+output "cognitive_form_recognizer" {
+  value       = local.az.cognitive_form_recognizer
+  description = "Cognitive Form Recognizer"
+}
+
+output "cognitive_openai" {
+  value       = local.az.cognitive_openai
+  description = "Cognitive Openai"
+}
+
+output "cognitive_speech_services" {
+  value       = local.az.cognitive_speech_services
+  description = "Cognitive Speech Services"
+}
+
+output "cognitive_text_analytics" {
+  value       = local.az.cognitive_text_analytics
+  description = "Cognitive Text Analytics"
+}
+
+output "cognitive_text_translation" {
+  value       = local.az.cognitive_text_translation
+  description = "Cognitive Text Translation"
 }
 
 output "communication_service" {
