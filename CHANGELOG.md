@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.30.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.29.0...v0.30.0) (2026-04-02)
+
+
+### Features
+
+* add namings for most used cognitive services ([#108](https://github.com/CloudNationHQ/terraform-azure-naming/issues/108)) ([8085f35](https://github.com/CloudNationHQ/terraform-azure-naming/commit/8085f35b209d00812147f3e64b5761bb0ff6e65b))
+
 ## [0.29.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.28.0...v0.29.0) (2026-03-25)
 
 
