@@ -151,6 +151,11 @@ output "automation_webhook" {
   description = "Automation Webhook"
 }
 
+output "cost_management_scheduled_action" {
+  value       = local.az.cost_management_scheduled_action
+  description = "Cost Management Scheduled Action"
+}
+
 output "availability_set" {
   value       = local.az.availability_set
   description = "Availability Set"

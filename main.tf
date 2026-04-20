@@ -315,6 +315,16 @@ locals {
       scope       = "parent"
       regex       = "^[^<>*%:.?+/ ]{1,128}$"
     }
+    cost_management_scheduled_action = {
+      name        = substr(join("-", compact([local.prefix, "cma", local.suffix])), 0, 25)
+      name_unique = substr(join("-", compact([local.prefix, "cma", local.suffix_unique])), 0, 25)
+      dashes      = true
+      slug        = "cma"
+      min_length  = 1
+      max_length  = 25
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9-]{1,25}$"
+    }
     availability_set = {
       name        = substr(join("-", compact([local.prefix, "avail", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "avail", local.suffix_unique])), 0, 80)
