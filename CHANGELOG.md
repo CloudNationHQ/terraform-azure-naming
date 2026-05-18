@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.31.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.30.0...v0.31.0) (2026-05-18)
+
+
+### Features
+
+* add cost management scheduled action naming and output ([#110](https://github.com/CloudNationHQ/terraform-azure-naming/issues/110)) ([89daa29](https://github.com/CloudNationHQ/terraform-azure-naming/commit/89daa29eb72a9ee9c6f2c1a13761524d4f22792c))
+
 ## [0.30.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.29.0...v0.30.0) (2026-04-02)
 
 
