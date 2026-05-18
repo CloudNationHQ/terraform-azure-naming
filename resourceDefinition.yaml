@@ -187,6 +187,15 @@
   slug: aawh
   dashes: true
 
+- name: cost_management_scheduled_action
+  length:
+    min: 1
+    max: 25
+  regex: '^[a-zA-Z0-9-]{1,25}$'
+  scope: resourceGroup
+  slug: cma
+  dashes: true
+
 - name: availability_set
   length:
     min: 1
