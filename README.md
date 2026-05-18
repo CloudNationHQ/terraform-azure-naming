@@ -402,6 +402,10 @@ Description: Cosmosdb Cassandra Datacenter
 
 Description: Cosmosdb Postgres
 
+### <a name="output_cost_management_scheduled_action"></a> [cost\_management\_scheduled\_action](#output\_cost\_management\_scheduled\_action)
+
+Description: Cost Management Scheduled Action
+
 ### <a name="output_custom_provider"></a> [custom\_provider](#output\_custom\_provider)
 
 Description: Custom Provider
