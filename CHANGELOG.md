@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.32.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.31.0...v0.32.0) (2026-06-17)
+
+
+### Features
+
+* add data_share_account naming type ([#113](https://github.com/CloudNationHQ/terraform-azure-naming/issues/113)) ([457e1fa](https://github.com/CloudNationHQ/terraform-azure-naming/commit/457e1fa56f62d948f6808210418f5aa323479cfc))
+
 ## [0.31.0](https://github.com/CloudNationHQ/terraform-azure-naming/compare/v0.30.0...v0.31.0) (2026-05-18)
 
 
