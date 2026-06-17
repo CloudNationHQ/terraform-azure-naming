@@ -1123,6 +1123,15 @@
   slug: bvault
   dashes: true
 
+- name: data_share_account
+  length:
+    min: 3
+    max: 90
+  regex: '^[a-zA-Z0-9][a-zA-Z0-9-]{1,88}[a-zA-Z0-9]$'
+  scope: resourceGroup
+  slug: dsa
+  dashes: true
+
 - name: database_migration_project
   length:
     min: 2

@@ -151,11 +151,6 @@ output "automation_webhook" {
   description = "Automation Webhook"
 }
 
-output "cost_management_scheduled_action" {
-  value       = local.az.cost_management_scheduled_action
-  description = "Cost Management Scheduled Action"
-}
-
 output "availability_set" {
   value       = local.az.availability_set
   description = "Availability Set"
@@ -404,6 +399,11 @@ output "cosmosdb_cassandra_datacenter" {
 output "cosmosdb_postgres" {
   value       = local.az.cosmosdb_postgres
   description = "Cosmosdb Postgres"
+}
+
+output "cost_management_scheduled_action" {
+  value       = local.az.cost_management_scheduled_action
+  description = "Cost Management Scheduled Action"
 }
 
 output "custom_provider" {
@@ -704,6 +704,11 @@ output "data_lake_store_firewall_rule" {
 output "data_protection_backup_vault" {
   value       = local.az.data_protection_backup_vault
   description = "Data Protection Backup Vault"
+}
+
+output "data_share_account" {
+  value       = local.az.data_share_account
+  description = "Data Share Account"
 }
 
 output "database_migration_project" {

@@ -646,6 +646,10 @@ Description: Data Lake Store Firewall Rule
 
 Description: Data Protection Backup Vault
 
+### <a name="output_data_share_account"></a> [data\_share\_account](#output\_data\_share\_account)
+
+Description: Data Share Account
+
 ### <a name="output_database_migration_project"></a> [database\_migration\_project](#output\_database\_migration\_project)
 
 Description: Database Migration Project

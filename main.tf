@@ -315,16 +315,6 @@ locals {
       scope       = "parent"
       regex       = "^[^<>*%:.?+/ ]{1,128}$"
     }
-    cost_management_scheduled_action = {
-      name        = substr(join("-", compact([local.prefix, "cma", local.suffix])), 0, 25)
-      name_unique = substr(join("-", compact([local.prefix, "cma", local.suffix_unique])), 0, 25)
-      dashes      = true
-      slug        = "cma"
-      min_length  = 1
-      max_length  = 25
-      scope       = "resourceGroup"
-      regex       = "^[a-zA-Z0-9-]{1,25}$"
-    }
     availability_set = {
       name        = substr(join("-", compact([local.prefix, "avail", local.suffix])), 0, 80)
       name_unique = substr(join("-", compact([local.prefix, "avail", local.suffix_unique])), 0, 80)
@@ -824,6 +814,16 @@ locals {
       max_length  = 63
       scope       = "resourceGroup"
       regex       = "^[a-z0-9][a-z0-9-_.]{1,61}[a-z0-9]$"
+    }
+    cost_management_scheduled_action = {
+      name        = substr(join("-", compact([local.prefix, "cma", local.suffix])), 0, 25)
+      name_unique = substr(join("-", compact([local.prefix, "cma", local.suffix_unique])), 0, 25)
+      dashes      = true
+      slug        = "cma"
+      min_length  = 1
+      max_length  = 25
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9-]{1,25}$"
     }
     custom_provider = {
       name        = substr(join("-", compact([local.prefix, "prov", local.suffix])), 0, 64)
@@ -1424,6 +1424,16 @@ locals {
       max_length  = 50
       scope       = "resourceGroup"
       regex       = "^[a-zA-Z][a-zA-Z0-9-]+[a-zA-Z0-9]$"
+    }
+    data_share_account = {
+      name        = substr(join("-", compact([local.prefix, "dsa", local.suffix])), 0, 90)
+      name_unique = substr(join("-", compact([local.prefix, "dsa", local.suffix_unique])), 0, 90)
+      dashes      = true
+      slug        = "dsa"
+      min_length  = 3
+      max_length  = 90
+      scope       = "resourceGroup"
+      regex       = "^[a-zA-Z0-9][a-zA-Z0-9-]{1,88}[a-zA-Z0-9]$"
     }
     database_migration_project = {
       name        = substr(join("-", compact([local.prefix, "migr", local.suffix])), 0, 57)
@@ -4473,6 +4483,10 @@ locals {
       valid_name        = length(regexall(local.az.cosmosdb_postgres.regex, local.az.cosmosdb_postgres.name)) > 0 && length(local.az.cosmosdb_postgres.name) > local.az.cosmosdb_postgres.min_length
       valid_name_unique = length(regexall(local.az.cosmosdb_postgres.regex, local.az.cosmosdb_postgres.name_unique)) > 0
     }
+    cost_management_scheduled_action = {
+      valid_name        = length(regexall(local.az.cost_management_scheduled_action.regex, local.az.cost_management_scheduled_action.name)) > 0 && length(local.az.cost_management_scheduled_action.name) > local.az.cost_management_scheduled_action.min_length
+      valid_name_unique = length(regexall(local.az.cost_management_scheduled_action.regex, local.az.cost_management_scheduled_action.name_unique)) > 0
+    }
     custom_provider = {
       valid_name        = length(regexall(local.az.custom_provider.regex, local.az.custom_provider.name)) > 0 && length(local.az.custom_provider.name) > local.az.custom_provider.min_length
       valid_name_unique = length(regexall(local.az.custom_provider.regex, local.az.custom_provider.name_unique)) > 0
@@ -4712,6 +4726,10 @@ locals {
     data_protection_backup_vault = {
       valid_name        = length(regexall(local.az.data_protection_backup_vault.regex, local.az.data_protection_backup_vault.name)) > 0 && length(local.az.data_protection_backup_vault.name) > local.az.data_protection_backup_vault.min_length
       valid_name_unique = length(regexall(local.az.data_protection_backup_vault.regex, local.az.data_protection_backup_vault.name_unique)) > 0
+    }
+    data_share_account = {
+      valid_name        = length(regexall(local.az.data_share_account.regex, local.az.data_share_account.name)) > 0 && length(local.az.data_share_account.name) > local.az.data_share_account.min_length
+      valid_name_unique = length(regexall(local.az.data_share_account.regex, local.az.data_share_account.name_unique)) > 0
     }
     database_migration_project = {
       valid_name        = length(regexall(local.az.database_migration_project.regex, local.az.database_migration_project.name)) > 0 && length(local.az.database_migration_project.name) > local.az.database_migration_project.min_length
